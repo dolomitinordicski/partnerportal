@@ -369,68 +369,81 @@ mark {
 }
 
 /* --- STYLE LOGO --- */
-.partnerhub-logo {
-  position: fixed;
-  top: 2px;
-  left: 2px;
-  z-index: 2000;
-  display: flex;
-  align-items: center;
-  filter: drop-shadow(2px 2px 6px rgba(0, 0, 0, 0.2));
-  transition: filter 0.3s ease;
-}
-
-.swoosh-icon {
-  height: 40px;
-  width: auto;
-  display: inline-block;
-  z-index: 10000;
-}
-
-.header-logo-img {
-  max-width: 400px;
-  margin-bottom: 10px;
-  filter: drop-shadow(2px 2px 6px rgba(0, 0, 0, 0.2));
-  transition: filter 0.3s ease;
-}
-
-/* --- RESPONSIVE --- */
-@media screen and (max-width: 768px) {
-  .partnerhub-logo {
-    position: fixed;
+.partnerhub-logo{
+    position: fixed;                 /* (eliminato il doppione) */
     top: 2px;
     left: 2px;
-    transform: translateX(-50%) scale(1);
-    width: 100%;
-    padding: 10px;
+    z-index: 2000;
     display: flex;
-    background-color: rgba(200, 200, 200, 0.3);
-    z-index: 10000;
-  }
-
-  .header-logo-img {
-    max-width: 300px;
-  }
-
-  header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 5000;
-    display: none;
-    justify-content: space-between;
     align-items: center;
-    background-color: none;
-  }
+    filter: drop-shadow(2px 2px 6px rgba(0,0,0,.2));
+    transition: filter .3s ease;
+}
 
-  header.show {
-    display: flex;
-    top: 2px;
-    background-color: white;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
-  }
-}	 
+/* Swoosh icon accanto al logo */
+.swoosh-icon{
+    height: 40px;
+    width: auto;
+    z-index: 10000;
+    display: inline-block;
+}
+
+/* ───────────── MOBILE (< 768 px) ───────────── */
+@media screen and (max-width:768px){
+    .partnerhub-logo{
+        position: absolute;
+        background-color: rgba(200,200,200,.3);   /* grigio trasparente */
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%) scale(1);
+        padding: 10px;
+        z-index: 10000;          /* sopra al menu (4000) */
+        width: 100%;
+    }
+}
+
+/* Swoosh: altezza invariata anche dopo il media query */
+.swoosh-icon{ height: 40px; }
+
+/* Logo immagine grande */
+.header-logo-img{
+    max-width: 400px;
+    margin-bottom: 10px;
+    filter: drop-shadow(2px 2px 6px rgba(0,0,0,.2));
+    transition: filter .3s ease;
+}
+
+/* ───────────── MOBILE (< 768 px) ───────────── */
+@media screen and (max-width:768px){
+    .partnerhub-logo{
+        display: flex;
+        position: relative;
+    }
+    .header-logo-img{ max-width: 300px; }
+}
+
+/* Header mobile “sticky” */
+@media screen and (max-width:768px){
+    header{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 5000;
+        background-color: transparent;   /* ← fix: “none” non è valido */
+        display: none;
+        justify-content: space-between;
+        align-items: center;
+    }
+    header.show{
+        top: 2px;
+        width: 100%;
+        display: flex;
+        background-color: #fff;
+        box-shadow: 0 2px 6px rgba(0,0,0,.4);
+    }
+}
+	 
 /* --- STYLE STICKY BAR --- */
 .desktop-sticky-bar {
   display: none;
