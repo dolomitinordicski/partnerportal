@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Dolomiti NordicSki - Widget Configurator to customize and embed the ski resort widgets.">
+    <title>Dolomiti NordicSki - Widget Configurator</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary-color: #0F4C5C;
+            --secondary-color: #D9534F;
+            --light-gray: #f0f0f0;
+            --dark-gray: #d9d9d9;
+            --font-color: #333333;
+        }
+
+        body {
+            font-family: 'Be Vietnam', sans-serif;
+            margin: 20px;
+            padding: 0;
+            text-align: center;
+            background-color: var(--light-gray);
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            border: 2px solid #ccc;
+        }
+
+        .config-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            align-items: center;
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin-top: 10px;
+            color: var(--primary-color);
+            text-transform: uppercase;
+        }
+
+        select, input {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .button {
+            margin-top: 15px;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #ffffff;
+            background-color: var(--primary-color);
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        .button:hover {
+            background-color: #093540;
+			transform: scale(1.05);
+        }
+
+        .reset-button {
+            background-color: var(--secondary-color);
+        }
+
+        .reset-button:hover {
+            background-color: #A94442;
+			transform: scale(1.05);
+        }
+
+        .preview {
+            margin-top: 40px;
+            padding: 15px;
+            border: 2px dashed #ccc;
+            background: #f9f9f9;
+        }
+
+        iframe {
+            width: 100%;
+            height: 610px;
+            border: none;
+            background-color: transparent;
+            display: block;
+            margin-top: 20px;
+        }
+
+        .code-box {
+            background: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+            word-break: break-word;
+            font-family: monospace;
+            text-align: left;
+            margin-top: 20px;
+            border: 1px solid #ccc;
+        }
+
+        .shape-preview {
+            width: 100%;
+        }
+
+        .shape-box {
+            display: inline-block;
+            padding: 10px;
+            margin-top: 15px;
+            border: 2px solid #ccc;
+            background: #f4f4f4;
+        }
+
+        /* Responsività per schermi più piccoli */
+        @media (max-width: 600px) {
+            .iframe-container {
+                padding: 20px 10px;
+                min-height: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Dolomiti NordicSki - Widget Configurator</h1>
+
+        <div class="config-grid">
+            <div>
+                <label for="location" aria-label="Select Region">Select Region:</label>
+                <select id="location" aria-label="Select Region">
+                    <option value="Dolomiti NordicSki Carousel">Dolomiti NordicSki Carousel</option>
+                    <option value="Antholzertal/Valle Anterselva">Antholzertal/Valle Anterselva</option>
+                    <option value="Gsiesertal-Welsberg-Taisten/Val Casies-Monguelfo-Tesido">Gsiesertal/Val Casies</option>
+                    <option value="3 Zinnen Dolomites">3 Zinnen Dolomites</option>
+                    <option value="Osttirol">Osttirol</option>
+                    <option value="Comelico">Comelico</option>
+                    <option value="Cortina d'Ampezzo">Cortina d'Ampezzo</option>
+                    <option value="Ahrntal/Valle Aurina">Ahrntal/Valle Aurina</option>
+                    <option value="Seiser Alm DOLOMITES Val Gardena/Alpe di Siusi DOLOMITES Val Gardena">Seiser Alm Val Gardena</option>
+                </select>
+            </div>
+            <div>
+                <label for="bgColor" aria-label="Background Color">Background Color:</label>
+                <select id="bgColor" aria-label="Background Color">
+                    <option value="transparent">Transparent</option>
+                    <option value="white">White</option>
+                    <option value="%23f0f0f0">Light Gray</option>
+                    <option value="%23d9d9d9">Dark Gray</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="fontColor" aria-label="Font Color">Font Color:</label>
+                <input type="color" id="fontColor" value="#333333" aria-label="Font Color">
+            </div>
+            <div>
+                <label for="buttonBg" aria-label="Button Background Color">Button Background Color:</label>
+                <input type="color" id="buttonBg" value="#0F4C5C" aria-label="Button Background Color">
+            </div>
+
+            <div>
+                <label for="buttonText" aria-label="Button Text Color">Button Text Color:</label>
+                <input type="color" id="buttonText" value="#ffffff" aria-label="Button Text Color">
+            </div>
+            <div>
+                <label for="widgetSize" aria-label="Widget Size">Widget Size:</label>
+                <select id="widgetSize" onchange="updateShapePreview()" aria-label="Widget Size">
+                    <option value="box">Box (300x300px)</option>
+                    <option value="banner">Banner (600x200px)</option>
+                    <option value="vertical">Vertical (250x500px)</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="shape-preview">
+            <div id="shapeBox" class="shape-box">BOX</div>
+        </div>
+
+        <button class="button" onclick="generateIframe()">Generate Widget</button>
+        <button class="button reset-button" onclick="resetValues()">Reset Values</button>
+
+        <div class="preview">
+            <h3 style="color: var(--primary-color); text-transform: uppercase;">Widget Preview - IFRAME</h3>
+            <iframe id="widgetPreview"></iframe>
+        </div>
+
+        <h3 style="color: var(--primary-color); text-transform: uppercase;">Embed Code:</h3>
+        <div class="code-box">
+            <code id="iframeCode"></code>
+        </div>
+
+        <!-- Spiegazione per l'utente -->
+		<div style="color: var(--font-color); font-size: 14px; text-align:left;">
+		<p><strong>Einleitung </strong></p>
+
+		Du kannst das iFrame auf deiner Webseite implementieren, indem du den bereitgestellten Embed-Code kopierst und einfügst. Parameter wie width und height bestimmen die Anfangsgröße des iFrames, können jedoch angepasst werden, um deinen Anforderungen zu entsprechen. Mit frameborder="0" und style="border:none;" entfernst du die Ränder, während overflow:hidden; den Inhalt verbirgt, der aus dem Rahmen herausragt. Durch die Verwendung von display:inline-block; verhält sich das iFrame wie ein Inline-Block und fügt sich problemlos in deine Seite ein. Du kannst die Breite und Höhe auch über CSS ändern, um das gewünschte Ergebnis zu erzielen.
+		<br><br>
+		<p><strong>Spiegazione</strong></p>
+    Puoi implementare l'iframe nel tuo sito copiando e incollando il codice embed fornito. I parametri come <code>width</code> e <code>height</code> determinano le dimensioni iniziali dell'iframe, ma possono essere personalizzati per adattarsi alle tue esigenze. Con <code>frameborder="0"</code> e <code>style="border:none;"</code> rimuovi i bordi, mentre <code>overflow:hidden;</code> nasconde il contenuto che esce dal riquadro. Utilizzando <code>display:inline-block;</code>, l'iframe si comporta come un blocco in linea, integrandosi facilmente nella tua pagina. Puoi anche modificare la larghezza e l'altezza tramite CSS per ottenere il risultato desiderato.
+	</p>
+</div>
+
+    <script>
+        function generateIframe() {
+            const location = document.getElementById('location').value;
+            const bgColor = document.getElementById('bgColor').value;
+            const fontColor = encodeURIComponent(document.getElementById('fontColor').value);
+            const buttonBg = encodeURIComponent(document.getElementById('buttonBg').value);
+            const buttonText = encodeURIComponent(document.getElementById('buttonText').value);
+            const widgetSize = document.getElementById('widgetSize').value;
+			
+			const basepath=''; // https://www.nordik2.com/widget/
+
+            const iframeUrl = basepath+`Widget%20DNS.html?bg=${bgColor}&color=${fontColor}&buttonBg=${buttonBg}&buttonText=${buttonText}&location=${encodeURIComponent(location)}&format=${widgetSize}`;
+
+            // Inizializzazione dell'iframe
+            document.getElementById('widgetPreview').src = iframeUrl;
+
+            // Codice embed
+            const embedCode = generateEmbedCode(widgetSize, iframeUrl);
+            document.getElementById('iframeCode').textContent = embedCode;
+        }
+
+        function generateEmbedCode(widgetSize, iframeUrl) {
+            let width, height;
+            if (widgetSize === 'banner') {
+                width = '600px';
+                height = '220px';
+            } else if (widgetSize === 'vertical') {
+                width = '250px';
+                height = '500px';
+            } else {
+                width = '300px';
+                height = '300px';
+            }
+
+            return `<iframe src="${iframeUrl}" width="${width}" height="${height}" frameborder="0" style="border:none; overflow:hidden; display:inline-block; width:auto; height:500px;"></iframe>`;
+        }
+
+        function resetValues() {
+            document.getElementById('location').value = "Dolomiti NordicSki Carousel";
+            document.getElementById('bgColor').value = "white";
+            document.getElementById('fontColor').value = "#333333";
+            document.getElementById('buttonBg').value = "#0F4C5C";
+            document.getElementById('buttonText').value = "#ffffff";
+            document.getElementById('widgetSize').value = "box";
+            updateShapePreview();
+            generateIframe(); 
+        }
+
+        function updateShapePreview() {
+            const shapeBox = document.getElementById('shapeBox');
+            const widgetSize = document.getElementById('widgetSize').value;
+
+            if (widgetSize === 'box') {
+                shapeBox.innerText = "BOX";
+                shapeBox.style.width = "300px";
+                shapeBox.style.height = "300px";
+            } else if (widgetSize === 'banner') {
+                shapeBox.innerText = "BANNER";
+                shapeBox.style.width = "600px";
+                shapeBox.style.height = "200px";
+            } else if (widgetSize === 'vertical') {
+                shapeBox.innerText = "VERTICAL";
+                shapeBox.style.width = "250px";
+                shapeBox.style.height = "500px";
+            }
+        }
+    </script>
+
+</body>
+</html>
+```
+

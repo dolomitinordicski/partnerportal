@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Dolomiti NordicSki - Partner Dashboard">
+    <title>Dolomiti NordicSki - Partner Dashboard</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam:wght@300;400;700&family=Roboto:wght@300&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary-color: #0F4C5C;
+            --secondary-color: #D9534F;
+            --light-gray: #f0f0f0;
+            --dark-gray: #d9d9d9;
+            --font-color: #333333;
+        }
+
+        body {
+            font-family: 'Be Vietnam', sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: var(--light-gray);
+            text-align: center;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            border: 2px solid var(--dark-gray);
+        }
+
+        .logo-container img {
+            width: 220px;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            color: var(--primary-color);
+            font-size: 24px;
+        }
+
+        .dashboard-menu {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .dashboard-menu a {
+            background-color: var(--primary-color);
+            color: white;
+            font-size: 16px;
+            padding: 12px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dashboard-menu a:hover {
+            background-color: #093540;
+            transform: scale(1.05);
+        }
+
+        .content-section {
+            display: none;
+            margin-top: 20px;
+            text-align: left;
+            background: var(--light-gray);
+            padding: 15px;
+            border-radius: 5px;
+        }
+
+        .content-section a {
+            display: block;
+            padding: 8px;
+            margin-bottom: 10px;
+            background-color: var(--dark-gray);
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        .content-section a:hover {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .close-btn {
+            display: block;
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 8px 12px;
+            border: none;
+            border-radius: 5px;
+            font-size: 14px;
+            cursor: pointer;
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .close-btn:hover {
+            background-color: #c9302c;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo-container">
+            <img src="https://www.dolomitinordicski.com/media/bd92869d-8dc3-4109-9ade-f89e3e9ac293/dolomiti-nordicski-logo-farbe-2025.png" alt="Dolomiti NordicSki Logo">
+        </div>
+        <h1>Welcome to the Partner Dashboard</h1>
+        <p>Access key resources and tools for your business.</p>
+
+        <div class="dashboard-menu">
+            <a href="#" onclick="toggleSection('media')">📸 Media & Content Hub</a>
+            <a href="#" onclick="toggleSection('info')">📌 Info & Packages</a>
+            <a href="#" onclick="toggleSection('support')">📞 Direct Support</a>
+            <a href="#" onclick="toggleSection('webinar')">🎓 Training & Webinars</a>
+        </div>
+
+        <div id="media" class="content-section">
+            <a href="#">Download Images</a>
+            <a href="#">Download Videos</a>
+            <a href="#">Marketing Materials</a>
+            <button class="close-btn" onclick="toggleSection('media')">Close</button>
+        </div>
+
+        <div id="info" class="content-section">
+            <a href="#">Price List</a>
+            <a href="#">Season Packages</a>
+            <a href="#">Special Offers</a>
+            <button class="close-btn" onclick="toggleSection('info')">Close</button>
+        </div>
+
+        <div id="support" class="content-section">
+            <a href="#">Contact Us</a><a href="mailto:info@dolomitinordicski.com?subject=Accomodation Partner&body=Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus luctus urna sed urna ultricies ac tempor dui sagittis. In condimentum facilisis porta." class="button">Anfrage-Richiesta</a>
+            <a href="#">FAQ</a>
+            <a href="#">Technical Support</a>
+            <button class="close-btn" onclick="toggleSection('support')">Close</button>
+        </div>
+
+        <div id="webinar" class="content-section">
+            <a href="#">Upcoming Webinars</a>
+            <a href="#">Recorded Sessions</a>
+            <a href="#">Training Materials</a>
+            <button class="close-btn" onclick="toggleSection('webinar')">Close</button>
+        </div>
+    </div>
+
+    <script>
+        function toggleSection(sectionId) {
+            var section = document.getElementById(sectionId);
+            section.style.display = section.style.display === "block" ? "none" : "block";
+        }
+    </script>
+</body>
+Copyright: Dolomiti NordicSki 2025
+</html>

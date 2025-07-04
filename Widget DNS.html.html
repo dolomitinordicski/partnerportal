@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Dolomiti NordicSki Widget for displaying cross-country ski trail information.">
+    <title>Dolomiti NordicSki Widget</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary-color: #0F4C5C;
+            --secondary-color: #D9534F;
+            --widget-bg: #fffff;
+            --button-bg: #0F4C5C;
+            --button-text: #ffffff;
+            --font-color: #333333;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: 'Be Vietnam', sans-serif;
+            text-align: center;
+            background-color: var(--widget-bg);
+        }
+
+        .iframe-container {
+            position:relative;
+            border-radius: 10px;
+            max-width: 600px;
+            width: 90%;
+			min-height:200px;
+            height: auto; /* Altezza automatica per adattarsi al contenuto */
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: transparent; /* Impostato come trasparente */
+            border: 2px solid #ccc;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: var(--font-color);
+        }
+
+        .divider {
+            width: 80%;
+            height: 2px;
+            background-color: #ccc;
+            margin: 10px auto;
+        }
+
+        .logo-container {
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .logo-container img {
+            max-width: 180px;
+            height: auto;
+            cursor: pointer;
+        }
+
+        .certified-text {
+            font-weight: bold;
+            font-size: 14px;
+            color: var(--primary-color);
+            text-transform: uppercase;
+            margin-top: 5px;
+			margin-bottom: 5px;
+        }
+
+        .paragraph-text {
+            font-size: 14px;
+            color: #000;
+            font-weight: normal;
+        }
+
+        .bold-text {
+            font-weight: bold;
+            font-size: 15px;
+            color: var(--primary-color);
+            text-transform: uppercase;
+        }
+
+        .tracks-info {
+            margin-top: 5px;
+            font-size: 16px;
+        }
+
+        .button {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 8px 15px;
+            font-size: 14px;
+            color: var(--button-text);
+            background-color: var(--button-bg);
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .button:hover {
+            opacity: 0.9;
+			transform: scale(1.05);
+        }
+
+        /* Layout per il formato banner */
+        .banner-layout {
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 15px;
+            max-width: 600px;
+            height: 200px;
+        }
+
+        .banner-layout .logo-container {
+            flex: 1;
+            text-align: center;
+        }
+
+        .banner-layout .logo-container img {
+            max-width: 140px;
+            max-height: 80px;
+        }
+
+        .banner-layout .text-container {
+            flex: 2;
+            text-align: left;
+            padding-left: 20px;
+        }
+
+        /* Responsività */
+        @media (max-width: 600px) {
+            .iframe-container {
+                padding: 20px 10px;
+                min-height: auto;
+                height: 400px;
+            }
+
+            .banner-layout {
+                flex-direction: column;
+            }
+        }
+
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            background-color: transparent;
+        }
+    </style>
+</head>
+<body>
+    <div class="iframe-container" id="widgetContainer">
+        <div class="logo-container">
+            <a href="https://www.dolomitinordicski.com" target="_blank" aria-label="Visit Dolomiti NordicSki Website">
+                <img id="widgetLogo" src="https://www.dolomitinordicski.com/media/bd92869d-8dc3-4109-9ade-f89e3e9ac293/dolomiti-nordicski-logo-farbe-2025.png" alt="Dolomiti NordicSki Logo">
+            </a>
+            <p class="certified-text" id="certifiedText">CERTIFIED ACCOMMODATION PARTNER</p>
+        </div>
+        <div class="text-container">
+            <p class="paragraph-text">Europe’s most spectacular cross-country ski carousel</p>
+            <div class="divider"></div>
+            <p class="bold-text" id="location"></p>
+            <p class="tracks-info" id="tracks-info"></p>
+            <a href="#" id="trails-button" class="button" target="_blank" aria-label="View open trails">VIEW OPEN TRAILS</a>
+        </div>
+    </div>
+
+    <script>
+        const locationUrls = {
+            'Dolomiti NordicSki Carousel': 'https://www.dolomitinordicski.com/en/tracks.html',
+            'Antholzertal/Valle Anterselva': 'https://www.dolomitinordicski.com/en/regions/antholzertal-valle-anterselva/open-tracks.html',
+            'Gsiesertal-Welsberg-Taisten/Val Casies-Monguelfo-Tesido': 'https://www.dolomitinordicski.com/en/regions/panorama-region-dolomites/open-tracks.html',
+            '3 Zinnen Dolomites': 'https://www.dolomitinordicski.com/en/regions/3-zinnen-dolomites/open-tracks.html',
+            'Osttirol': 'https://www.dolomitinordicski.com/en/regions/osttirol/open-tracks.html',
+            'Comelico': 'https://www.dolomitinordicski.com/en/regions/val-comelico/padola-tavela-2-km.html',
+            'Cortina d\'Ampezzo': 'https://www.dolomitinordicski.com/en/regions/cortina-d-ampezzo.html',
+            'Ahrntal/Valle Aurina': 'https://www.dolomitinordicski.com/en/regions/cross-country-ahrntal-valley/open-tracks.html',
+            'Seiser Alm DOLOMITES Val Gardena/Alpe di Siusi DOLOMITES Val Gardena': 'https://www.dolomitinordicski.com/en/regions/seiser-alm-dolomites-val-gardena/open-tracks.html'
+        };
+
+        const params = new URLSearchParams(window.location.search);
+        const locationText = params.get('location') || 'Antholzertal/Valle Anterselva';
+        const bgColor = params.get('bg') || '#ffffff';
+        const fontColor = params.get('color') || '#333';
+        const buttonBg = params.get('buttonBg') || '#0F4C5C';
+        const buttonText = params.get('buttonText') || '#ffffff';
+        const format = params.get('format') || 'box';
+
+        // Apply custom colors using CSS variables
+        document.body.style.setProperty('--widget-bg', bgColor);
+        document.body.style.setProperty('--button-bg', buttonBg);
+        document.body.style.setProperty('--button-text', buttonText);
+        document.body.style.color = fontColor;
+        document.getElementById('location').innerText = `📍 ${locationText}`;
+
+        const widgetContainer = document.getElementById('widgetContainer');
+
+        if (format === 'banner') {
+            widgetContainer.classList.add('banner-layout');
+            widgetContainer.style.width = "600px";
+            widgetContainer.style.height = "200px";
+        } else {
+			widgetContainer.style.height = format === 'vertical' ? "300px" : "300px";
+			widgetContainer.style.width = format === 'vertical' ? "250px" : "500px";
+
+        }
+
+        const trailsButton = document.getElementById('trails-button');
+        trailsButton.href = locationUrls[locationText] || "#";
+        trailsButton.style.display = locationUrls[locationText] ? 'inline-block' : 'none';
+
+        const openKm = Math.floor(Math.random() * 100) + 10;
+        document.getElementById('tracks-info').innerText = `🎿 OPEN TRAILS: ${openKm} km`;
+    </script>
+</body>
+</html>

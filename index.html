@@ -1,0 +1,5404 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wordcloud2.js/1.0.5/wordcloud2.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Dolomiti NordicSki - Corporate Design e values">
+    <meta name="theme-color" content="#0F4C5C">
+    <title>Dolomiti NordicSki - Corporate Design</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Lora:ital,wght@0,400..700;1,400..700&family=Merriweather+Sans:ital@0;1&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<!-- Font alternativi gratuiti che simulano Futura e Univers -->
+<link href="https://fonts.googleapis.com/css2?family=Didact+Gothic&family=Nunito:wght@300;900&family=Work+Sans:wght@300;400&display=swap" rel="stylesheet">
+   
+   <style>
+
+	  :root {
+        --primary-color: #0D4D5E;
+        --secondary-color:#AAD0D1;
+        --third-color:#417483;
+		--white-color:#FFFFFF;
+        --dark-color: #313131;
+		--gray-color:#dddddd;
+    }
+
+    html, body {
+        overflow-x: hidden;
+		font-family: 'Be Vietnam Pro', sans-serif;
+		padding-top: 100vh; /* Spinge il contenuto sotto l'hero */
+		color:white;
+		font-weight:700;
+		text-align: center;
+		margin: 0;
+		z-index: 1;
+	
+}
+main {
+    background-color: var(--white-color);
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    margin: 0px auto;
+	    padding-left: 0;
+    padding-right: 0;
+    box-sizing: border-box;
+
+}
+    .container {
+        max-width: 100%;
+        margin: 0 auto;
+		    padding-left: 0;
+    padding-right: 0;
+    box-sizing: border-box;
+}
+
+@media screen and (max-width: 768px) {
+  main,
+  .container {
+    width: 100%!important;
+    padding-left: 0;
+    padding-right: 0;
+    box-sizing: border-box;
+	position:relative;
+  }
+}
+
+/* --- STYLE TYPE *, *::before, *::after {
+  box-sizing: border-box;
+}--- * /
+
+	.josefin-sans-<uniquifier> {
+  font-family: "Josefin Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+.lora-<uniquifier> {
+  font-family: "Lora", serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+.roboto-<uniquifier> {
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+.merriweather-sans-<uniquifier> {
+  font-family: "Merriweather Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+.be-vietnam-pro-thin {
+  font-family: "Be Vietnam Pro", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.be-vietnam-pro-extralight {
+  font-family: "Be Vietnam Pro", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.be-vietnam-pro-light {
+  font-family: "Be Vietnam Pro", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.be-vietnam-pro-regular {
+  font-family: "Be Vietnam Pro", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.be-vietnam-pro-medium {
+  font-family: "Be Vietnam Pro", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.be-vietnam-pro-semibold {
+  font-family: "Be Vietnam Pro", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.be-vietnam-pro-bold {
+  font-family: "Be Vietnam Pro", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.be-vietnam-pro-extrabold {
+  font-family: "Be Vietnam Pro", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+}
+
+.be-vietnam-pro-black {
+  font-family: "Be Vietnam Pro", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.be-vietnam-pro-thin-italic {
+  font-family: "Be Vietnam Pro", sans-serif;
+  font-weight: 100;
+  font-style: italic;
+}
+
+.be-vietnam-pro-extralight-italic {
+  font-family: "Be Vietnam Pro", sans-serif;
+  font-weight: 200;
+  font-style: italic;
+}
+
+.be-vietnam-pro-light-italic {
+  font-family: "Be Vietnam Pro", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.be-vietnam-pro-regular-italic {
+  font-family: "Be Vietnam Pro", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.be-vietnam-pro-medium-italic {
+  font-family: "Be Vietnam Pro", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.be-vietnam-pro-semibold-italic {
+  font-family: "Be Vietnam Pro", sans-serif;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.be-vietnam-pro-bold-italic {
+  font-family: "Be Vietnam Pro", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.be-vietnam-pro-extrabold-italic {
+  font-family: "Be Vietnam Pro", sans-serif;
+  font-weight: 800;
+  font-style: italic;
+}
+
+.be-vietnam-pro-black-italic {
+  font-family: "Be Vietnam Pro", sans-serif;
+  font-weight: 900;
+  font-style: italic;
+}
+
+.open-sans-<uniquifier> {
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+
+/* --- STYLE FONT--- */
+        h1 {
+            font-family: "Be Vietnam Pro", sans-serif;
+			font-style: normal;
+			font-kerning: auto;
+			color: var(--primary-color);
+            font-size: 80px;
+			font-weight: 900; /* Bold / Black */
+		        }
+        h2 {
+            font-family: 'Be Vietnam Pro', sans-serif;
+			color: var(--third-color);
+			font-kerning: auto;
+            font-size: 35px;
+			font-weight: 700; /* Light */
+		}
+        h3 {
+            font-family: 'Roboto Light', sans-serif;
+			color: var(--secondary-color);
+			font-kerning: auto;
+            font-size: 18px;
+			font-weight: 300; /* Light */			
+		}
+
+		h5  {
+            font-family: 'Roboto Light', sans-serif;
+			color: var(--third-color);
+			font-kerning: auto;
+			height: 1.5em;
+            font-size: 35px;
+			text-align:left;
+			font-weight: regular;			
+		}
+		
+		h6 {
+            font-family: 'Roboto Light', sans-serif;
+			color: var(-white-color);
+			font-kerning: auto;
+            font-size: 25px;
+			font-weight: 900;		
+		}
+		
+		.h8-special {
+			font-family: 'Roboto Light', sans-serif;
+			color: var(--third-color);
+			font-kerning: auto;
+            font-size: 35px;
+			text-align:left;
+			font-weight: regular;	
+			position: relative;
+			height: 1.5em;
+		}
+
+		.lang-switch1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+transition: opacity 0.3s ease-in-out;
+  pointer-events: none;
+}
+
+		.lang-switch1.active {
+  opacity: 1;
+  position: absolute;
+  pointer-events: auto;
+		}
+		
+
+
+.slide-track {
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.8s ease-in-out;
+}
+
+.slide {
+  height: 6.5em;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+		
+		p {
+			font-family: 'Roboto Light', sans-serif;
+			color: var(--dark-color);
+			font-size: 18px;
+			font-weight: 400; /* Regular / Book */
+			line-height: 1.6; /* Migliora la leggibilità */
+			margin-bottom: 10px; /* Aggiunge spazio tra i paragrafi */
+}
+		
+li {
+			color: var(--dark-color);
+			font-size: 16px;
+			font-weight: 400; /* Regular / Book */
+			font-kerning: auto;
+			line-height: 1.6; /* Migliora la leggibilità */
+			margin-bottom: 10px; /* Aggiunge spazio tra i paragrafi */
+}
+	
+	@media screen and (max-width: 768px) {
+        h1 {
+            font-size: 50px;
+		}
+        h2 {
+            font-size: 26px;		
+		}
+        h3 {
+            font-size: 16px;
+			}
+		p {
+			font-size: 12px;
+			line-height: 1.6; /* Migliora la leggibilità */
+			margin-bottom: 10px; /* Aggiunge spazio tra i paragrafi */
+}
+		.h8-special {
+
+            font-size: 26px;
+		}
+}
+
+h1.section-title {
+  opacity: 0;
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  transform: translateX(0); /* Default neutro */
+}
+
+h1.section-title.animate-left {
+  opacity: 1;
+  transform: translateX(0);
+  animation: slideInLeft 0.8s ease-out forwards;
+}
+
+h1.section-title.animate-right {
+  opacity: 1;
+  transform: translateX(0);
+  animation: slideInRight 0.8s ease-out forwards;
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-500px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(500px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+h2 {
+  opacity: 0;
+  transform: scale(0.95);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+h2.fade-in {
+  opacity: 1;
+  transform: scale(1);
+}
+
+@media screen and (max-width: 768px) {
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-200px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(200px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+}
+
+/* --- STYLE SECTION TITLE BAR--- */
+
+.section-title {
+    position: relative;
+    display: inline-block; /* Per limitare la larghezza della linea */
+    text-align: center;
+    margin-bottom: 10px; /* Spazio tra titolo e linea */
+}
+
+.section-title::after {
+    content: "";
+    display: block;
+    width: 100px; /* Larghezza della linea */
+    height: 10px; /* Spessore della linea */
+    background-color: var(--secondary-color); /* Colore DNS */
+    margin: 5px auto 0; /* Centrare la linea */
+    border-radius: 2px; /* Arrotondare leggermente gli angoli */
+}
+
+/* --- STYLE MARKED TEXT--- */
+
+/* Stile personalizzato per il testo evidenziato */
+mark {
+    background: none; /* Rimuove il colore di sfondo predefinito */
+    color: var(--third-color); /* Usa il colore var(--third-color) */
+    font-weight: bold; /* Mantiene un effetto di enfasi */
+    text-decoration: underline; /* Opzionale: aggiunge una sottolineatura */
+    padding: 2px 4px;
+}
+
+/* --- STYLE LOGO--- */
+
+.partnerhub-logo {
+    position: fixed;
+    top: 2px;
+    left: 2px;
+	position:fixed;
+    z-index: 2000;
+    display: flex;
+    align-items: center;
+	filter: drop-shadow(2px 2px 6px rgba(0, 0, 0, 0.2));
+    transition: filter 0.3s ease;
+}
+
+/* Swoosh icon accanto al logo */
+.swoosh-icon {
+    height: 40px;
+    width: auto;
+    z-index: 10000;
+    display: inline-block;
+}
+
+@media screen and (max-width: 768px) {
+    .partnerhub-logo {
+        position: absolute;
+		background-color: rgba(200, 200, 200, 0.3); /* grigio trasparente */
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%) scale(1); /* centro + scala */
+        padding: 10px;
+        z-index: 10000; /* più alto del menu (che è 4000) */
+        display: flex;
+        width: 100%; /* se vuoi farlo estendersi */
+    }
+}
+    .swoosh-icon {
+        height: 40px;
+    }
+
+.header-logo-img {
+	max-width: 400px;
+	margin-bottom:10px;
+	    filter: drop-shadow(2px 2px 6px rgba(0, 0, 0, 0.2));
+    transition: filter 0.3s ease;
+}
+
+@media screen and (max-width: 768px) {
+.partnerhub-logo {
+display:flex;
+  position: relative;
+}
+  .header-logo-img {
+  max-width: 300px;
+}
+}
+@media screen and (max-width: 768px) {
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 5000;
+    background-color: none;
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+
+  }
+
+  header.show {
+      top: 2px;
+      width: 100%;
+    display: flex;
+	    background-color: white;
+		    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+  }
+}
+
+
+/* --- STYLE STICKY BAR--- */
+	
+/* 🔹 Base: nascosta di default */
+.desktop-sticky-bar {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 30%;
+  height: 70px;
+  opacity: 0.97;
+  background-color: white;
+  z-index: 1000;
+  transition: all 0.3s ease;
+  filter: drop-shadow(2px 2px 6px rgba(0, 0, 0, 0.2));
+  backdrop-filter: blur(4px);
+  clip-path: polygon(0 0, 100% 0, 90% 100%, 0% 100%);
+}
+
+@media screen and (min-width: 769px) {
+  .desktop-sticky-bar.show {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2px;
+  }
+}
+
+
+
+
+/* --- STYLE HERO--- */
+
+.hero {
+position: fixed; /* ← serve per posizionare il background interno */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.hero::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+ background: url('https://www.dolomitinordicski.com/media/ca8effb6-0abe-43c1-9792-dc0da61fed6c/013-dns-plaetzwiese-kottersteger-dji-0189.jpg') no-repeat center;
+  background-size: cover;
+  z-index: -1;
+  animation: zoomSlow 20s ease-in-out alternate infinite;
+}
+
+
+
+@keyframes zoomSlow {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.40);
+  }
+}
+
+.hero-content {
+    z-index: 2;
+    max-width: 800px;
+	padding:30px;
+    animation: fadeIn 1.2s ease-out forwards;
+    opacity: 0;
+    transform: translateY(20px);
+		filter: drop-shadow(2px 2px 6px rgba(0, 0, 0, 0.2));
+    transition: filter 0.3s ease;
+    backdrop-filter: blur(4px);
+	animation: fadeZoom 1.4s ease-out forwards;
+}
+
+@keyframes fadeZoom {
+  0% {
+    opacity: 0;
+    transform: scale(0.95) translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.hero h1 {
+  font-style: normal;
+    font-size: 50px;
+    font-weight: 900;
+}
+
+.hero h2 {
+    font-size: 20px;
+	color:var(--dark-color);
+    margin-bottom: 30px;
+	    font-weight: 500;
+}
+
+@media screen and (max-width: 768px) {
+    .hero {
+        padding: 10px 10px;
+        text-align: left;
+		margin-top:25px;
+		position:absolute;
+		
+    }
+
+    .hero h1 {
+        font-size: 25px;
+    }
+    .hero h2 {
+        font-size: 17px;
+    }
+    .hero h3 {
+        font-size: 20px;
+    }
+    .hero-btn {
+        font-size: 14px;
+		text-align: left;
+    }
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+  animation: fadeIn 0.8s ease-out both;
+}
+
+/* --- STYLE SECTION--- */
+
+	@media screen and (min-width: 769px) {
+  section {
+    scroll-margin-top: 25px; /* spazio sotto la sticky bar */
+  }
+}
+	@media screen and (max-width: 769px) {
+  section {
+    scroll-margin-top: 15px; /* spazio sotto la sticky bar */
+  }
+}
+		
+
+
+/* --- STILE BASE NAV --- */
+nav {
+  display: none; /* appare solo con .active */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #AAD0D1;
+  z-index: 4000;
+  overflow: hidden;
+}
+
+nav.active {
+  display: flex;
+}
+
+/* --- SFONDO DECORATIVO --- */
+nav::before {
+  content: "";
+  position: absolute;
+  bottom: -20%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120%;
+  height: 120%;
+  background: url('https://www.dolomitinordicski.com/media/f0a51847-50a9-4eeb-908f-1dee1b292b3c/dolomitinordicski-kurve.png') no-repeat center center;
+  background-size: contain;
+  opacity: 0.60;
+  z-index: 1;
+  pointer-events: none;
+  mask-image: linear-gradient(to bottom, black 0%, transparent 100%);
+  mask-size: 100% 100%;
+  mask-repeat: no-repeat;
+  animation: reveal-swoosh 1.2s ease-out forwards;
+  filter: brightness(0) saturate(100%) invert(20%) sepia(100%) saturate(1000%) hue-rotate(150deg);
+}
+
+@keyframes reveal-swoosh {
+  0%   { mask-position: 0% 100%; opacity: 0; }
+  40%  { opacity: 0.05; }
+  100% { mask-position: 0% 0%; opacity: 0.30; }
+}
+/* === DESKTOP === */
+@media screen and (min-width: 769px) {
+  nav {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    gap: 40px 40px;
+  }
+
+  nav a {
+    flex: 0 0 calc((100% - 2 * 40px) / 3); /* 3 colonne */
+    font-size: 50px;
+	padding: 20px 30px;
+  }
+
+  nav a:hover {
+    color: var(--third-color);
+    filter: drop-shadow(2px 2px 6px rgba(0, 0, 0, 0.2));
+  }
+
+  nav a::after {
+    background-color: var(--third-color);
+  }
+}
+/* === MOBILE === */
+@media screen and (max-width: 768px) {
+  nav {
+    flex-direction: column;         /* distribuzione verticale */
+    justify-content: left !important;        /* centrato verticalmente */
+    align-items: center;            /* centrato orizzontalmente */
+    gap: 20px;                      /* spazio tra le voci */
+    padding: 20px;
+  }
+
+  nav a {
+    display: inline-block;
+    font-size: 28px;
+    font-weight: 600;
+    padding: 12px 20px;
+    color: var(--primary-color);
+    background-color: transparent;
+    border-radius: 6px;
+    position: relative;
+    text-align: center;
+    transition: transform 0.3s ease, color 0.3s ease;
+  }
+
+  nav a:hover {
+    transform: scale(1.05);
+    color: var(--third-color);
+  }
+
+  nav a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 15%;
+    width: 70%;
+    height: 3px;
+    background-color: var(--primary-color);
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.3s ease;
+  }
+
+  nav a:hover::after {
+    transform: scaleX(1);
+  }
+
+  nav::before {
+    bottom: -80%;
+    width: 200%;
+    height: 200%;
+    opacity: 0.4;
+  }
+}
+
+/* --- STYLE MENU TITLE--- */
+@media screen and (min-width: 769px) {
+  .menu-title {
+display:none;
+  }
+
+  .menu-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    gap: 60px 60px;
+  }
+
+  .menu-items a {
+    flex: 0 0 calc((100% - 2 * 40px) / 3);
+    text-align: center;
+    font-size: 40px;
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: transform 0.3s ease;
+  }
+
+  .menu-items a:hover {
+    color: var(--third-color);
+    transform: scale(1.1);
+  }
+}
+@media screen and (max-width: 768px) {
+  .menu-title {
+    font-size: 32px;
+    color: var(--primary-color);
+    margin-bottom: 30px;
+  }
+  .menu-items {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .menu-items a {
+    font-size: 24px;
+    text-align: center;
+    color: var(--primary-color);
+    text-decoration: none;
+  }
+}
+/* --- STILE BASE DEI LINK --- */
+nav a {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: bold;
+  text-align: center;
+  padding: 10px 15px;
+  position: relative;
+  transition: all 0.3s ease;
+  z-index: 200;
+}
+
+/* === EFFETTO LINEA SOTTO === */
+nav a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 10%;
+  width: 80%;
+  height: 4px;
+  background-color: currentColor;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+/* === HOVER SU DESKTOP === */
+@media (hover: hover) and (pointer: fine) {
+  nav a:hover {
+    background-color: transparent;
+    transform: scale(1.10);
+  }
+
+  nav a:hover::after {
+    transform: scaleX(1);
+  }
+}
+
+/* === TOCCO SU MOBILE === */
+@media (hover: none) and (pointer: coarse) {
+  nav a:active,
+  nav a:focus-visible {
+    transform: scale(0.96);
+    background-color: rgba(0, 0, 0, 0.15);
+  }
+
+  nav a:active::after,
+  nav a:focus-visible::after {
+    transform: scaleX(1);
+  }
+}
+
+
+
+/* --- STYLE MENU HAMBURGER--- */
+
+
+/* 🔹 Stile base hamburger */
+.menu-toggle {
+  position: relative;
+  right: 20px;
+  z-index: 12000;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media screen and (max-width: 768px) {
+.menu-toggle {
+	position: absolute;
+}
+}
+.menu-toggle::before {
+	content: "☰"; /*  \2634*/
+	font-size: 30px;
+    display: block;
+    transition: all 0.3s ease-in-out;
+    transform-origin: center;
+}
+.menu-toggle.active::before {
+	content: "✕"; /*  2192 2794 2796 2715 2719*/ 
+    transform: rotate(180deg) scale(1.2);
+    color: var(--primary-color);
+}
+
+.menu-toggle:hover::before {
+    color: var(--primary-color);
+}
+
+@media screen and (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+}
+
+
+/* --- STYLE GOTOTOP--- */
+
+
+/* 🔹 Stile per il pulsante "Go to Top" */
+#goToTop {
+    position: fixed;
+	z-index:10000;
+    bottom: 100px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: none;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+	transform: rotate(180deg);
+}
+
+#goToTop:hover {
+    background-color: var(--secondary-color);
+    transform: scale(1.1);
+	transform: rotate(0deg);
+	    color: var(--primary-color);
+	    filter: drop-shadow(2px 2px 6px rgba(0, 0, 0, 0.2));
+    transition: filter 0.3s ease;
+}
+@media screen and (max-width: 768px) {
+  .desktop-sticky-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 5000;
+    background-color: white; /* o il tuo colore */
+    padding: 10px 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+
+  body {
+    padding-top: 60px; /* altezza della barra, per non coprire il contenuto */
+  }
+}
+
+
+
+
+
+/* ------------------- SINGLE SECTIONS --------------------------------------- */
+/* --- Intro Section ----------------------------------------- */
+.intro-section {
+  position: relative;
+  background-color: var(--secondary-color);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 30px 30px;
+  overflow: visible;
+  z-index: 1000;
+  opacity: 0;
+  filter: drop-shadow(2px 2px 6px rgba(0, 0, 0, 0.2));
+  transition: filter 0.3s ease, opacity 0.6s ease;
+  backdrop-filter: blur(4px);
+}
+
+.intro-section.visible {
+  opacity: 1;
+}
+
+.intro-img-wrapper {
+  position: absolute;
+  top: 0;
+  left: -200px;
+  width: 50vw;
+  max-width: 900px;
+  z-index: 100;
+  pointer-events: none;
+}
+
+.intro-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  opacity: 1;
+  transform: translateX(-600px);
+  transition:
+    opacity 0.8s ease-in-out,
+    transform 1.2s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+/* === Animazione visibile === */
+.intro-img.visible {
+  transform: translateX(1100px); /* Desktop effect */
+  opacity: 1;
+}
+
+.intro-text {
+  flex: 1;
+  z-index: 1;
+  max-width: 800px;
+  text-align: left;
+  color: var(--dark-color);
+}
+
+.intro-text h1.section-title {
+  color: var(--primary-color);
+  font-size: 40px;
+  font-weight: 900;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.intro-text h2 {
+  color: var(--third-color);
+  font-size: 24px;
+  font-weight: 600;
+  margin: 20px 0 10px;
+  text-align: left;
+}
+
+.intro-text p {
+  font-size: 20px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  color: var(--dark-color);
+}
+
+/* --- Responsive --- */
+@media screen and (max-width: 768px) {
+  .intro-section {
+    flex-direction: column;
+    padding: 20px 30px;
+  }
+
+  .intro-img-wrapper {
+    position: static;
+    width: 60%;
+    margin: 0 auto 30px;
+  }
+
+  .intro-img {
+    transform: none;
+  }
+
+  .intro-img.visible {
+    transform: translateX(40%); /* Mobile-specific animation */
+    opacity: 1;
+  }
+
+  .intro-text {
+    margin: 0 auto;
+  }
+
+  .intro-text h1.section-title {
+    font-size: 28px;
+  }
+
+  .intro-text h2 {
+    font-size: 18px;
+  }
+
+  .intro-text p {
+    font-size: 14px;
+  }
+}
+/*DNS EVOLUTION TIMELINE - STORIA - ATTUALMENTE DISATTIVO*/
+
+/* Bottone principale */
+.expanded-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem; /* spazio tra testo e freccia */
+  position: relative;
+  width: 100%;
+  padding: 1rem;
+  font-size: 2.5rem;
+  font-weight: bold;
+  background: transparent;
+  border: none;
+  color: var(--primary-color);
+  cursor: pointer;
+  transition: color 0.4s ease, background-color 0.4s ease;
+}
+
+/* Freccia */
+.dns-arrow {
+  width: 12px;
+  height: 12px;
+  border-right: 2px solid var(--primary-color);
+  border-bottom: 2px solid var(--primary-color);
+  transform: rotate(45deg);
+  transition: transform 0.4s ease, border-color 0.4s ease;
+}
+
+/* Stato Aperti */
+.expanded-toggle.open .dns-arrow {
+  transform: rotate(-135deg);
+  border-color: var(--third-color);
+}
+
+
+
+/* Freccia (prima del testo) */
+.expanded-toggle::before {
+  content: '';
+  position: absolute;
+  right: 1.5rem;
+  top: 50%;
+  transform: translateY(-50%) rotate(45deg);
+  width: 10px;
+  height: 10px;
+  border-right: 2px solid var(--primary-color);
+  border-bottom: 2px solid var(--primary-color);
+  transition: transform 0.4s ease, border-color 0.4s ease;
+}
+
+/* Stato APERTO */
+.expanded-toggle.open {
+  color: var(--third-color);
+  background-color: rgba(173, 208, 209, 0.1); /* leggerissimo sfondo */
+}
+
+.expanded-toggle.open::before {
+  transform: translateY(-50%) rotate(-135deg);
+  border-color: var(--third-color);
+}
+
+/* Contenuto nascosto */
+.expanded-content {
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 1rem;
+  transition: max-height 0.6s ease, padding 0.6s ease;
+}
+
+/* Contenuto visibile */
+.expanded-content.open {
+  max-height: 800px;
+}
+
+
+
+
+/*DNS EVOLUTION TIMELINE*/
+.timeline-section {
+  background: #f6f9fa;
+  padding: 100px 20px;
+}
+
+.timeline-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 60px;
+}
+.timeline-container {
+scroll-snap-type: x mandatory;
+  width: 90%;
+  max-height:auto;
+  margin: 0 auto;
+  position: relative;
+}
+
+.timeline {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  gap: 10px;
+  justify-content: space-between;
+  align-items: flex-start;
+    overflow-x: auto;
+}
+
+.timeline-line {
+  position: absolute;
+  top: 40px;
+  min-width: 1200px;
+  left: 0;
+  right: 0;
+  height: 6px;
+  background: linear-gradient(to right, #0D4D5E, #AAD0D1);
+  z-index: 1;
+    animation: time-line-move 8s ease-in-out ;
+}
+
+/* Animazione di scorrimento orizzontale */
+@keyframes time-line-move {
+  from {
+    transform: translateX(-1200px);
+  }
+  to {
+    transform: translateX(0px);
+  }
+}
+.timeline-arrow {
+  position: absolute;
+  top: 23px; /* stessa altezza della linea */
+  right: 0;
+  width: 40px;
+  height: 40px;
+  z-index: 2;
+  transition: transform 0.3s ease-out;
+  animation: arrow-move 8s ease-in-out ;
+}
+
+/* Animazione di scorrimento orizzontale */
+@keyframes arrow-move {
+  from {
+    transform: translateX(-1200px);
+  }
+  to {
+    transform: translateX(0px);
+  }
+}
+
+.timeline-block {
+  scroll-snap-align: center;
+  position: relative;
+  flex: 0 0 auto; /* forza larghezza fissa */
+  width: 200px;
+  min-width: 200px;
+  text-align: center;
+  z-index: 1;
+}
+
+.timeline-block.visible .timeline-circle {
+  transform: scale(1.5);
+  background-color: #AAD0D1;
+}
+.timeline-block:hover .timeline-circle {
+  transform: scale(1.7);
+  background-color: #0D4D5E;
+}
+
+.timeline-block:hover .timeline-year {
+  color: #0D4D5E;
+  transform: scale(1.2);
+}
+.timeline-content {
+  transition: all 0.4s ease;
+    box-shadow: 0 4px 12px rgba(13, 77, 94, 0.25);
+	  z-index:3;
+}
+
+.timeline-block:hover .timeline-content {
+  transform: scale(1.10);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  background-color: linear-gradient(to right, #0D4D5E, #AAD0D1);
+  z-index: 10;
+}
+
+.timeline-circle {
+  width: 20px;
+  height: 20px;
+  background: #0D4D5E;
+  border-radius: 50%;
+  margin: 0 auto;
+  position: relative;
+  top: 32px;
+  z-index: 3;
+}
+
+.timeline-circle.highlight {
+    top: -638px;
+	background: #AAD0D1;
+  box-shadow: 0 0 0 6px rgba(10, 77, 94, 0.2);
+
+}
+
+.timeline-content {
+  margin-top: 50px;
+  background: #e9f6f9;
+  text-align:left;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.6s ease-out;
+}
+
+.timeline-content img {
+  width: 150px;
+  margin-bottom: 10px;
+}
+
+.timeline-block.visible .timeline-content {
+  opacity: 1;
+  transform: translateY(0);
+}
+.timeline-circle {
+  transform: scale(1.5);
+  background-color: #AAD0D1;
+}
+
+/* Responsive - verticale sotto i 768px */
+@media screen and (max-width: 768px) {
+  .timeline {
+    flex-direction: column;
+    gap: 80px;
+  }
+
+  .timeline-line {
+    top: 0;
+    left: 20px;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(to bottom, #0D4D5E, #AAD0D1);
+  }
+
+  .timeline-circle {
+    margin-left: 0;
+    left: 12px;
+    top: 0;
+  }
+
+  .timeline-content {
+    margin-top: 30px;
+    text-align: left;
+  }
+}
+
+
+
+/* === STILE GENERALE PER LA SEZIONE CORPORATE (DESKTOP) === */
+@media screen and (min-width: 768px) {
+  #corporate {
+    padding: 50px 90px;
+  }
+
+  .corporate-layout {
+    display: flex;
+    align-items: column;
+    gap: 40px;
+    margin: 60px 0;
+    flex-wrap: wrap;
+  }
+
+  .corporate-left {
+    flex: 0 0 250px;
+    padding-right: 20px;
+  }
+
+  .corporate-right {
+    flex: 1;
+  }
+
+  .section-title {
+    font-size: 100px;
+    text-align: left;
+    padding: 5px;
+    margin: 6px;
+  }
+
+  .corporate-type h2 {
+    font-size: 60px;
+    color: var(--primary-color);
+    font-weight: 500;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 30px;
+  }
+
+  .corporate-type p {
+    font-size: 20px;
+    color: var(--primary-color);
+    font-weight: 300;
+    text-align: left;
+  }
+}
+
+  .corporate-type h4 {
+    font-size: 35px;
+    color: var(--primary-color);
+    font-weight: 400;
+    text-align: left;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+@media screen and (max-width: 768px) {
+  #corporate {
+    padding: 30px 20px;
+  }
+
+  .corporate-layout {
+  display:flex;
+    flex-direction: column;
+	gap:30px;
+  }
+
+  .corporate-left,
+  .corporate-right {
+    flex: 1 1 100%;
+  }
+
+  .corporate-left {
+    margin-bottom: 30px;
+  }
+}
+
+.section-subtitle {
+  font-size: 40px;
+  color: var(--primary-color);
+  font-weight: 800;
+  text-align: center;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* --- TYPE SECTION --- */
+.font-section {
+  display: flex;
+  flex-direction:column;
+  gap: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  opacity: 0;
+  transform: translateX(200px);
+
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  will-change: transform, opacity;
+}
+
+/* Quando entra in viewport */
+.font-section.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Colonna singola */
+.font-column {
+  flex: 1;
+  min-width: 220px;
+  padding: 20px;
+  box-sizing: border-box;
+  background: #f2ffff;
+  border-radius: 20px;
+  text-align: left;
+  margin-left: 60px
+  opacity: 0;
+  transform: scale(0.95);
+  transition: transform 0.4s ease, opacity 0.6s ease, box-shadow 0.4s ease;
+  color: var(--primary-color);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* Entrata con delay a cascata */
+.font-section.visible .font-column {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.font-section.visible .font-column:nth-child(1) {
+  transition-delay: 0.1s;
+}
+.font-section.visible .font-column:nth-child(2) {
+  transition-delay: 0.2s;
+}
+.font-section.visible .font-column:nth-child(3) {
+  transition-delay: 0.3s;
+}
+.font-section.visible .font-column:nth-child(4) {
+  transition-delay: 0.4s;
+}
+/* Aggiungi più delay se hai altre colonne */
+
+/* HOVER ANIMATO */
+.font-column:hover {
+  transform: scale(1.15);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Titolo del font */
+.font-column h3 {
+  font-size: 25px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: var(--primary-color);
+}
+
+/* Descrizione */
+.font-column p {
+  font-size: 20px;
+  margin: 5px 0;
+  text-align: left;
+}
+
+/* Varianti di font */
+.font-be-vietnam-black {
+  font-family: 'Be Vietnam Pro', sans-serif;
+  font-weight: 900;
+}
+
+.font-be-vietnam-light {
+  font-family: 'Be Vietnam Pro', sans-serif;
+  font-weight: 300;
+}
+
+.font-roboto-light {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+}
+
+.font-roboto-condensed {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-stretch: condensed;
+}
+/* Simulazione di Futura Std Bold → Nunito 900 */
+.font-be-vietnam-black {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 900;
+}
+
+/* Simulazione di Futura Std Light → Nunito 300 */
+.font-be-vietnam-light {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 300;
+}
+
+/* Simulazione di Univers Light → Work Sans 300 */
+.font-roboto-light {
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 300;
+}
+
+/* Simulazione di Univers Condensed → Work Sans 400 (non ha condensato, ma è simile) */
+.font-roboto-condensed {
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 400;
+}
+
+
+/* PALETTE COLORI */
+.color-palette {
+  display: flex;
+  align-items: center;
+  justify-content:center;
+  gap: 20px;
+  max-width:100%;
+
+}
+@media screen and (max-width: 768px) {
+.color-palette {
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+}
+
+.color-box {
+  width: 200px;
+  height: 200px;
+  perspective: 1000px;
+  border-radius: 50%;
+  position: relative;
+  cursor: pointer;
+  opacity: 0;
+  transform: translateX(100%) rotate(360deg);
+  transition: all 1s ease-out;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+}
+
+
+
+.color-inner {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  position: relative;
+  border-radius: 100%;
+  
+}
+
+.color-box:hover .color-inner {
+  transform: rotateX(180deg);
+}
+
+.color-face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+  color: white;
+  line-height: 1.4;
+}
+
+/* Front side (nome del colore) */
+.front {
+  z-index: 2;
+}
+
+/* Back side (codici colore) */
+.back {
+  transform: rotateX(180deg);
+  font-size: 16px;
+}
+@keyframes rollInFromRight {
+  from {
+    transform: translateX(100%) rotate(360deg);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0) rotate(0deg);
+    opacity: 1;
+  }
+}
+.color-box.roll-in {
+  animation: rollInFromRight 0.8s ease-out forwards;
+}
+
+
+/* --- COLOR WHHEL A SCOMPARSA --- */
+
+.color-wheel-toggle-wrapper {
+  overflow: hidden;
+  transition: max-height 0.6s ease, opacity 0.6s ease;
+}
+
+.collapsible {
+  max-height: 0;
+  opacity: 0;
+  transition: max-height 0.6s ease, opacity 0.6s ease;
+}
+
+.collapsible.active {
+  max-height: 400px;
+  opacity: 1;
+}
+
+/* Pulsante */
+.toggle-btn {
+  color: var(--primary-color);
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 25px;
+  margin-bottom: 10px;
+  margin-top:40px;
+  gap: 10px;
+}
+
+.toggle-btn:hover {
+  color: var(--third-color);
+}
+
+/* Freccia */
+.toggle-btn .arrow {
+  display: inline-block;
+  transition: transform 0.4s ease;
+}
+
+.toggle-btn.open .arrow {
+  transform: rotate(90deg);
+}
+@media screen and (max-width: 768px) {
+.toggle-btn  {
+display:none;
+  flex-direction: column;
+  align-items: center;
+  font-size: 15px;
+    margin-top: 80px;
+
+}
+}
+
+
+/* CONTENITORE GENERALE */
+.corporate-color-chart {
+	padding:70px 0px;
+	width:100%;
+	max-width:1500px;
+    position: relative;
+	display:flex;
+	flex-direction:column;
+	justify-content: center;
+	
+}
+
+/* TITOLO */
+.corporate-color-chart h2 {
+    font-size: 40px;
+    color: var(--primary-color);
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* CONTENITORE RUOTA */
+.color-wheel-container {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    border-radius: 100%;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+	margin: 0 auto;
+}
+@media screen and (max-width: 768px) {
+.color-wheel-container  {
+display:none;
+}
+}
+
+/* SVG RUOTA */
+#color-wheel {
+    width: 100%;
+    height: 100%;
+    transform: rotate(-90deg); /* per partire da sopra */
+	display:flex;
+	flex-direction:column;
+}
+
+/* FORO CENTRALE DECORATIVO */
+.color-wheel-container::after {
+    content: "";
+    position: absolute;
+	display:flex;
+	flex-direction:column;
+    width: 200px;
+    height: 200px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.05);
+    z-index: 1;
+}
+
+/* NOME COLORE CENTRALE */
+.color-named {
+    position: absolute;
+    z-index: 2;
+	padding:2px;
+    max-width: 150px;
+	max-height: 190px;
+	line-height:0.8;
+    font-size: 32px;
+    font-weight: 600;
+    color: var(--primary-color);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6); /* 👈 Ombra per rilievo */
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+
+/* DESCRIZIONE SIMBOLISMO */
+.color-descriptionwheel {
+    margin-top: 10px;
+    font-size: 25px;
+    color: #333;
+	text-align:center;
+    background: rgba(255, 255, 255, 0.9);
+    border-left: 4px solid var(--primary-color);
+    max-width:200px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.color-descriptionwheel.show {
+    opacity: 1;
+}
+
+#dns-description {
+    display: none;
+    margin-top: 20px;
+	margin-left: 60px;
+    text-align: left;
+	element-align:center;
+    font-size: 25px;
+    color: #0D4D5E;
+    padding: 20px 20px 20px 20px;
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+    width: 85%;
+}
+
+@media screen and (max-width: 768px) {
+#dns-description {
+display:none;
+margin-top: 2px;;
+padding: 1px 1px 1px 1px;
+width: 100%;
+}
+}
+
+#dns-description.show {
+    display: flex;
+    flex-direction:column;
+	justify-content:left;
+    opacity: 1;
+}
+
+#dns-button {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    width:200px;
+	Height:180px;
+	padding: 25px 25px;
+    font-size: 80px;
+    font-weight: regular;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    margin: 20px auto;
+    text-align: left;
+}
+
+@media screen and (max-width: 768px) {
+  #dns-button {
+  display:none;
+	  padding: 35px 35px;
+	  margin:0px auto;
+      font-size: 15px; 
+	      border-radius: 2px;
+  }
+}
+
+
+#dns-button:hover {
+    background-color: var(--third-color);
+    color: var(--white-color);
+    filter: drop-shadow(2px 2px 6px rgba(0, 0, 0, 0.2));
+    transition: filter 0.3s ease;
+}
+
+.dns-color-box {
+    display: flex;
+	flex-direction:center;
+    align-items: left;
+    font-size: 25px;
+    gap: 2px;
+    text-align: left;
+}
+
+@media screen and (max-width: 768px) {
+    .dns-color-box {
+        font-size: 10px;
+        margin: 2px 0;
+        text-align: left;
+    }
+}
+
+.color-dot {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: inline;
+    flex-shrink: 0;
+}
+
+
+
+
+
+/* --- LOGO DESCRIPTION SECTION ----------------------------------------- */
+
+
+/* --- Immagine parallax sfondo Logo--- */
+.parallax-section {
+  position: relative;
+  height: 80vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  filter: drop-shadow(2px 2px 6px rgba(0, 0, 0, 0.2));
+    transition: filter 0.3s ease;
+    backdrop-filter: blur(40px);
+
+}
+
+.parallax-bg {
+  background-image: url("https://www.dolomitinordicski.com/media/b2befeed-3abd-4706-8a49-e16220472991/chatgpt-image-24-apr-2025-16-42-17.png");
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  display: inline-block;
+  position: absolute;
+  width: 60%;
+  height: 100%;
+  top: -10%;
+  left: 0;
+  z-index: 0;
+  transition: transform 0.4s ease-out;
+    opacity: 0.6; /* Trasparenza effettiva */
+  will-change: transform;
+    clip-path: polygon(0 0, 100% 0, 55% 100%, 0% 100%);
+}
+@media screen and (max-width: 768px) {
+    .parallax-section {
+  height: 20vh;
+    }
+}
+
+.parallax-content {
+  position: relative;
+  z-index: 1;
+  color: white;
+  padding: 2rem;
+}
+
+.parallax-content h2 {
+  font-size: clamp(2rem, 6vw, 4rem);
+  margin-bottom: 1rem;
+  font-weight: bold;
+  text-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.parallax-content p {
+  font-size: clamp(1rem, 3vw, 1.5rem);
+  text-shadow: 0 0 8px rgba(0,0,0,0.4);
+}
+
+/* Immagine anteprima logo */
+.logo-preview img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 0.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Layout anteprime */
+.logos-preview {
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.logo-preview {
+  text-align: center;
+  max-width: 300px;
+  
+}
+
+.logo-preview:hover img {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.logo-preview p {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+}
+
+
+.section-separator {
+  background-color: none;
+  padding: 40px 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.separator-line {
+  width: 100%;
+  height: 4px;
+  background-color: var(--primary-color, #005baa);
+  margin: 10px 0;
+  border-radius: 2px;
+}
+
+.separator-text {
+  font-size: 1.2rem;
+  font-weight: 600;
+  font-size:50px;
+  color: var(--third-color, #444);
+  margin: 0;
+}
+
+.timeline-wrapper {
+  position: relative;
+  width: 100%;
+  padding: 20px;
+  overflow-x: auto;
+  white-space: nowrap;
+  scroll-behavior: smooth;
+  z-index: 0;
+  min-width: 600px;
+  will-change: transform, opacity;
+  opacity: 0;
+  transition: transform 0.8s ease-out, opacity 1s ease-out;
+  background-color: transparent; /* fallback */
+}
+
+.timeline-wrapper.visible {
+  transform: perspective(800px) rotateY(-15deg) translateX(0);
+  opacity: 1;
+  background: linear-gradient(to bottom, rgba(13, 77, 94, 0.8), rgba(170, 208, 209, 0.6));
+}
+
+/* Sfondo tramite pseudo-elemento */
+.timeline-wrapper::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("https://www.altoadige.it/image/contentid/policy:1.75915:1501860823/image/image.jpg?f=3x2&w=627&$p$f$w=caf6c4a");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  transform: scaleX(-1);
+  opacity: 0.1;
+  filter: grayscale(100%);
+  z-index: -1;
+  pointer-events: none;
+}
+
+
+/* Tutto il contenuto sta sopra l'immagine */
+.timeline-wrapper > * {
+  position: relative;
+  z-index: 1;
+}
+
+.timeline-track::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  height: 100%;
+  width: 0px;
+  background: linear-gradient(to bottom, rgba(13, 77, 94, 0.8), rgba(170, 208, 209, 0.6));
+}
+
+/* Timeline anni */
+.timeline-track {
+  display: inline-flex;
+  padding-top:40px;
+  justify-content: space-between;
+  align-items: center;
+  min-width: 800px;
+  margin: 0 auto;
+  font-size: 20px;
+  color: var(--white-color);
+}
+.timeline-track::before {
+  content: "";
+  position: absolute;
+  top: 100px; /* stesso livello dei puntini */
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(to right, #ffffff,#0D4D5E);
+  z-index: 0;
+}
+
+.timeline-year {
+  flex: 1;
+  text-align: center;
+  position: relative;
+  transition: transform 0.3s ease, color 0.8s ease;
+}
+.timeline-year::after {
+  content: '';
+  position: absolute;
+  top: 35px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 50%;
+    background-color: var(--third-color);
+  border-radius: 10%;
+}
+.timeline-year-initial::after {
+  content: '';
+  position: absolute;
+  top: 35px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 6px;
+  height: 20px;
+  background-color: var(--third-color);
+  border-radius: 10%;
+}
+.timeline-year-final::after {
+  content: '';
+  position: absolute;
+  top: 35px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 6px;
+  height: 20px;
+  background-color: var(--third-color);
+  border-radius: 10%;
+}
+
+/* Highlight dinamico (durante il passaggio del logo) */
+.timeline-year.active {
+  transform: scale(1.4);
+  color: var(--highlight-color, var(--white-color));
+}
+
+.timeline-year-initial {
+  transform: scale(1.5);
+  color: var(--highlight-color, var(--white-color));
+}
+
+/* Highlight permanente (solo per il 2020 e 2025) */
+.timeline-year-final {
+  transform: scale(1.5);
+  color: var(--highlight-color, var(--white-color));
+}
+
+/* Logo slider */
+.logo-slider {
+  position: relative;
+  height: 100px;
+  margin: 60px auto 40px;
+  width: 100%;
+  max-width: 1300px;
+  overflow: hidden;
+}
+
+.logo-slider img {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  transition: transform 4s ease-out, opacity 2,5s ease-in-out;
+  will-change: transform, opacity;
+}
+
+#moving-logo {
+  left: 0;
+  z-index: 2;
+  transition: all 6s ease;
+}
+
+#new-logo {
+  height:120px;
+  right: 0;
+  left: auto;
+  top: 0;
+  z-index: 1;
+  opacity: 0;
+  pointer-events: none;
+  padding: 0 20px;
+  position: absolute;
+  transform: scale(0.95);
+  filter: blur(4px);
+  transition:
+  opacity 8s ease-in-out,
+  transform 5s ease-in-out,
+  filter 5s ease-in-out;
+}
+
+#new-logo.active {
+  opacity: 1;
+  transform: scale(1);
+  filter: blur(0);
+  pointer-events: auto;
+}
+
+#moving-logo {
+  transition:
+    opacity 6s ease-in-out,
+    transform 6s ease-in-out,
+    left 6s ease-in-out;
+}
+
+#moving-logo.active {
+  opacity: 1;
+  transform: translateX(-200px) scale(0.9);
+  filter: blur(0);
+  pointer-events: auto;
+}
+
+#fixed-logo {
+  left: 0;
+  right: auto;
+  top: 0;
+  z-index: 3;
+  opacity: 0;
+  pointer-events: none;
+  padding: 0 20px;
+  position: absolute;
+  transform: scale(0.95);
+  transition:
+  opacity 12s ease-in-out,
+  transform 12s ease-in-out,
+  filter 12s ease-in-out;
+}
+
+#fixed-logo.active {
+  opacity: 1;
+  transform: scale(1);
+  pointer-events: auto;
+}
+@keyframes pulse-shadow {
+  0%, 100% {
+    filter: drop-shadow(0 0 10px rgba(13, 77, 94, 0.4));
+  }
+  50% {
+    filter: drop-shadow(0 0 20px rgba(13, 77, 94, 0.8));
+  }
+}
+#moving-logo.active,
+#new-logo.active,
+#fixed-logo.active {
+  animation: pulse-shadow 4s ease-in-out infinite;
+}
+
+/* Wrapper generale per sezione full height */
+.logo-timeline {
+  height: 50vh;
+  position: relative;
+}
+
+@media screen and (max-width: 768px) {
+  .timeline-wrapper,
+  .timeline-track,
+  .logo-slider,
+  .logo-timeline,
+  .parallax-bg {
+    display: none !important;
+	
+  }
+}
+.restart-button {
+  position: absolute;
+  right: 30px;
+  bottom: 20px;
+  width: 30px;
+  height: 30px;
+  border: none;
+  border-radius: 50%;
+  background: var(--primary-color);
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  z-index: 10;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.restart-button:hover {
+  background: var(--third-color);
+  transform: scale(1.1);
+}
+/* Mostra solo su mobile */
+@media screen and (max-width: 768px) {
+  .mobile-timeline {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 40px;
+    padding: 20px 20px;
+    background: linear-gradient(to bottom, #ffffff,#AAD0D1,#ffffff); #0D4D5E
+    position: relative;
+  }
+
+  .mobile-entry {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+  }
+
+  .mobile-year {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    font-size: 20px;
+    font-weight: bold;
+    color: #0D4D5E;
+    flex-shrink: 0;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+  }
+
+  .mobile-logo {
+    width: 60%;
+    max-width: 280px;
+    opacity: 0;
+    transform: translateY(5px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+    filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.3));
+    display: block;
+	    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .fade-in {
+    animation: fadeInUp 1s forwards;
+  }
+
+  .fade-in.delayed {
+    animation-delay: 1s;
+  }
+
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .mobile-arrow {
+    animation: pulse 2s infinite;
+    font-size: 32px;
+    color: #0D4D5E;
+    align-self: left;
+    filter: drop-shadow(1px 2px 3px rgba(0, 0, 0, 0.4));
+  }
+
+  @keyframes pulse {
+    0% { transform: translateY(0); opacity: 1; }
+    50% { transform: translateY(8px); opacity: 0.6; }
+    100% { transform: translateY(0); opacity: 1; }
+  }
+}
+
+/* Nasconde la timeline desktop */
+@media screen and (min-width: 769px) {
+  .mobile-timeline {
+    display: none;
+  }
+}
+
+
+/* LOGO DECODING  */
+
+
+.logo-decoding {
+  position: relative;
+  /*background-image: url("https://www.dolomitinordicski.com/media/24984f15-8ed4-425c-94af-48b36e2124bb/048-idm-dns-kottersteger-201213-dji-0215.jpg");*/
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 150%;
+    filter: grayscale(80%);
+  background-position: center;
+	filter: drop-shadow(2px 2px 6px rgba(0, 0, 0, 0.2));
+    transition: filter 0.3s ease;
+    backdrop-filter: blur(4px);
+  z-index: 1;
+  padding-bottom:20px;
+}
+
+.logo-decoding::before {
+  content: "";
+  background-image: url("https://www.dolomitinordicski.com/media/0fba5714-7f8e-4551-9ddc-aca93ba1453d/011-dns-kasern-kottersteger-kot-4988.jpg");
+  position: absolute;
+  background-size: cover;
+  background-position: center;
+  filter: grayscale(80%);
+  z-index: 0; /* Sta sotto */
+  opacity: 0.7;
+  pointer-events: none;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255,255,255,0.15);
+  z-index: 2;
+}
+
+.logo-decoding > * {
+  position: relative;
+  z-index: 3;
+}
+
+
+/* Toggle collapsible */
+.collapsible {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+}
+
+.collapsible.active {
+  max-height: 1000px;
+  max-width: 100%;
+}
+
+/* Lingua toggle */
+.logo-elements {
+  display: flex;
+  justify-content: center;
+  padding: 30px;
+  margin-bottom: 30px;
+}
+
+.lang-switch {
+  display: flex;
+  gap: 10px;
+}
+
+.lang-btn {
+  padding: 8px 25px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+.lang-btn.active {
+  background-color: var(--primary-color);
+}
+
+/* Elementi descrittivi */
+.logo-element {
+  margin-bottom: 20px;
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.logo-element.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.element-grid {
+  display: grid;
+  grid-template-columns: 3fr 4fr 1fr;
+  gap: 10px;
+  align-items: center;
+}
+
+.element-image img {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+.logo-element-name {
+  font-weight: bold;
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 40px;
+  color: var(--third-color);
+}
+
+.logo-description-container ul {
+  max-width: 100%;
+  max-height: 100%;
+  justify:center;
+
+}
+
+.logo-description-container mark {
+  background: var(--highlight-color) !important;
+  color: var(--primary-color) !important;
+  padding: 0 4px;
+  border-radius: 3px;
+}
+
+@media screen and (max-width: 768px) {
+  .logo-layouts {
+    padding: 5px;
+  }
+  .logo-decoding {
+  background-size: 400%;
+
+}
+
+  .logos-preview {
+    gap: 2rem;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .element-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .element-image img {
+    max-width: 30%;
+	
+    margin: 0 auto;
+  }
+
+  .logo-element {
+    margin-bottom: 10px;
+    padding: 0 10px;
+  }
+
+  .logo-element-name {
+    font-size: 20px;
+    margin-top: 0.5rem;
+  }
+
+  .logo-description-container {
+    max-height: 300px; /* Limita l'altezza in mobile */
+    overflow-y: auto;  /* Aggiunge barra scroll verticale */
+    padding-right: 10px;
+  }
+
+  .logo-description-container ul {
+    max-width: 100%;
+    font-size: 5px;
+    line-height: 1.5;
+    padding: 0 10px;
+  }
+  
+.logo-element img {
+    max-width: 180px;
+    max-height: 180px;
+}
+  .logo-description-container mark {
+    padding: 0 2px;
+  }
+
+  /* Scrollbar per WebKit (Chrome, Edge, Safari) */
+  .logo-description-container::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  .logo-description-container::-webkit-scrollbar-thumb {
+    background-color: var(--primary-color);
+    border-radius: 3px;
+  }
+
+  .logo-description-container::-webkit-scrollbar-track {
+    background-color: #f0f0f0;
+  }
+
+  /* Scrollbar per Firefox */
+  .logo-description-container {
+    scrollbar-width: thin;
+    scrollbar-color: var(--primary-color) #f0f0f0;
+  }
+}
+
+.logo-section img:hover {
+    transform: scale(1.6);
+    box-shadow: 0 0px 0px rgba(0, 0, 0, 0.2);
+}
+
+.logo-section p {
+max-width: 500px;
+height: auto;
+text-align: justify;
+}
+
+.logo-description-container {
+    padding:20px;
+	display: flex;
+    justify-content: left;
+    align-items: flex-start;
+    gap: 20px;
+    max-width: 800px;
+    margin: 20px auto;
+    flex-wrap: wrap;
+    max-height: 0; /* Nasconde il contenitore inizialmente */
+    opacity: 0; /* Imposta l'opacità a 0 *
+    transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    will-change: max-height, opacity; /* Ottimizza la transizione */
+	  filter: drop-shadow(2px 2px 6px rgba(0, 0, 0, 0.4));
+    transition: filter 0.1s ease;
+    backdrop-filter: blur(8px);
+}
+
+.logo-element:hover + .logo-description-container {
+    max-height: 1000px; /* Espande il contenitore */
+    opacity: 1; /* Rende il contenuto visibile */
+}
+
+.logo-element img {
+    max-width: 200px;
+    max-height: 200px;
+    display: block;
+    margin: 0 auto;
+    filter: blur(3px);
+    transition: filter 0.3s ease-in-out;
+}
+
+.logo-element img:hover {
+    filter: blur(0);
+}
+
+.logo-element-name{	
+	color:var(--third-color);
+	font-size:25px;
+	font-weight: bold;
+	padding: 20px;
+}
+
+.logo-description {
+    flex: 1; 
+    min-width: 100%; 
+    text-align: left; 
+}
+
+.logo-description h2 {
+    color: var(--primary-color);
+    font-size: 35px;
+	font-weight:bold;
+}
+
+.logo-description ul {
+    list-style: none;
+    padding-left: 0;
+    text-align: justify-content;
+	padding: 10px;
+}
+
+.logo-description ul li {
+    margin-bottom: 5px;
+    font-size: 16px;
+}
+
+.logo-preview {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.pdf-preview {
+  text-align: center;
+}
+
+.animated-heading {
+  display: flex;
+  height: 7rem; /* evita resize verticali */
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: clamp(1.5rem, 2.2vw, 3rem);
+  font-weight: normal;
+  letter-spacing: clamp(0.2em, 2vw, 0.4em); /* spazio tra lettere */
+  transition: letter-spacing 2s ease, opacity 1s ease;
+  opacity: 0.2;
+  white-space: pre-line;
+  margin-bottom:rem;
+  text-transform: none;
+  padding: 4rem 4rem;
+}
+
+.animated-heading span {
+  display: inline-block;
+  transition: transform 1s ease;
+  white-space: pre-line;
+}
+
+.animated-heading.in-view {
+  letter-spacing: 0.05em;
+  word-spacing: 0.3em; /* mantiene lo spazio tra parole anche durante l'effetto */
+  opacity: 1;
+}
+.animated-heading span.space {
+  display: inline-block;
+  width: 0.5em; /* o più se vuoi più distanza tra parole */
+}
+
+.animated-heading .word {
+  white-space: nowrap;
+  display: inline-block;
+  margin-right: 0.4em; /* spazio tra parole */
+}
+@media screen and (max-width: 768px) {
+  .animated-heading {
+    font-size: 1.4rem;
+    letter-spacing: 0.15em;
+    word-spacing: 0.2em;
+    padding: 2rem 1rem;
+    height: auto;
+    text-align: center;
+  }
+
+  .animated-heading .word {
+    margin-right: 0.2em;
+  }
+}
+
+.animated-heading-grid {
+  display: flex;
+  height: 4rem; /* evita resize verticali */
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 20px;
+  font-weight: normal;
+  color:var(--primary-color);
+  letter-spacing: clamp(0.2em, 2vw, 0.4em); /* spazio tra lettere */
+  transition: letter-spacing 2s ease, opacity 1s ease;
+  opacity: 0.2;
+  white-space: pre-line;
+  margin-bottom: 1rem;
+  text-transform: none;
+  padding: 1rem 1rem;
+}
+
+.animated-heading-grid span {
+  display: inline-block;
+  transition: transform 1s ease;
+  white-space: pre-line;
+}
+
+.animated-heading-grid.in-view {
+  letter-spacing: 0.05em;
+  word-spacing: 0.3em;
+  opacity: 1;
+}
+
+.animated-heading-grid span.space {
+  display: inline-block;
+  width: 0.5em;
+}
+
+.animated-heading-grid .word {
+  white-space: nowrap;
+  display: inline-block;
+  margin-right: 0.4em;
+}
+
+@media screen and (max-width: 768px) {
+  .animated-heading-grid {
+    font-size: 2.5 rem;
+    letter-spacing: 0.15em;
+    word-spacing: 0.2em;
+    padding: 1rem 1rem;
+    height: auto;
+    text-align: center;
+  }
+
+  .animated-heading-grid .word {
+    margin-right: 0.2em;
+  }
+}
+
+.logo-manual-section {
+  max-width: 1200px;
+  margin: 4rem auto;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(10px);
+  border-radius: 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.manual-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 1rem;
+  align-items: start;
+}
+
+.manual-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+
+.section-subtext {
+  font-size: 1rem;
+  color:var(--primary-color);
+  margin-bottom: 2rem;
+  opacity: 0.7;
+}
+
+.toggle-btn {
+  padding: 0.7rem 1.5rem;
+  border: none;
+  background-color: var(--primary-color);
+  color: white;
+  font-weight: bold;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+}
+
+.toggle-btn:hover {
+  background-color: var(--primary-color-dark);
+
+}
+
+.pdf-preview {
+  text-align: center;
+}
+
+.pdf-frame-container {
+  overflow: hidden;
+  border-radius: 1rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  margin-bottom: 1rem;
+}
+
+.btn-download {
+  color: var(--primary-color);
+  border: none;
+  padding: 0.8rem 2rem;
+  font-size: 1.5rem;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-download:hover {
+  background-color: var(--secondary-color-dark);
+  font-weight:bold;
+  color:var(-0primary-color);
+      filter: drop-shadow(2px 2px 6px rgba(0, 0, 0, 0.2));
+    transition: filter 0.3s ease;
+    backdrop-filter: blur(4px);
+}
+
+/* LOGO VARIANTS - puoi adattare i padding/gap se vuoi più aria */
+.logo-variants {
+  margin-top: 3rem;
+}
+
+.logo-preview {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.logo-preview img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+}
+
+.logo-preview h2 {
+  margin-top: 0.5rem;
+  font-size: 1.1rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .manual-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .manual-info, .pdf-preview {
+    text-align: center;
+  }
+
+  .pdf-frame-container iframe {
+    height: 300px;
+	display:none;
+  }
+}
+@media (max-width: 768px) {
+  .logo-variants {
+    display: block; /* o flex se necessario */
+    margin-top: 2rem;
+    text-align: center;
+  }
+
+  .logo-variants button,
+  .logo-variants a {
+    display: inline-block;
+    margin-top: 1rem;
+  }
+}
+@media (max-width: 768px) {
+  .toggle-btn {
+    display: block !important;
+    margin: 1rem auto;
+    text-align: center;
+  }
+}
+
+.digital-section {
+  padding: 4rem 2rem;
+  overflow: hidden;
+  animation: floatIn 2s ease-in-out
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+.digital-grid {
+  display: grid;
+  grid-template-columns: 3fr 4fr;
+  gap: 3rem;
+}
+
+.btn-dns {
+  display: inline-block;
+  background-color: #0D4D5E;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  text-decoration: none;
+  margin-top: 1rem;
+  font-weight: bold;
+}
+
+.ecosystem-image img {
+  margin-top:120px;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  filter: drop-shadow(2px 2px 6px rgba(0, 0, 0, 0.2));
+    transition: filter 0.3s ease;
+    backdrop-filter: blur(4px);
+ transform: perspective(800px) rotateY(-15deg) translateX(-40px);
+  opacity: 1;
+  transition: transform 0.8s ease-out, opacity 0.8s ease-out;
+}
+
+
+.dns-feature-list {
+  margin-top: 2em;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.feature-item {
+  display: flex;
+  align-items: flex-start;
+    text-align:left !important;
+  background: #e9f6f7;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(13, 77, 94, 0.1);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease;
+      clip-path: polygon(0 0, 100% 0, 75% 100%, 0% 100%);
+}
+
+.feature-item.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.feature-item:hover {
+  box-shadow: 0 4px 12px rgba(13, 77, 94, 0.25);
+  background: #d0edf0;
+}
+
+.feature-item .icon {
+  width: 2rem;
+  margin-right: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.feature-item strong {
+  color: var(--primary-color);
+  font-size: 1.1rem;
+}
+
+.feature-item small {
+  color: var(--primary-color);
+  font-size: 0.95rem;
+}
+
+@media screen and (max-width: 768px) {
+  .digital-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+	font-size: 0.65rem;
+  }
+
+  .ecosystem-image {
+    order: 1; /* opzionale: porta l'immagine sopra il testo */
+    text-align: center;
+  }
+
+  .ecosystem-image img {
+    transform: none; /* disattiva la rotazione e traslazione 3D su mobile */
+    margin-top: 0;
+    max-width: 100%;
+  }
+  .feature-item {
+        clip-path: polygon(0 0, 100% 0, 85% 100%, 0% 100%);
+}
+}
+
+
+
+
+
+.wordcloud-section {
+  padding: 1rem 1rem;
+  text-align: center;
+  position: relative;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100%;
+  background-position: center;
+    filter: drop-shadow(2px 2px 6px rgba(0, 0, 0, 0.2));
+    transition: filter 0.3s ease;
+    backdrop-filter: blur(4px);
+	  z-index: 1; /* Assicura che sia sopra lo sfondo */
+}
+
+.wordcloud-section > * {
+  position: relative;
+  z-index: 2; /* Per essere visibili sopra ::before */
+}
+
+.wordcloud-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("https://www.dolomitinordicski.com/media/c63f89ef-5fa4-4a1e-a660-042f2a863e8f/036-dns-seiseralm-kottersteger-kot-4059.jpg");
+  background-size: cover;
+  background-position: center;
+  filter: grayscale(40%);
+  z-index: 0; /* Sta sotto */
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+
+.usp-filters {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1.5rem 0;
+  flex-wrap: wrap;
+}
+.usp-filters button {
+  background: var(--third-color);
+  color: white;
+  border: none;
+  padding: 0.5rem 1.2rem;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.usp-filters button.active,
+.usp-filters button:hover {
+  background: var(--primary-color);
+}
+
+
+.usp-stats {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+.stat {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+.stat strong {
+  font-size: 4.5rem;
+  display: block;
+}
+.stat:hover {
+  transform: scale(1.1);
+}
+
+#wordcloud-container {
+  width: 100%;
+  max-width: 800px;
+  height: 500px;
+  margin: 40px auto;
+  padding: 1.5rem;
+  position: relative;
+  overflow: hidden;
+  animation: floatIn 2s ease-in-out
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+
+}
+
+  background: radial-gradient(circle at center, var(--primary-color), var(--secondary-color));
+    border-radius: 30px;
+  
+#wordcloud-container::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  opacity: 0.02;
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* Canvas: in primo piano sopra la texture */
+#wordcloud-container canvas {
+  width: 100% !important;
+  height: 100% !important;
+
+  display: block;
+  position: relative;
+  z-index: 3;
+}
+
+/* Animazione */
+@keyframes floatIn {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  #wordcloud-container {
+    height: 300px;
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  #wordcloud-container {
+    height: 250px;
+    padding: 0.5rem;
+  }
+}
+
+
+
+.value-palette {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.value-box {
+    width: 90px;
+    height: 90px;
+    background: var(--accent-color, #3a3a3a);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    font-weight: 700;
+    transform: rotate(45deg);
+    position: relative;
+    border-radius: 12px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    cursor: pointer;
+}
+
+.value-box strong {
+    transform: rotate(-45deg);
+    display: block;
+    font-size: clamp(0.8rem, 1.5vw, 1rem);
+}
+
+.value-box:hover {
+    transform: scale(1.2) rotate(45deg);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
+}
+
+.value-description {
+    position: absolute;
+    top: 110%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.9);
+    color: white;
+    padding: 10px 14px;
+    border-radius: 10px;
+    font-size: 0.95rem;
+    text-align: center;
+    width: max-content;
+    min-width: 180px;
+    max-width: 300px;
+    display: none;
+    z-index: 999;
+    white-space: normal;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.value-description.show {
+    display: block;
+    opacity: 1;
+    transform: translateX(-50%) translateY(8px);
+}
+
+
+
+
+/* Tooltip sopra su schermi piccoli */
+@media (max-width: 768px) {
+    .value-description {
+        bottom: 110%;
+        top: auto;
+        transform: translateX(-50%);
+        font-size: 0.8rem;
+        min-width: 120px;
+        max-width: 90%;
+    }
+}
+
+
+.dns-statement {
+    font-size: 34px;
+    font-weight: bold;
+    color: var(--primary-color);
+    font-style: italic;
+    text-align: center;
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    border-left: 5px solid var(--third-color);
+    border-right: 5px solid var(--third-color);
+    border-radius: 10px;
+    position: relative;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    z-index: 100; /* 🔹 Un livello sotto il tooltip */
+}
+
+/* Effetto di comparsa */
+.dns-statement.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Linea decorativa sopra e sotto */
+.dns-statement::before,
+.dns-statement::after {
+    content: "❝";
+    font-size: 40px;
+    color: var(--third-color);
+    position: absolute;
+    z-index: 200; /* 🔹 Anche le virgolette devono essere sopra */
+}
+
+.dns-statement::before {
+    left: 10px;
+    top: -10px;
+}
+
+.dns-statement::after {
+    right: 10px;
+    bottom: -10px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .dns-statement {
+        font-size: 20px;
+        max-width: 90%;
+        padding: 15px;
+    }
+}	
+.sticky-buttons-container {
+    position: fixed;
+    right: 0;
+    top: 30%; /* 🔹 Posizionamento centrale verticale */
+    transform: translateY(-50%); /* 🔹 Centrare rispetto alla pagina */
+    display: flex;
+	     align-items: flex-end;
+    flex-direction: column; /* 🔹 Mantiene i bottoni in verticale */
+    gap: 10px; /* 🔹 Riduce la distanza tra i bottoni */
+    z-index: 1000;    
+	opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+ }
+  .sticky-buttons-container.hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+.sticky-button1 {
+    background-color: var(--third-color);
+	opacity:0.9;
+    color: white;
+    width: 40px; /* 🔹 Larghezza più visibile */
+    height: 60px; /* 🔹 Altezza adeguata */
+    border-radius: 10px 0 0 10px;
+    cursor: pointer;
+    text-align: center;
+    font-weight: bold;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition: width 0.3s ease, background-color 0.3s ease;
+}
+
+.sticky-button2 {
+    background-color: var(--third-color);
+	opacity:0.9;
+    color: white;
+    width: 40px; /* 🔹 Larghezza più visibile */
+    height: 60px; /* 🔹 Altezza adeguata */
+    border-radius: 10px 0 0 10px;
+    cursor: pointer;
+    text-align: center;
+    font-weight: bold;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition: width 0.3s ease, background-color 0.3s ease;
+}
+.sticky-button3 {
+    background-color: var(--third-color);
+	opacity:0.9;
+    color: white;
+    width: 40px; /* 🔹 Larghezza più visibile */
+    height: 60px; /* 🔹 Altezza adeguata */
+    border-radius: 10px 0 0 10px;
+    cursor: pointer;
+    text-align: center;
+    font-weight: bold;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition: width 0.3s ease, background-color 0.3s ease;
+}
+
+
+/* Effetto hover */
+.sticky-button1:hover {
+    width: 150px; /* 🔹 Espansione meno drastica */
+    background-color: var(--primary-color);
+					    filter: drop-shadow(2px 2px 6px rgba(0, 0, 0, 0.2));
+    transition: filter 0.3s ease;
+}
+.sticky-button2:hover {
+    width: 150px; /* 🔹 Espansione meno drastica */
+    background-color: var(--primary-color);
+					    filter: drop-shadow(2px 2px 6px rgba(0, 0, 0, 0.2));
+    transition: filter 0.3s ease;
+}
+
+.sticky-button3:hover {
+    width: 150px; /* 🔹 Espansione meno drastica */
+    background-color: var(--primary-color);
+					    filter: drop-shadow(2px 2px 6px rgba(0, 0, 0, 0.2));
+    transition: filter 0.3s ease;
+}
+
+/* Testo verticale per i bottoni */
+.vertical-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transform: rotate(90deg);
+    transform-origin: center;
+    white-space: nowrap;
+}
+
+/* Testo completo nascosto inizialmente */
+.full-text {
+    display: none;
+    white-space: nowrap;
+    padding: 0 10px;
+    text-align: center;
+}
+
+/* Mostra il testo completo al passaggio del mouse */
+.sticky-button1:hover .full-text {
+    display: block;
+}
+
+/* Nasconde il testo verticale al passaggio del mouse */
+.sticky-button1:hover .vertical-text {
+    display: none;
+}
+
+/* Mostra il testo completo al passaggio del mouse */
+.sticky-button2:hover .full-text {
+    display: block;
+}
+
+/* Nasconde il testo verticale al passaggio del mouse */
+.sticky-button2:hover .vertical-text {
+    display: none;
+}
+
+/* Mostra il testo completo al passaggio del mouse */
+.sticky-button3:hover .full-text {
+    display: block;
+}
+
+/* Nasconde il testo verticale al passaggio del mouse */
+.sticky-button3:hover .vertical-text {
+    display: none;
+}
+
+/* ---------- CORPORATE IDENTITY SLIDER ---------- */
+#corporate-identity {
+    text-align: center;
+    margin-top: 50px;
+    padding: 30px;
+}
+
+/* Contenitore dello slider */
+.image-slider {
+    width: 800px;
+    height: 250px; /* Altezza fissa per mantenere uniformità */
+    overflow: hidden;
+    position: relative;
+    margin: 0 auto;
+    display: flex;
+    align-items: center; /* Centrare le immagini verticalmente */
+}
+
+/* Track per lo scroll continuo */
+.slider-track {
+    display: flex;
+    gap: 20px;
+    animation: scroll 30s linear infinite;
+}
+
+/* Immagini in bianco e nero di default */
+.slider-img {
+    max-width: 250px; /* Mantiene la larghezza costante */
+    max-height: 100%; /* Si adatta al contenitore */
+    object-fit: contain; /* Mantiene le proporzioni senza schiacciarsi */
+    filter: grayscale(100%);
+    transition: filter 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+}
+
+/* Effetto hover */
+.slider-img:hover {
+    filter: grayscale(0%);
+    transform: scale(1.1);
+}
+
+/* Effetto dissolvenza laterale */
+.image-slider::before,
+.image-slider::after {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 100%;
+    top: 0;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.image-slider::before {
+    left: 0;
+    background: linear-gradient(to right, rgba(255, 255, 255, 1), transparent);
+}
+
+.image-slider::after {
+    right: 0;
+    background: linear-gradient(to left, rgba(255, 255, 255, 1), transparent);
+}
+
+/* Animazione dello scroll continuo */
+@keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+
+/* LIGHTBOX */
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    flex-direction: column;
+}
+
+.lightbox-img {
+    max-width: 80%;
+    max-height: 80%;
+}
+
+.close, .prev, .next {
+    position: absolute;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+    user-select: none;
+    background: none;
+    border: none;
+}
+
+.close {
+    top: 20px;
+    right: 20px;
+}
+
+.prev, .next {
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 50px;
+}
+
+.prev { left: 5%; }
+.next { right: 5%; }
+
+      .fade-in {
+            opacity: 1;
+            transform: translateY(0);
+        }	
+
+
+/* ---------- FOOTER  ---------- */
+
+
+        footer {
+            position: relative;  /* Assicura che sia sopra gli altri elementi */
+			z-index: 2000;
+			background-color: var(--third-color);
+			padding:40px 0px;
+            color: white;
+            width: 100%;
+            bottom: 0;
+            text-align: center;
+        }
+		
+		
+		
+		* {
+  outline: 1px solid red; /* debug visivo */
+}
+
+		
+		
+		
+		
+    </style>
+	
+</head>
+<body>
+<header>
+<!-- LOGO SVG CON SWOOSH + DNS PartnerHub -->
+<div class="partnerhub-logo">
+    <img src="https://www.dolomitinordicski.com/media/f0a51847-50a9-4eeb-908f-1dee1b292b3c/dolomiti-nordicski-kurve.png" alt="Nordic Swoosh" class="swoosh-icon">
+
+    <svg width="280" height="60" xmlns="http://www.w3.org/2000/svg">
+        <style>
+            .dns { font: bold 28px 'Be Vietnam Pro', sans-serif; fill: #0D4D5E; }
+            .partnerhub { font: 24px 'Be Vietnam Pro', sans-serif; fill: var(--primary-color); }
+        </style>
+        <text x="0" y="40" class="dns">DNS</text>
+        <text x="80" y="40" class="partnerhub">Partner Portal</text>
+    </svg>
+
+<button class="menu-toggle" type="button" aria-label="Menu"></button>
+
+	    <nav>
+  <h1 class="menu-title">NAVIGATION</h1>
+  <div class="menu-items">
+    <a href="#corporate">CORPORATE DESIGN</a>
+    <a href="#logo">LOGO</a>
+    <a href="#digital">DIGITAL ECOSYSTEM</a>
+    <a href="#usps">USP</a>
+    <a href="#core-values">CREDO</a>
+    <a href="#corporate-identity">IDENTITY</a>
+  </div>
+</nav>
+</header>  
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const header = document.querySelector("header");
+  const hero = document.querySelector(".hero");
+
+  const observer = new IntersectionObserver(([entry]) => {
+    if (!entry.isIntersecting) {
+      header.classList.add("show");
+    } else {
+      header.classList.remove("show");
+    }
+  }, {
+    threshold: 0.1
+  });
+
+  if (hero) observer.observe(hero);
+});
+</script>
+
+
+
+
+<div class="desktop-sticky-bar" id="stickyBar">
+</div>
+    <!-- HERO SECTION -->
+<section class="hero" id="hero">
+  <div class="hero-content">
+    <div class="header-logo-blur">
+      <img class="header-logo-img" src="https://www.dolomitinordicski.com/media/bd92869d-8dc3-4109-9ade-f89e3e9ac293/dolomiti-nordicski-logo-farbe-2025.png" alt="Nuovo Logo Dolomiti NordicSki">
+      <h1>WELCOME</h1>
+      <h2>DEIN EINSTIEG IN DIE WELT VON DNS!</br>
+        Spüre den Zauber des Langlaufs, die Kraft der Natur und das gemeinsame Ziel.
+        Hier findest du alles: unser visuelles Erscheinungsbild, unsere Werte – und über die Buttons am Rand den direkten Zugang zu allen Tools, die dich als Partner weiterbringen.</h2>
+      <h2>IL TUO PUNTO DI ACCESSO AL MONDO DI DNS!</br>
+        Vivi l’emozione dello sci di fondo, il legame con la natura e la forza della collaborazione.
+        Qui scopri la nostra identità visiva, i nostri valori – e puoi accedere facilmente a tutti gli strumenti riservati grazie ai pulsanti laterali.</h2>
+    </div>
+<script>
+window.addEventListener("scroll", () => {
+  const scrolled = window.scrollY;
+  const bg = document.querySelector(".hero-background");
+  if (bg) {
+    bg.style.transform = `translateY(${scrolled * 0.3}px) scale(1.05)`;
+  }
+});
+</script>
+</section>
+<main id="inizio">
+<!-- Contenitore per i bottoni sticky -->
+<div class="sticky-buttons-container">
+    <div class="sticky-button1" id="accomodation-toolbox">
+        <span class="vertical-text">AT</span>
+        <span class="full-text">Accomodation <br> Toolbox</span>
+    </div>
+    <div class="sticky-button2" id="b2c-toolbox">
+        <span class="vertical-text">B2C</span>
+        <span class="full-text">B2C <br> Tool</span>
+    </div>
+    <div class="sticky-button3" id="region-toolbox">
+        <span class="vertical-text">RT</span>
+        <span class="full-text">Region <br> Toolbox</span>
+    </div>
+</div>
+<script>
+    document.getElementById("accomodation-toolbox").addEventListener("click", function () {
+        window.open("accomodation-toolbox.html", "_blank");
+    });
+
+    document.getElementById("b2c-toolbox").addEventListener("click", function () {
+        window.open("b2c-toolbox.html", "_blank");
+    });
+
+    document.getElementById("region-toolbox").addEventListener("click", function () {
+        window.open("region-toolbox.html", "_blank");
+    });
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const stickyButtons = document.querySelector(".sticky-buttons-container");
+  const main = document.querySelector("main");
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        // Quando main entra in vista, nascondi i bottoni
+        stickyButtons.classList.add("hidden");
+      } else {
+        // Quando main NON è in vista (cioè siamo ancora nell'hero), mostra i bottoni
+        stickyButtons.classList.remove("hidden");
+      }
+    });
+  }, {
+    root: null,
+    threshold: 0.05
+  });
+
+  if (main && stickyButtons) {
+    observer.observe(main);
+  }
+});
+</script>
+
+<!-- INTRO SECTION -->
+<section class="intro-section" id="Intro">
+  <div class="intro-img-wrapper">
+  <img src="img/dolomitinordicskiimage.png" alt="Langläufer" class="intro-img" loading="lazy">
+  </div>
+  <div class="intro-text">
+    <h1 class="section-title">TIME FOR A (R)EVOLUTION</h1>
+
+    <h2 lang="de">FRISCHER WIND FÜR KLAREN SPUREN</h2>
+    <p>
+      Dolomiti NordicSki wächst – in Qualität, Sichtbarkeit und gemeinsamer Vision.
+      Es war an der Zeit, dass auch unser Auftritt diese Entwicklung widerspiegelt.
+      Mit einem neuen, starken Corporate Design zeigen wir, wer wir sind: ein grenzüberschreitendes Langlauf-Erlebnis inmitten einer einzigartigen Natur – modern, klar, unverwechselbar.
+    </p>
+
+    <h2 lang="it">UNA NUOVA IMMAGINE PER UN CHIARO PERCORSO</h2>
+    <p>
+      Dolomiti NordicSki cresce – in qualità, visibilità e visione condivisa.
+      Era il momento giusto per un cambiamento che parlasse di noi.
+      Con il nuovo corporate design raccontiamo chi siamo davvero: un’esperienza di sci di fondo senza confini, immersa in una natura straordinaria – moderna, chiara, riconoscibile.
+    </p>
+  </div>
+</section>
+  <script>
+document.addEventListener("DOMContentLoaded", function () {
+  const img = document.querySelector(".intro-img");
+  const section = document.querySelector(".intro-section");
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        img.classList.add("visible");
+      } else {
+        img.classList.remove("visible"); // ❗ Lo rimuove quando esce dalla vista
+      }
+    });
+  }, { threshold: 0.3 });
+
+  observer.observe(section);
+});
+</script>
+  </section>
+<h2 class="animated-heading" data-phrases='[
+  "Jede Geschichte trägt Spuren. Jede Etappe hat unsere Identität geprägt.","Ogni storia lascia un segno. Ogni tappa ha forgiato la nostra identità.","Every story leaves a mark. Every milestone has shaped our identity."
+]'></h2>
+
+<!--
+<section>
+<button class="expanded-toggle">
+    <span class="expanded-text">DNS STORY</span>
+  <span class="dns-arrow"></span>
+</button>
+<div class="expanded-content">
+<!-- ✅ HTML: Timeline evolutiva 
+<section class="timeline-section">
+  <div class="timeline-container">
+<svg class="timeline-arrow" viewBox="0 0 24 24" width="24" height="24">
+  <defs>
+    <linearGradient id="arrowGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0D4D5E" />
+      <stop offset="100%" stop-color="#AAD0D1" />
+    </linearGradient>
+  </defs>
+  <path d="M4 4l12 8-12 8" fill="none" stroke="url(#arrowGradient)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+    <div class="timeline timeline-horizontal">
+
+      <div class="timeline-line"></div>
+
+      <!-- Ogni blocco rappresenta un anno  
+      <div class="timeline-block" data-year="2000">
+        <div class="timeline-circle"></div>
+        <div class="timeline-content">
+          <h2>2000</h2>
+          <p><strong>Foundation of the CO.</strong></p>
+		  <p>Central secretary in the Tourismusverband Hochpustertal</p>
+        </div>
+      </div>
+      <div class="timeline-block" data-year="2001">
+        <div class="timeline-circle"></div>
+        <div class="timeline-content">
+          <h2>2001</h2>
+          <p><strong>Interreg III (2001-2005)</strong></p>
+		  		  <p><strong></strong></p>
+          <p>Creation of the logo</p>
+<img src="https://www.dolomitinordicski.com/media/74ccaeaa-44e4-4270-aa58-b3fa8aef4457/logo-dns-transparent.png" alt="Logo 2000">
+		  <p>Maps & publications</p>
+        </div>
+      </div>
+      <div class="timeline-block" data-year="2007">
+        <div class="timeline-circle"></div>
+        <div class="timeline-content">
+          <h2>2007</h2>
+		  <p><strong>Interreg IV (2007-2013)</strong></p>
+          <p>Website</p>
+		  <p>Common signs</p>
+        </div>
+      </div>
+      <div class="timeline-block" data-year="2018">
+        <div class="timeline-circle"></div>
+        <div class="timeline-content">
+          <h2>2018</h2>
+		  <p><strong>Site transfer</strong></p>
+          <p>The secretary transfers in the Tourist Association of Toblach-Dobbiaco</p>
+        </div>
+      </div>
+      <div class="timeline-block" data-year="2023">
+        <div class="timeline-circle"></div>
+        <div class="timeline-content">
+          <h2>2023</h2>
+		  <p><strong>Office open</strong></p>
+          <p>Opening of a strategic office in Welsberg-Monguelfo</p>
+        </div>
+      </div>
+      <div class="timeline-block" data-year="2025">
+        <div class="timeline-circle"></div>
+
+        <div class="timeline-content">
+          <h2>2025</h2>
+		  <p><strong>Interreg VI</strong></p>
+		  <p><strong>Dolomiti Live (2025-2027)</strong></p>
+          <p>redesign logo</p>
+          <img src="https://www.dolomitinordicski.com/media/bd92869d-8dc3-4109-9ade-f89e3e9ac293/dolomiti-nordicski-logo-farbe-2025.png" alt="Logo 2015">
+		  <p>new website</p>
+		  <p>digitalized cartography (Contwise Map)</p>
+		  <p>new strategy</p>
+        </div>
+				 <div class="timeline-circle highlight"></div>
+      </div>
+    </div>
+</section>
+</div>
+</div>
+</section>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const toggles = document.querySelectorAll('.expanded-toggle');
+
+  toggles.forEach(toggle => {
+    toggle.addEventListener('click', function() {
+      this.classList.toggle('open'); // ruota la freccia
+      const content = this.nextElementSibling;
+      content.classList.toggle('open'); // mostra/nasconde il contenuto
+    });
+  });
+});
+</script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const blocks = document.querySelectorAll(".timeline-block");
+
+    if (!blocks.length) return;
+
+    const observer = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+          } else {
+            entry.target.classList.remove("visible");
+          }
+        });
+      },
+      {
+        threshold: 0.4,
+        rootMargin: "0px 0px -10% 0px"
+      }
+    );
+
+    blocks.forEach(block => {
+      observer.observe(block);
+
+      // 🔁 Forza visibilità iniziale se già nel viewport
+      const rect = block.getBoundingClientRect();
+      if (
+        rect.top < window.innerHeight &&
+        rect.bottom > 0
+      ) {
+        block.classList.add("visible");
+      }
+    });
+  });
+</script>
+-->
+
+<!-- CORPORATE DESIGN -->
+<section id="corporate">
+  <div class="corporate-layout">
+  
+    <!-- Colonna sinistra -->
+    <div class="corporate-left">
+      <h1 class="section-title">VISUAL IDENTITY</h1>
+    
+	        <div class="corporate-color-chart">
+<div class="animated-heading-grid" data-phrases='[
+  "Farben haben Bedeutung. Wir mischten 2, machten 3 und schufen 1 Identität.",
+  "I colori hanno un significato. Ne abbiamo uniti 2, creati 3 e forgiato 1 sola identità.",
+  "Colors have meanings. We mixed 2, made 3, and created 1 identity"
+]'></div>
+
+        <button id="toggle-color-wheel" class="toggle-btn">
+          <span class="arrow">▶</span> Color symbology
+        </button>
+
+        <div class="color-wheel-toggle-wrapper">
+          <div id="color-wheel-toggle" class="collapsible">
+            <div class="color-wheel-container">
+              <svg id="color-wheel" viewBox="0 0 100 100">
+                <g id="segments"></g>
+              </svg>
+              <div class="color-named" id="color-named"></div>
+            </div>
+
+            <div class="color-descriptionwheel" id="color-descriptionwheel">
+              Passa sopra un colore per vedere la descrizione
+            </div>
+
+          </div>
+
+        </div>
+		<button id="dns-button">3 COLORS 1 VOICE</button>
+</div>
+
+
+	</div>
+
+    <!-- Colonna destra con stile applicato a tutta la sezione -->
+    <div class="corporate-right corporate-type">
+
+      <!-- TYPOGRAPHY -->
+      <h2>TYPEFACE</h2>
+      <div class="font-section">
+        <div class="font-column">
+          <h3>Print</h3>
+          <p class="font-futura"><strong>Futura Std Bold</strong></p>
+          <p class="font-futura">Futura Std Book</p>
+          <p class="font-universal">Universe LT Std 45 Light</p>
+          <p class="font-universal">Universe Std 47 Light Condensed</p>
+        </div>
+
+        <div class="font-column">
+          <h3>Web</h3>
+          <p class="font-be-vietnam-black">Be Vietnam Pro Black 900</p>
+          <p class="font-be-vietnam-light">Be Vietnam Pro Light 300</p>
+          <p class="font-roboto-light">Roboto Light</p>
+          <p class="font-roboto-condensed">Roboto Regular Condensed</p>
+        </div>
+      </div>
+
+      <!-- COLORS -->
+      <h2>PALETTE</h2>
+      <div class="corporate-colors"> 
+        <div class="color-palette">
+          <!-- Color box 1 -->
+          <div class="color-box" style="background-color: #0D4D5E;">
+            <div class="color-inner">
+              <div class="color-face front">FROSTED ICE<br>BLUE</div>
+              <div class="color-face back">HEX: #0D4D5E<br>RGB: 13, 77, 94<br>CMYK: 90, 50, 40, 40</div>
+            </div>
+          </div>
+
+          <!-- Color box 2 -->
+          <div class="color-box" style="background-color: #417483;">
+            <div class="color-inner">
+              <div class="color-face front">NORDIC SKY<br>BLUE</div>
+              <div class="color-face back">HEX: #417483<br>RGB: 65, 116, 131<br>CMYK: 70, 30, 30, 30</div>
+            </div>
+          </div>
+
+          <!-- Color box 3 -->
+          <div class="color-box" style="background-color: #AAD0D1;">
+            <div class="color-inner">
+              <div class="color-face front">DEEP GLACIER<br>BLUE</div>
+              <div class="color-face back">HEX: #AAD0D1<br>RGB: 170, 208, 209<br>CMYK: 38, 6, 19, 0</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- DNS COLOR IDENTITY -->
+      <div class="corporate-dns-identity" id="dns-description">
+        <div class="dns-color-box">
+          <span class="color-dot" style="background:#0D4D5E;"></span>
+          <p><strong>Frosted Ice Blue:</strong> Represents <mark>clarity</mark>, <mark>freshness</mark>, and <mark>purity</mark>. It embodies the crispness of high-altitude air and untouched snow.</p>
+        </div>
+
+        <div class="dns-color-box">
+          <span class="color-dot" style="background: var(--primary-color);"></span>
+          <p><strong>Nordic Sky Blue:</strong> Symbolizes <mark>serenity</mark>, <mark>balance</mark>, and <mark>freedom</mark>. It reflects the vastness of the sky over the Dolomites and the harmony of nature.</p>
+        </div>
+
+        <div class="dns-color-box">
+          <span class="color-dot" style="background: #AAD0D1;"></span>
+          <p><strong>Deep Glacier Blue:</strong> Evokes <mark>strength</mark>, <mark>trust</mark>, and <mark>endurance</mark>. Inspired by the deep alpine lakes and the resilience of the Nordic skiing spirit.</p>
+        </div>
+      </div>
+
+    </div> <!-- fine .corporate-right -->
+  </div> <!-- fine .corporate-layout -->
+</section>
+
+
+<script>
+// Entrata/uscita animata della sezione font
+const fontSection = document.querySelector('.font-section');
+
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            fontSection.classList.add('visible');
+        } else {
+            fontSection.classList.remove('visible'); // Uscita
+        }
+    });
+}, {
+    threshold: 0.2
+});
+
+if (fontSection) {
+    observer.observe(fontSection);
+}
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const colorBoxes = document.querySelectorAll('.color-box');
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('roll-in');
+      } else {
+        entry.target.classList.remove('roll-in');
+      }
+    });
+  }, {
+    threshold: 0.3
+  });
+
+  colorBoxes.forEach(box => {
+    observer.observe(box);
+  });
+});
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const segmentCount = 7;
+    const colors = ["#FF7F7F", "#FFB347", "#FFF176", "#A8E6A2", "#6EC6FF", "#7A3E9D", "#F48FB1"];
+    const names = ["Red", "Orange", "Yellow", "Green", "Blue", "Purple", "Pink"];
+    const descriptions = [
+        "Action, Passion, Energy, Excitement, Strength, Adventure, Love",
+        "Optimism, Enthusiasm, Freedom, Emotion, Pleasure, Passion, Youth",
+        "Joy, Warmth, Positivity, Happiness, Charity, Curiosity, Fun",
+        "Nature, Luck, Harmony, Loyalty, Safety, Prosperity, Health",
+        "Trust, Power, Confidence, Loyalty, Success, Security, Purpose",
+        "Mystery, Imagination, Royalty, Spirituality, Justice, Art",
+        "Femininity, Creativity, Respect, Softness, Gratitude, Intuition, Calm"
+    ];
+
+    const segmentGroup = document.getElementById("segments");
+    const angleStep = (2 * Math.PI) / segmentCount;
+
+    for (let i = 0; i < segmentCount; i++) {
+        let startAngle = i * angleStep;
+        let endAngle = (i + 1) * angleStep;
+
+        let x1 = 50 + 50 * Math.cos(startAngle);
+        let y1 = 50 + 50 * Math.sin(startAngle);
+        let x2 = 50 + 50 * Math.cos(endAngle);
+        let y2 = 50 + 50 * Math.sin(endAngle);
+
+        let pathData = `M50,50 L${x1},${y1} A50,50 0 0,1 ${x2},${y2} Z`;
+
+        let path = document.createElementNS("http://www.w3.org/2000/svg", "path");
+        path.setAttribute("d", pathData);
+        path.setAttribute("fill", colors[i]);
+        path.setAttribute("class", "color-segment");
+        path.setAttribute("data-color-name", names[i]);
+        path.setAttribute("data-description", descriptions[i]);
+
+        segmentGroup.appendChild(path);
+    }
+
+    const segments = document.querySelectorAll(".color-segment");
+    const colorNamed = document.getElementById("color-named");
+    const dnsButton = document.getElementById("dns-button");
+    const dnsDescription = document.getElementById("dns-description");
+
+    segments.forEach(segment => {
+        segment.addEventListener("mouseenter", function () {
+            const name = this.getAttribute("data-color-name");
+            const desc = this.getAttribute("data-description");
+            const color = this.getAttribute("fill");
+
+            // Mostra nome + descrizione al centro
+            colorNamed.innerHTML = `
+                <div style="color: ${color}">
+                    <strong style="font-size: 20px;">${name}</strong><br>
+                    <span style="font-size: 15px;">${desc}</span>
+                </div>
+            `;
+            colorNamed.style.opacity = "1";
+        });
+
+        segment.addEventListener("mouseleave", function () {
+            colorNamed.innerHTML = "";
+            colorNamed.style.opacity = "0";
+        });
+    });
+
+    // Filtro DNS
+    let dnsFilterActive = false;
+
+    dnsButton.addEventListener("click", function () {
+        dnsDescription.classList.toggle("show");
+        dnsFilterActive = !dnsFilterActive;
+
+        segments.forEach(segment => {
+            const colorName = segment.getAttribute("data-color-name");
+            if (dnsFilterActive) {
+                if (colorName === "Green" || colorName === "Blue") {
+                    segment.style.display = "block";
+                } else {
+                    segment.style.display = "none";
+                }
+            } else {
+                segment.style.display = "block";
+            }
+        });
+    });
+});
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const toggleBtn = document.getElementById("toggle-color-wheel");
+  const collapsible = document.getElementById("color-wheel-toggle");
+  const arrow = toggleBtn.querySelector(".arrow");
+
+  toggleBtn.addEventListener("click", () => {
+    const isOpen = collapsible.classList.toggle("active");
+    toggleBtn.classList.toggle("open", isOpen);
+
+    // Aggiorna il testo
+    toggleBtn.innerHTML = `
+      <span class="arrow">${isOpen ? "▶" : "▶"}</span>
+      ${isOpen ? "Hide Color Chart" : "Show Color Chart"}
+    `;
+
+    // Ruota la freccia (dopo che l'elemento è ricreato)
+    const newArrow = toggleBtn.querySelector(".arrow");
+    if (isOpen) {
+      newArrow.style.transform = "rotate(90deg)";
+    } else {
+      newArrow.style.transform = "rotate(0deg)";
+    }
+  });
+});
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const colorChart = document.querySelector(".corporate-color-chart");
+  const dnsButton = document.getElementById("dns-button");
+  const dnsIdentity = document.getElementById("dns-description");
+  const colorSection = document.querySelector(".corporate-colors");
+  const leftCol = document.querySelector(".corporate-left");
+  const rightCol = document.querySelector(".corporate-right");
+
+  // Wrapper temporaneo per gestire il riordino
+  const tempWrapper = document.createElement("div");
+  tempWrapper.classList.add("mobile-extra");
+  dnsButton.parentNode.insertBefore(tempWrapper, dnsButton);
+  tempWrapper.appendChild(dnsButton);
+
+  function rearrangeElements() {
+    const isMobile = window.innerWidth <= 768;
+
+    if (isMobile) {
+      // Sposta color chart e dns button sotto alla color section
+      if (!colorSection.contains(colorChart)) {
+        rightCol.insertBefore(colorChart, dnsIdentity);
+      }
+      if (!rightCol.contains(dnsButton)) {
+        rightCol.insertBefore(dnsButton, dnsIdentity);
+      }
+    } else {
+      // Riporta tutto nella colonna sinistra
+      if (!leftCol.contains(colorChart)) {
+        leftCol.appendChild(colorChart);
+      }
+      if (!leftCol.contains(dnsButton)) {
+        leftCol.appendChild(dnsButton);
+      }
+    }
+  }
+
+  // Esegui all'avvio
+  rearrangeElements();
+
+  // Riassegna in caso di resize
+  window.addEventListener("resize", rearrangeElements);
+});
+</script>
+<script>
+function initAnimatedHeading(selectors = [".animated-heading", ".animated-heading-grid"]) {
+  const headings = document.querySelectorAll(selectors.join(","));
+
+  headings.forEach(heading => {
+    const phrases = JSON.parse(heading.dataset.phrases || "[]");
+    if (!phrases.length) return;
+
+    let current = 0;
+
+    function renderPhrase(text) {
+      const words = text.split(" ");
+      heading.innerHTML = words.map(word => {
+        const letterSpans = [...word].map(letter => `<span>${letter}</span>`).join("");
+        return `<span class="word">${letterSpans}</span>`;
+      }).join(" ");
+    }
+
+    function animateInView() {
+      heading.classList.add("in-view");
+    }
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          heading.classList.add("in-view");
+        }
+      });
+    }, { threshold: 0.3 });
+
+    observer.observe(heading);
+
+    renderPhrase(phrases[current]);
+
+    setInterval(() => {
+      heading.classList.remove("in-view");
+      current = (current + 1) % phrases.length;
+      setTimeout(() => {
+        renderPhrase(phrases[current]);
+        animateInView();
+      }, 300);
+    }, 3000);
+  });
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  initAnimatedHeading();
+});
+</script>
+
+
+
+
+
+<section id="logo">
+<section class="parallax-section">
+  <div class="parallax-bg"></div>
+  <div class="parallax-content">
+	<h1 class="section-title">LOGO</h1>
+  </div>
+<script>
+  window.addEventListener("scroll", function () {
+    const bg = document.querySelector(".parallax-bg");
+    const scrollY = window.scrollY;
+    const scale = 0.02 + scrollY / 2000; // regola la velocità dello zoom
+    bg.style.transform = `scale(${scale})`;
+  });
+</script>
+      <div class="logo-layout"> 
+    <div class="logo" id="LogoTimeline" aria-label="Timeline evoluzione logo">
+    <!-- 1. TIMELINE -->	 
+	<div class="timeline-wrapper">
+			<p class="separator-text"></p>
+        <div class="timeline-track">
+          <div class="timeline-year-initial">2000</div>
+          <div class="timeline-year">2005</div>
+          <div class="timeline-year">2010</div>
+          <div class="timeline-year">2015</div>
+          <div class="timeline-year">2020</div>
+          <div class="timeline-year">2023</div>
+          <div class="timeline-year-final">2025</div>
+        </div>
+		<button id="restart-logo-animation" class="restart-button" title="Restart Animation">⟳</button>
+        <div class="logo-slider">
+          <img
+            src="https://www.dolomitinordicski.com/media/74ccaeaa-44e4-4270-aa58-b3fa8aef4457/logo-dns-transparent.png"
+            id="moving-logo"
+            alt="Logo Dolomiti NordicSki storico"
+          />
+          <img
+            src="https://www.dolomitinordicski.com/media/bd92869d-8dc3-4109-9ade-f89e3e9ac293/dolomiti-nordicski-logo-farbe-2025.png"
+            id="new-logo"
+            alt="Logo Dolomiti NordicSki 2025"
+          />
+		            <img
+            src="https://www.dolomitinordicski.com/media/74ccaeaa-44e4-4270-aa58-b3fa8aef4457/logo-dns-transparent.png"
+            id="fixed-logo"
+            alt="Logo Dolomiti NordicSki storico di confronto"
+          />
+        </div>
+		</div>
+      </div>
+	  	</div>
+</section>
+<script>
+  document.getElementById('restart-logo-animation').addEventListener('click', function () {
+    const logoSection = document.getElementById("LogoTimeline");
+    const oldLogo = document.getElementById("moving-logo");
+    const newLogo = document.getElementById("new-logo");
+    const fixedLogo = document.getElementById("fixed-logo");
+    const years = document.querySelectorAll(".timeline-year");
+
+    // Reset manuale
+    oldLogo.style.transform = "translateX(0)";
+    oldLogo.style.opacity = "1";
+    newLogo.classList.remove("active");
+    fixedLogo.classList.remove("active");
+    years.forEach(y => y.classList.remove("active"));
+
+    // Scrolla leggermente la pagina in su e poi torna giù
+    const y = window.scrollY;
+    window.scrollTo({ top: y - 20, behavior: "smooth" });
+
+    setTimeout(() => {
+      window.scrollTo({ top: y, behavior: "smooth" });
+    }, 400);
+  });
+</script>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const timeline = document.querySelector(".timeline-wrapper");
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          timeline.classList.add("visible");
+        } else {
+          timeline.classList.remove("visible");
+        }
+      });
+    }, { threshold: 0.3 });
+
+    observer.observe(timeline);
+  });
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const logoSection = document.getElementById("LogoTimeline");
+  const oldLogo = document.getElementById("moving-logo");
+  const newLogo = document.getElementById("new-logo");
+  const fixedLogo = document.getElementById("fixed-logo");
+  const years = document.querySelectorAll(".timeline-year");
+
+  let lastScrollY = window.scrollY;
+
+  function updateLogoTimeline() {
+    const sectionTop = logoSection.offsetTop;
+    const sectionHeight = logoSection.offsetHeight;
+    const scrollY = window.scrollY;
+    const windowHeight = window.innerHeight;
+
+    const scrollRelative = Math.max(
+      0,
+      Math.min(1, (scrollY + windowHeight / 2 - sectionTop) / sectionHeight)
+    );
+
+    const maxTranslate = logoSection.scrollWidth - oldLogo.offsetWidth;
+    const translateX = scrollRelative * maxTranslate;
+    oldLogo.style.transform = `translateX(${translateX}px)`;
+
+    if (scrollRelative > 0.8) {
+      newLogo.classList.add("active");
+      fixedLogo.classList.add("active");
+      oldLogo.style.opacity = "0";
+    } else {
+      newLogo.classList.remove("active");
+      fixedLogo.classList.remove("active");
+      oldLogo.style.opacity = "1";
+    }
+
+    // Highlight anni
+    years.forEach((year, index) => {
+      const yearRect = year.getBoundingClientRect();
+      const logoRect = oldLogo.getBoundingClientRect();
+      const overlap =
+        yearRect.left < logoRect.right && yearRect.right > logoRect.left;
+
+      year.classList.toggle("active", overlap);
+
+      if (index === 0) year.classList.add("timeline-year-initial");
+      if (index === years.length - 1) year.classList.add("timeline-year-final");
+    });
+  }
+
+  // Evento scroll principale
+  //window.addEventListener("scroll", updateLogoTimeline);//
+
+  // Observer per il RESET
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        // Reset
+        oldLogo.style.opacity = "1";
+        oldLogo.style.transform = "translateX(0)";
+        newLogo.classList.remove("active");
+        fixedLogo.classList.remove("active");
+
+        years.forEach(y => y.classList.remove("active"));
+
+        // Trigger update dopo piccolo delay
+        setTimeout(() => updateLogoTimeline(), 100);
+      }
+    });
+  }, { threshold: 0.3 });
+
+  if (logoSection) observer.observe(logoSection);
+});
+</script>
+<div class="mobile-timeline">
+  <div class="mobile-entry">
+    <div class="mobile-year">2000</div>
+    <img 
+      src="https://www.dolomitinordicski.com/media/74ccaeaa-44e4-4270-aa58-b3fa8aef4457/logo-dns-transparent.png"
+      alt="Logo 2020"
+      class="mobile-logo fade-in">
+  </div>
+
+  <div class="mobile-arrow">
+    <span>&#x2193;</span>
+  </div>
+
+  <div class="mobile-entry">
+    <div class="mobile-year">2025</div>
+    <img 
+      src="https://www.dolomitinordicski.com/media/bd92869d-8dc3-4109-9ade-f89e3e9ac293/dolomiti-nordicski-logo-farbe-2025.png"
+      alt="Logo 2025"
+      class="mobile-logo fade-in delayed">
+  </div>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const mobileTimeline = document.querySelector(".mobile-timeline");
+  const logos = mobileTimeline.querySelectorAll(".mobile-logo");
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        logos.forEach(logo => logo.classList.add("fade-in"));
+        observer.disconnect(); // Attiva solo una volta
+      }
+    });
+  }, { threshold: 0.3 });
+
+  if (mobileTimeline) {
+    observer.observe(mobileTimeline);
+  }
+});
+</script>
+
+
+<h2 class="animated-heading" 
+     data-phrases='["Dietro ogni segno grafico c&#39;è una storia - tre elementi danno voce alla nostra identità.","Hinter jedem grafischen Zeichen steckt eine Geschichte - drei Elemente, geben unserer Identität eine Stimme.","Behind every graphic sign lies a story - three elements give our identity a voice. "]'>
+</h2>
+<script>
+function initAnimatedHeading(selector = ".animated-heading", ".animated-heading-grid"		) {
+  const headings = document.querySelectorAll(selector);
+
+  headings.forEach(heading => {
+    const phrases = JSON.parse(heading.dataset.phrases || "[]");
+    if (!phrases.length) return;
+
+    let current = 0;
+
+    function renderPhrase(text) {
+      const words = text.split(" ");
+      heading.innerHTML = words.map(word => {
+        const letterSpans = [...word].map(letter => `<span>${letter}</span>`).join("");
+        return `<span class="word">${letterSpans}</span>`;
+      }).join(" ");
+    }
+
+    function animateInView() {
+      heading.classList.add("in-view");
+    }
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          heading.classList.add("in-view");
+        }
+      });
+    }, { threshold: 0.3 });
+
+    observer.observe(heading);
+
+    renderPhrase(phrases[current]);
+
+    setInterval(() => {
+      heading.classList.remove("in-view");
+      current = (current + 1) % phrases.length;
+      setTimeout(() => {
+        renderPhrase(phrases[current]);
+        animateInView();
+      }, 300);
+    }, 3000);
+  });
+}
+
+// ✅ Esegui alla fine del DOM o dove necessario
+document.addEventListener("DOMContentLoaded", () => {
+  initAnimatedHeading();
+});
+</script>
+
+
+<section class="logo-decoding">
+<!-- Switch lingua -->
+  <div class="logo-elements">
+<div>
+    <div class="lang-switch">
+      <button class="lang-btn" data-lang="de">DE</button>
+	  <button class="lang-btn active" data-lang="it">IT</button>
+	  <button class="lang-btn active" data-lang="en">EN</button>
+      
+    </div>
+	</div>
+  </div>
+  <!-- Elemento 1: Testo -->
+  <div class="logo-element">
+    <div class="element-grid">
+      <div class="element-image">
+        <img src="https://www.dolomitinordicski.com/media/7f95fc69-6496-4a38-8e66-18b164aa5969/schrift.png" alt="Textual Element">
+        <p class="logo-element-name">TEXTUAL ELEMENT</p>
+      </div>
+      <div class="logo-description-container">
+        <div class="logo-description it">
+          <ul>
+            <li>→ Il logotipo combina <mark>"DOLOMITI"</mark> con <mark>lettere audaci</mark> e un <mark>colore più chiaro</mark>, richiamando immediatamente la nostra <mark>USP più importante</mark>, con <mark>"NORDICSKI"</mark> in un <mark>colore più scuro</mark> e con peso tipografico normale, che rappresenta <mark>il nostro tema centrale</mark>.</li>
+            <li>→ Un design tipografico che <mark>rispetta l'eredità del logo precedente</mark>, ma rinnovato con le <mark>nuove tonalità e font</mark> del Corporate Design.</li>
+            <li>→ Il <mark>carattere senza grazie e chiaro</mark> è stato scelto appositamente per la sua <mark>elevata leggibilità</mark>. Ciò garantisce che il logo sia <mark>ben leggibile</mark> anche quando è <mark>di piccole dimensioni</mark> o visto da <mark>grande distanza</mark>. Questo aspetto è di <mark>importanza fondamentale</mark> per i <mark>diversi utilizzi</mark> del logo.</li>
+          </ul>
+        </div>
+        <div class="logo-description de" style="display: none;">
+          <ul>
+            <li>→ Die Wortmarke kombiniert <mark>"DOLOMITI"</mark> in <mark>kräftigen Buchstaben</mark> und einer <mark>helleren Farbe</mark>, was sofort auf unsere <mark>wichtigste USP</mark> hinweist, mit <mark>"NORDICSKI"</mark> in einer <mark>dunkleren Farbe</mark> und normaler Schriftstärke, das <mark>unser zentrales Thema</mark> verkörpert.</li>
+            <li>→ Eine Schriftgestaltung, die <mark>die Essenz des vorherigen Logos bewahrt</mark>, aber mit den <mark>aktuellen Farben und Typografien</mark> des Corporate Designs weiterentwickelt wurde.</li>
+            <li>→ Die <mark>serifenlose, klare Schriftart</mark> wurde bewusst für ihre <mark>hohe Leserlichkeit</mark> gewählt.</li>
+            <li>→ Somit ist das Logo auch <mark>klein gesetzt</mark> oder von <mark>großer Entfernung</mark> sehr gut lesbar. Das ist für die <mark>verschiedenen Anwendungszwecke</mark> von <mark>grundlegender Wichtigkeit</mark>.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Elemento 2: Skier -->
+  <div class="logo-element">
+    <div class="element-grid">
+	      <div class="element-image">
+      <img src="https://www.dolomitinordicski.com/media/dbc52bd5-3a3e-4665-8879-b74fd45dd9e6/langlaeufer.png" alt="Skier">
+          <p class="logo-element-name">SKIER</p>
+	</div>
+    <div class="logo-description-container">
+      <div class="logo-description it">
+        <ul>
+          <li>→ La nuova <mark>figura</mark> è stata concepita intenzionalmente come una <mark>figura neutrale dal punto di vista del genere</mark>.</li>
+          <li>→ Ora si muove deliberatamente nella <mark>direzione dell'osservatore</mark> – trasmettendo una sensazione <mark>positiva</mark> e <mark>accogliente</mark>.</li>
+          <li>→ La sua <mark>dinamicità</mark> e il suo <mark>slancio</mark> coinvolgono e trascinano l'osservatore.</li>
+        </ul>
+      </div>
+      <div class="logo-description de" style="display: none;">
+        <ul>
+          <li>→ Die neue <mark>Skifigur</mark> wurde bewusst als <mark>geschlechtsneutrale Figur</mark> konzipiert.</li>
+          <li>→ Er bewegt sich jetzt gezielt in die <mark>Richtung des Betrachters</mark> – das wirkt <mark>positiv</mark> und <mark>einladend</mark>.</li>
+          <li>→ Man wird von seiner <mark>Dynamik</mark> und seinem <mark>Schwung</mark> sprichwörtlich mitgerissen.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Elemento 3: Nordic Swoosh -->
+  <div class="logo-element">
+    <div class="element-grid">
+      <div class="element-image">
+        <img src="https://www.dolomitinordicski.com/media/f0a51847-50a9-4eeb-908f-1dee1b292b3c/dolomiti-nordicski-kurve.png" alt="Nordic Swoosh">
+        <p class="logo-element-name">NORDIC SWOOSH</p>
+      </div>
+      <div class="logo-description-container">
+        <div class="logo-description it">
+          <ul>
+            <li>→ Già presente nel vecchio logo, prima solo un dettaglio – ora con <mark>funzione chiara e significato preciso</mark>.</li>
+            <li>→ Dona al logo un <mark>effetto 3D dinamico</mark> e richiama le <mark>iconiche tracce da sci di fondo</mark>.</li>
+            <li>→ Il <mark>"Nordic Swoosh"</mark> racchiude l’essenza di <mark>Dolomiti NordicSki</mark>: <mark>sci di fondo, dinamismo, innovazione, natura, libertà e uno stile di vita sano</mark>.</li>
+            <li>→ La sua forma sinuosa è <mark>un abbraccio</mark> – un simbolo di <mark>ospitalità</mark> e dell’accessibilità dello sci di fondo.</li>
+            <li>→ <mark>Unisce e integra</mark> tutti gli elementi, rafforzando identità e messaggio!</li>
+          </ul>
+        </div>
+        <div class="logo-description de" style="display: none;">
+          <ul>
+            <li>→ Bereits im alten Logo vorhanden, doch früher nur ein Detail – jetzt mit <mark>klarer Funktion und präziser Bedeutung</mark>.</li>
+            <li>→ Verleiht dem Logo eine <mark>dynamische 3D-Wirkung</mark> und erinnert an die <mark>typischen Loipenspuren</mark>.</li>
+            <li>→ Der <mark>"Nordic Swoosh"</mark> steht für alles, was <mark>Dolomiti NordicSki</mark> ausmacht: <mark>Langlaufen, Dynamik, Innovation, Natur, Freiheit und einen gesunden Lebensstil</mark>.</li>
+            <li>→ Seine geschwungene Form ist <mark>eine Umarmung</mark> – ein Symbol für <mark>Gastfreundschaft</mark> und die Offenheit des Langlaufsports.</li>
+            <li>→ <mark>Vereint und integriert</mark> alle Elemente, verstärkt die Identität und die Botschaft!</li>
+          </ul>
+        </div>
+    </div>
+	</div>
+  </div>
+    </div>
+	<section class="logo-manual-section">
+  <div class="manual-grid">
+    <!-- Colonna sinistra: titolo + toggle -->
+    <div class="manual-info">
+      <h1 class="section-title">Manual</h1>
+      <div class="section-subtext">Everything you need to know about the logo.</div>
+	  <button class="btn-download" onclick="window.open('https://www.dolomitinordicski.com/media/59d56144-d8dc-44cf-ab28-ed485cf0d6e9/dns-logo-manual.pdf', '_blank')">
+        Download Manual
+      </button>
+	  </br>
+	  	  <button class="btn-download" onclick="window.open('https://www.dolomitinordicski.com/media/59d56144-d8dc-44cf-ab28-ed485cf0d6e9/dns-logo-manual.pdf', '_blank')">
+        Download Logo (full version)
+      </button>
+	  </br>
+	        <button class="toggle-btn" data-toggle="variants">
+        <span class="arrow">▶</span> Show logo variants
+      </button>
+
+    </div>
+
+    <!-- Colonna destra: preview PDF -->
+    <div class="pdf-preview">
+      <div class="pdf-frame-container">
+        <iframe 
+          src="https://www.dolomitinordicski.com/media/59d56144-d8dc-44cf-ab28-ed485cf0d6e9/dns-logo-manual.pdf#toolbar=0&navpanes=0&scrollbar=0" 
+          frameborder="0" 
+          width="100%" 
+          height="400px">
+        </iframe>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Varianti logo collapsible -->
+  <div class="collapsible-wrapper">
+    <div class="collapsible" data-toggle="variants">
+      <div class="logo-variants two-columns animate-on-scroll">
+        <div class="column logos-preview">
+          <div class="logo-preview">
+                 <img src="https://www.dolomitinordicski.com/media/bd92869d-8dc3-4109-9ade-f89e3e9ac293/dolomiti-nordicski-logo-farbe-2025.png" alt="Positive Logo">
+      <h2>Positive</h2>
+    </div>
+    <div class="logo-preview animate-on-scroll">
+      <img src="img/dolomiti nordicski logo NEGATIV 2025.png" alt="Negative Logo">
+      <h2>Negative</h2>
+    </div>
+    <div class="logo-preview animate-on-scroll">
+      <img src="img/dolomiti nordicski logo GRAU 2025.png" alt="Grayscale Logo">
+      <h2>Grayscale</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</section>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const phrases = document.querySelectorAll(".lang-switch1");
+    let current = 0;
+    const transitionTime = 1500; // quanto tempo ogni frase rimane visibile (in ms)
+    let isTransitioning = false;
+
+    function switchPhrase() {
+      if (isTransitioning) return;
+      isTransitioning = true;
+
+      // Rimuovi l'attuale
+      phrases[current].classList.remove("active");
+      phrases[current].style.zIndex = 0;
+
+      // Calcola il prossimo
+      current = (current + 1) % phrases.length;
+
+      // Aspetta solo quanto basta per l'opacità
+      setTimeout(() => {
+        phrases[current].classList.add("active");
+        phrases[current].style.zIndex = 1;
+        isTransitioning = false;
+
+        // Riavvia il ciclo
+        setTimeout(switchPhrase, transitionTime);
+      }, 100); // breve ritardo solo per non sovrapporre le classi
+    }
+
+    // Avvia il ciclo
+    setTimeout(switchPhrase, transitionTime);
+  });
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const buttons = document.querySelectorAll(".lang-btn");
+  const descriptionsIt = document.querySelectorAll(".logo-description.it");
+  const descriptionsDe = document.querySelectorAll(".logo-description.de");
+
+  buttons.forEach(button => {
+    button.addEventListener("click", () => {
+      const selectedLang = button.dataset.lang;
+      buttons.forEach(btn => btn.classList.remove("active"));
+      button.classList.add("active");
+
+      if (selectedLang === "it") {
+        descriptionsIt.forEach(el => el.style.display = "block");
+        descriptionsDe.forEach(el => el.style.display = "none");
+      } else {
+        descriptionsIt.forEach(el => el.style.display = "none");
+        descriptionsDe.forEach(el => el.style.display = "block");
+      }
+    });
+  });
+});
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", function () { 
+  const elements = document.querySelectorAll(".logo-element");
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, index) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => {
+          entry.target.classList.add("visible");
+        }, index * 200);
+      } else {
+        // Rimuove la classe se esce dalla viewport per riattivare l'animazione
+        entry.target.classList.remove("visible");
+      }
+    });
+  }, {
+    threshold: 0.3
+  });
+
+  elements.forEach(el => observer.observe(el));
+});
+
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const toggleButtons = document.querySelectorAll(".toggle-btn");
+
+  toggleButtons.forEach(button => {
+    const toggleKey = button.getAttribute("data-toggle");
+    const target = document.querySelector(`.collapsible[data-toggle="${toggleKey}"]`);
+    const arrow = button.querySelector(".arrow");
+
+    button.addEventListener("click", () => {
+      const isOpen = target.classList.toggle("active");
+      button.classList.toggle("open", isOpen);
+
+      // Aggiorna il testo e la freccia
+      button.innerHTML = `
+        <span class="arrow" style="transform: ${isOpen ? 'rotate(90deg)' : 'rotate(0deg)'}">▶</span>
+        ${isOpen ? "Hide " + toggleKey.charAt(0).toUpperCase() + toggleKey.slice(1) : "Show " + toggleKey.charAt(0).toUpperCase() + toggleKey.slice(1)}
+      `;
+    });
+  });
+});
+</script>
+<section id="digital" class="digital-section">
+
+  <div class="container">
+
+    <div class="digital-grid">
+
+      <!-- Colonna sinistra: Testi -->
+      <div class="digital-text">
+	    	  		<h1 class="section-title">DIGITAL</h1>
+<div class="animated-heading-grid" data-phrases='[
+  "Vernetzte digitale Tools für bessere Verwaltung, Kommunikation und Nutzererlebnis.",
+  "Strumenti digitali interconnessi per migliorare gestione, comunicazione ed esperienza dell’utente.",
+  "Interconnected digital tools to enhance management, communication, and user experience."
+]'></div>					
+			
+<div class="dns-feature-list">
+  <div class="feature-item fade-in">
+    <span class="icon">
+      <!-- Icona: struttura (es. casa/box) -->
+      <svg width="24" height="24" fill="#0D4D5E" viewBox="0 0 24 24"><path d="M3 10L12 3l9 7v10a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1V10z"/></svg>
+    </span>
+    <div>
+      <strong>Accommodation Toolbox</strong><br />
+      <small>Tools für Partner</small>
+    </div>
+  </div>
+
+  <div class="feature-item fade-in">
+    <span class="icon">
+      <!-- Icona: valigetta -->
+      <svg width="24" height="24" fill="#0D4D5E" viewBox="0 0 24 24"><path d="M6 7V6a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v1h3v13H3V7h3zm2-1v1h8V6H8zm13 3H3v9h18V9z"/></svg>
+    </span>
+    <div>
+      <strong>B2B Tool</strong><br />
+      <small>Travel agencies area</small>
+    </div>
+  </div>
+
+  <div class="feature-item fade-in">
+    <span class="icon">
+      <!-- Icona: map/navigation -->
+      <svg width="24" height="24" fill="#0D4D5E" viewBox="0 0 24 24"><path d="M2 3v18l7-3 7 3 6-3V2l-6 3-7-3-7 3z"/></svg>
+    </span>
+    <div>
+      <strong>Contwise Map, App Infra, AR</strong><br />
+      <small>Technology & interconnectivity</small>
+    </div>
+  </div>
+
+  <div class="feature-item fade-in">
+    <span class="icon">
+      <!-- Icona: messaggi -->
+      <svg width="24" height="24" fill="#0D4D5E" viewBox="0 0 24 24"><path d="M4 4h16v12H5.17L4 17.17V4zm0-2a2 2 0 0 0-2 2v18l4-4h14a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H4z"/></svg>
+    </span>
+    <div>
+      <strong>OneTrail & Social</strong><br />
+      <small>the heart of the brand</small>
+    </div>
+  </div>
+</div>
+
+      </div>
+
+      <!-- Colonna destra: Immagine -->
+      <div class="ecosystem-image">
+
+        <img src="https://www.dolomitinordicski.com/media/d51c340b-eff9-40cd-9a49-a7b25a05ae33/dns-ecosystem.png" />
+      </div>
+    </div>
+	<a href="#approfondisci" class="btn-dns">Go to Toolbox</a>
+  </div>
+          
+</section>
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+      }
+    });
+  });
+
+  document.querySelectorAll(".feature-item").forEach(item => {
+    observer.observe(item);
+  });
+</script>
+
+<section id="usps" class="wordcloud-section">
+  <section class="section-separator">
+    <h1 class="section-title wordcloud-title">USP</h1>
+    <h2>WHAT MAKES US UNIQUE</h2>
+
+    <!-- WordCloud -->
+    <div id="wordcloud-container"></div>
+
+    <!-- Statistiche visive -->
+    <div class="usp-stats">
+	<div class="stat"><strong>25</strong><br>years experience</div>
+      <div class="stat"><strong>700</strong><br>km of ski trails</div>
+      <div class="stat"><strong>3</strong><br>Regions</strong><br>South Tyrol</strong><br> Osttirol</strong><br> Belluno</div>
+      <div class="stat"><strong>2</strong><br>countries</div>
+	  <div class="stat"><strong>1</strong><br>shared</strong><br>project</div>
+    </div>
+  </section>
+</section>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    if (typeof WordCloud !== "function") {
+        console.error("Errore: WordCloud.js non è stato caricato!");
+        return;
+    }
+
+    function getCSSVariable(name) {
+        return getComputedStyle(document.documentElement).getPropertyValue(name).trim();
+    }
+
+    const colors = {
+        high: getCSSVariable("--primary-color"),
+        medium: getCSSVariable("--third-color"),
+        low: getCSSVariable("--secondary-color"),
+    };
+
+    function getColorByWeight(weight) {
+        if (weight >= 50) return colors.high;
+        if (weight >= 30) return colors.medium;
+        return colors.low;
+    }
+
+    const words = [
+        ['Dolomites', 80], ['Nature', 70], ['Quality', 80], ['Experience', 65], 
+        ['Sustainability', 60], ['+700km Trails', 40], ['8 areas', 60], 
+        ['Panoramic Views', 50], ['UNESCO Heritage', 60], ['Innovation', 50], ['Unified Access', 45],['Cross-Border', 40]
+    ];
+
+    const container = document.getElementById('wordcloud-container');
+    const wordCloudCanvas = document.createElement("canvas");
+
+    wordCloudCanvas.style.backgroundColor = "transparent";
+    wordCloudCanvas.style.position = "relative";
+    wordCloudCanvas.style.zIndex = "3";
+    container.appendChild(wordCloudCanvas);
+
+    function renderWordCloud() {
+        wordCloudCanvas.width = container.clientWidth;
+        wordCloudCanvas.height = container.clientHeight;
+
+        const ctx = wordCloudCanvas.getContext("2d", { alpha: true });
+        ctx.clearRect(0, 0, wordCloudCanvas.width, wordCloudCanvas.height);
+
+        const dynamicWeightFactor = wordCloudCanvas.width / 650;
+
+        WordCloud(wordCloudCanvas, {
+            list: words,
+            gridSize: 0.7,
+            weightFactor: dynamicWeightFactor,
+            minSize: 8,
+            fontFamily: 'Be Vietnam Pro',
+            shapePadding: 10,
+            backgroundColor: 'rgba(0,0,0,0)',
+            color: function (word, weight) {
+                return getColorByWeight(weight);
+            },
+            rotateRatio: 0.2,
+            drawOutOfBound: false
+        });
+    }
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                renderWordCloud();
+            }
+        });
+    }, {
+        threshold: 0.5
+    });
+
+    observer.observe(container);
+    window.addEventListener('resize', renderWordCloud);
+});
+</script>
+    <!-- CORE VALUES -->
+<section id="core-values">
+
+	<h1 class="section-title">CREDO</h1>
+    <h2>CORE VALUES THAT GUIDE US️</h2>
+	</br>
+    <div class="value-palette">
+        <div class="value-box" style="background-color: rgb(13, 77, 94);" data-desc="Our deep commitment and love for Nordic skiing.">
+            <strong>Passion & Dedication</strong>
+        </div>
+        <div class="value-box" style="background-color: rgb(32, 96, 112);" data-desc="Staying true to our roots and embracing our traditions.">
+            <strong>Authenticity</strong>
+        </div>
+        <div class="value-box" style="background-color: rgb(65, 116, 131);" data-desc="The spirit of adventure, accessibility, and connection with nature.">
+            <strong>Freedom & Connected Openness</strong>
+        </div>
+        <div class="value-box" style="background-color: rgb(110, 160, 170);" data-desc="Promoting an active lifestyle, health, and well-being.">
+            <strong>Health & Well-being</strong>
+        </div>
+        <div class="value-box" style="background-color: rgb(150, 190, 200);" data-desc="Protecting nature and ensuring a sustainable future.">
+            <strong>Sustainability</strong>
+        </div>
+        <div class="value-box" style="background-color: rgb(170, 208, 209);" data-desc="Constantly improving to offer the best Nordic skiing experience.">
+            <strong>Innovation & Progress</strong>
+        </div>
+    </div>
+	    <!-- Tooltip a fumetto -->
+    <div class="tooltip" id="tooltip"></div>
+</section>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const valueBoxes = document.querySelectorAll(".value-box");
+
+    valueBoxes.forEach(box => {
+        // Creazione dinamica della descrizione
+        const description = document.createElement("div");
+        description.classList.add("value-description");
+        description.innerHTML = box.getAttribute("data-desc"); // Legge il valore dall'attributo
+        box.appendChild(description);
+
+        let isOpen = false; // 🔹 Stato aperto/chiuso
+
+        // 🔹 Ottiene il colore del box e lo applica al tooltip
+        const boxColor = window.getComputedStyle(box).backgroundColor;
+        description.style.backgroundColor = boxColor;
+
+        box.addEventListener("mouseenter", function () {
+            if (!isOpen) {
+                description.classList.add("show");
+            }
+        });
+
+        box.addEventListener("mouseleave", function () {
+            if (!isOpen) {
+                description.classList.remove("show");
+            }
+        });
+
+        box.addEventListener("click", function (e) {
+            e.stopPropagation(); // 🔹 Impedisce la chiusura immediata su click fuori
+            isOpen = !isOpen; // 🔹 Alterna lo stato
+            if (isOpen) {
+                description.classList.add("show");
+            } else {
+                description.classList.remove("show");
+            }
+        });
+
+        // 🔹 Chiude la descrizione cliccando fuori dal box
+        document.addEventListener("click", function (event) {
+            if (!box.contains(event.target)) {
+                isOpen = false;
+                description.classList.remove("show");
+            }
+        });
+    });
+});
+
+</script>
+
+<section id="dns-statement">
+    <h2 class="statement-title">MORE THAN JUST SKIING</h2>
+    <h2 class="statement-subtitle">"0% FOOTPRINT, 100% IIMPACT"</h2>
+    <p class="dns-statement">
+        "Dolomiti NordicSki is more than just a skiing destination. <br>
+        It’s a way of life, a connection to nature, and a passion for excellence."
+    </p>
+
+</section>
+  <div class="separator-line"></div>
+<script>
+	document.addEventListener("DOMContentLoaded", function () {
+    const statement = document.querySelector(".dns-statement");
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                statement.classList.add("fade-in");
+            }
+        });
+    }, { threshold: 0.5 });
+
+    observer.observe(statement);
+});
+</script>
+</section>
+<!-- CORPORATE IDENTITY SECTION -->
+<section id="corporate-identity">
+    <h1 class="section-title">CORPORATE IDENTITY</h1>
+    <div class="image-slider">
+        <div class="slider-track">
+            <img class="slider-img" src="C:\Users\Dolomiti Nordicski\OneDrive - Organisationskomitee Dolomiti Nordicski\PROJEKTE 2024 - 26\WEB IMPLEMENTATION\Roll up.png" alt="Logo DNS">
+            <img class="slider-img" src="https://www.dolomitinordicski.com/media/bd92869d-8dc3-4109-9ade-f89e3e9ac293/dolomiti-nordicski-logo-farbe-2025.png" alt="Logo Nuovo">
+            <img class="slider-img" src="https://www.dolomitinordicski.com/media/7f95fc69-6496-4a38-8e66-18b164aa5969/schrift.png" alt="Testo Logo">
+            <img class="slider-img" src="https://www.pinkhand.it/img/portfolio/full/pocketfolder.jpg" alt="Sciatore">
+            <img class="slider-img" src="https://www.dolomitinordicski.com/media/f0a51847-50a9-4eeb-908f-1dee1b292b3c/dolomiti-nordicski-kurve.png" alt="Nordic Swoosh">
+
+            <!-- DUPLICAZIONE PER SCROLL INFINITO -->
+            <img class="slider-img" src="C:\Users\Dolomiti Nordicski\OneDrive - Organisationskomitee Dolomiti Nordicski\PROJEKTE 2024 - 26\WEB IMPLEMENTATION\Roll up.png">
+            <img class="slider-img" src="https://www.dolomitinordicski.com/media/bd92869d-8dc3-4109-9ade-f89e3e9ac293/dolomiti-nordicski-logo-farbe-2025.png" alt="Logo Nuovo">
+            <img class="slider-img" src="https://www.dolomitinordicski.com/media/7f95fc69-6496-4a38-8e66-18b164aa5969/schrift.png" alt="Testo Logo">
+            <img class="slider-img" src="https://www.pinkhand.it/img/portfolio/full/pocketfolder.jpg" alt="Sciatore">
+            <img class="slider-img" src="https://www.dolomitinordicski.com/media/f0a51847-50a9-4eeb-908f-1dee1b292b3c/dolomiti-nordicski-kurve.png" alt="Nordic Swoosh">
+        </div>
+    </div>
+</section>
+	
+    <!-- LIGHTBOX -->
+    <div id="lightbox" class="lightbox">
+        <span class="close">&times;</span>
+        <img class="lightbox-img" id="lightbox-img">
+        <button class="prev">&#10094;</button>
+        <button class="next">&#10095;</button>
+    </div>
+</section>
+
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const images = document.querySelectorAll(".slider-img");
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImg = document.getElementById("lightbox-img");
+    const closeBtn = document.querySelector(".close");
+    const prevBtn = document.querySelector(".prev");
+    const nextBtn = document.querySelector(".next");
+
+    let currentIndex = 0;
+
+    function openLightbox(index) {
+        lightbox.style.display = "flex";
+        lightboxImg.src = images[index].src;
+        currentIndex = index;
+    }
+
+    function closeLightbox() {
+        lightbox.style.display = "none";
+    }
+
+    function navigateLightbox(step) {
+        currentIndex = (currentIndex + step + images.length) % images.length;
+        lightboxImg.src = images[currentIndex].src;
+    }
+
+    images.forEach((img, index) => {
+        img.addEventListener("click", () => openLightbox(index));
+    });
+
+    closeBtn.addEventListener("click", closeLightbox);
+    prevBtn.addEventListener("click", () => navigateLightbox(-1));
+    nextBtn.addEventListener("click", () => navigateLightbox(1));
+
+    lightbox.addEventListener("click", (event) => {
+        if (event.target === lightbox) closeLightbox();
+    });
+});
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const elements = document.querySelectorAll(".animate-on-scroll");
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.5 });
+
+  elements.forEach(el => observer.observe(el));
+});
+</script>
+</main>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const titles = document.querySelectorAll("h1.section-title");
+  const isMobile = window.matchMedia("(max-width: 768px)").matches;
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        // Rimuove eventuali classi precedenti
+        entry.target.classList.remove("animate-left", "animate-right", "fade-in");
+
+        if (isMobile) {
+          entry.target.classList.add("fade-in");
+        } else {
+          const direction = Math.random() > 0.5 ? "animate-left" : "animate-right";
+          entry.target.classList.add(direction);
+        }
+      } else {
+        entry.target.classList.remove("animate-left", "animate-right", "fade-in");
+      }
+    });
+  }, { threshold: 0.2 });
+
+  titles.forEach(title => observer.observe(title));
+});
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const allH2s = document.querySelectorAll("h2");
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("fade-in");
+      } else {
+        entry.target.classList.remove("fade-in");
+      }
+    });
+  }, { threshold: 0.4 });
+
+  allH2s.forEach(h2 => observer.observe(h2));
+});
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    /** ANIMAZIONE FADE-IN PER LE SEZIONI **/
+    const sections = document.querySelectorAll('#Intro, .color-palette, .font-section, .logo-section');
+    const options = { threshold: 0.1 };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('fade-in');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, options);
+
+    sections.forEach(section => observer.observe(section));
+
+    /** MENU HAMBURGER **/
+const menuToggle = document.querySelector(".menu-toggle");
+    const navMenu = document.querySelector("nav");
+    const navLinks = document.querySelectorAll("nav a");
+	
+
+    if (menuToggle && navMenu) {
+        menuToggle.addEventListener("click", () => {
+            navMenu.classList.toggle("active");
+            menuToggle.classList.toggle("active"); // Cambia forma in "X"
+			document.body.classList.toggle("no-scroll");
+        });
+
+        // Chiude il menu e ripristina l'icona quando si clicca su un link
+        navLinks.forEach(link => {
+            link.addEventListener("click", () => {
+                navMenu.classList.remove("active");
+                menuToggle.classList.remove("active"); // Ripristina l'icona hamburger
+            });
+        });
+    }
+	
+ /** PULSANTE GO TO TOP **/
+    const goToTopBtn = document.getElementById("goToTop");
+
+    // Mostra il pulsante quando si scorre la pagina
+    window.addEventListener("scroll", () => {
+        if (window.scrollY > 300) {
+            goToTopBtn.style.display = "block";
+        } else {
+            goToTopBtn.style.display = "none";
+        }
+    });
+
+    // Scrolla in cima quando viene cliccato
+    goToTopBtn.addEventListener("click", () => {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    });
+    /** EFFETTO ESPANSIONE SEZIONE LOGO **/
+const logoImages = document.querySelectorAll(".logo-element img");
+const descriptionContainers = document.querySelectorAll(".logo-description-container");
+
+if (logoImages.length === descriptionContainers.length) {
+    logoImages.forEach((img, index) => {
+        let isOpen = false; // Stato iniziale chiuso
+
+        img.addEventListener("mouseenter", () => {
+            descriptionContainers[index].style.maxHeight = "500px";
+            descriptionContainers[index].style.opacity = "1";
+            descriptionContainers[index].style.display = "flex";
+            img.style.filter = "blur(0)"; // Rimuove il blur
+            isOpen = true;
+        });
+
+        document.addEventListener("click", (event) => {
+            // Verifica se il click NON è avvenuto sull'immagine o sul container
+            if (!img.contains(event.target) && !descriptionContainers[index].contains(event.target)) {
+                descriptionContainers[index].style.maxHeight = "0";
+                descriptionContainers[index].style.opacity = "0";
+                descriptionContainers[index].style.display = "none";
+                img.style.filter = "blur(3px)"; // Riapplica il blur
+                isOpen = false;
+            }
+        });
+    });
+}
+});
+</script>
+<Script>
+document.addEventListener("DOMContentLoaded", function () {
+    const colorBoxes = document.querySelectorAll(".color-box");
+
+    colorBoxes.forEach(box => {
+        // Creazione dinamica della descrizione
+        const description = document.createElement("div");
+        description.classList.add("color-description");
+        description.innerHTML = box.getAttribute("data-info"); // Legge il valore dall'attributo
+        box.appendChild(description);
+
+        let isOpen = false; // 🔹 Stato aperto/chiuso
+
+        // 🔹 Ottiene il colore del box e lo applica al tooltip
+        const boxColor = window.getComputedStyle(box).backgroundColor;
+        description.style.backgroundColor = boxColor;
+
+        box.addEventListener("mouseenter", function () {
+            if (!isOpen) {
+                description.classList.add("show");
+            }
+        });
+
+        box.addEventListener("mouseleave", function () {
+            if (!isOpen) {
+                description.classList.remove("show");
+            }
+        });
+
+        box.addEventListener("click", function (e) {
+            e.stopPropagation(); // 🔹 Impedisce la chiusura immediata su click fuori
+            isOpen = !isOpen; // 🔹 Alterna lo stato
+            if (isOpen) {
+                description.classList.add("show");
+            } else {
+                description.classList.remove("show");
+            }
+        });
+
+        // 🔹 Chiude la descrizione cliccando fuori dal box
+        document.addEventListener("click", function (event) {
+            if (!box.contains(event.target)) {
+                isOpen = false;
+                description.classList.remove("show");
+            }
+        });
+    });
+});
+
+</script>
+<script>
+// SCRIPT PER IL MENU - compatibile con hero full-screen
+document.querySelectorAll('nav a').forEach(anchor => {
+   
+});
+
+</script>
+
+<button id="goToTop">&#8679;</button>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const stickyBar = document.getElementById("stickyBar");
+  const trigger = document.querySelector("main");
+
+  window.addEventListener("scroll", function () {
+    const triggerTop = trigger.getBoundingClientRect().top;
+
+    // Modifica qui: attiva la stickyBar 2em (≈32px) prima
+    if (triggerTop <= 32) {
+      stickyBar.classList.add("show");
+    } else {
+      stickyBar.classList.remove("show");
+    }
+  });
+});
+
+</script>
+
+
+
+     <!-- FOOTER -->   
+	 <footer>
+	   &copy; 2025 Dolomiti NordicSki. All rights reserved.
+    </footer>
+</body>
+</html>

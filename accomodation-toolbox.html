@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Toolbox Accomodation Partner">
+    <title>Toolbox Accomodation Partner</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam:wght@300;400;700&family=Roboto:wght@300&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary-color: #0F4C5C;
+            --secondary-color: #D9534F;
+            --light-gray: #f0f0f0;
+            --dark-gray: #d9d9d9;
+            --font-color: #333333;
+        }
+
+        body {
+            font-family: 'Be-Vietnam', sans-serif;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+            background-color: var(--light-gray);
+        }
+
+        .container {
+            max-width: 900px;
+			max-height:auto;
+            margin: auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            border: 2px solid #ccc;
+        }
+
+        .logo-container {
+            margin-bottom: 20px;
+            padding: 20px;
+        }
+
+        .logo-container img {
+            width: 220px;
+            height: auto;
+        }
+
+        h1 {
+            color: var(--primary-color);
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            color: var(--font-color);
+            font-size: 14px;
+            margin-bottom: 30px;
+            font-weight: 300;
+        }
+
+        /* Password prompt */
+        .password-container {
+            display: block;
+            text-align: center;
+        }
+
+        .password-container input {
+            font-size: 16px;
+            padding: 10px;
+            margin: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .password-container button {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .password-container button:hover {
+            background-color: #093540;
+        }
+
+        .button-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .button-container a {
+            background-color: var(--primary-color);
+            color: #fff;
+            font-size: 16px;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            text-align: center;
+            display: block;
+            text-transform: uppercase;
+        }
+
+        .button-container a:hover {
+            background-color: #093540;
+        }
+
+        /* Specific style for the "Accomodation Widget" button */
+        .button-container a.accomodation-widget {
+            background-color: var(--secondary-color);
+        }
+
+        /* Responsività */
+        @media (max-width: 600px) {
+            .button-container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Hidden content when Materials button is clicked */
+        .materials-content, .useful-links-content, .widget-configurator {
+            display: none;
+            margin-top: 20px;
+            text-align: left;
+        }
+
+        .materials-content a, .useful-links-content a {
+            display: block;
+            padding: 8px;
+            margin-bottom: 10px;
+            background-color: var(--light-gray);
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        .materials-content a:hover, .useful-links-content a:hover {
+            background-color: var(--primary-color);
+            color: #fff;
+        }
+
+        /* CSS for Configurator */
+        .configurator-container {
+            margin-top: 20px;
+        }
+
+        .configurator-container iframe {
+            width: 100%;
+            height: 600px;
+            border: none;
+            background-color: transparent;
+        }
+
+        .partner-request {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .partner-request .button {
+            display: inline-block;
+            padding: 12px 20px;
+            background-color: var(--secondary-color);
+            color: white;
+            border-radius: 5px;
+            font-size: 16px;
+            text-decoration: none;
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .partner-request .button:hover {
+            background-color: #A94442;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Password Section with Logo -->
+    <div class="password-container" id="password-container">
+        <div class="logo-container">
+            <a href="https://www.dolomitinordicski.com" target="_blank">
+                <img src="https://www.dolomitinordicski.com/media/bd92869d-8dc3-4109-9ade-f89e3e9ac293/dolomiti-nordicski-logo-farbe-2025.png" alt="Dolomiti NordicSki Logo">
+            </a>
+        </div>
+        <p>Enter Password to Access</p>
+        <input type="password" id="password" placeholder="Enter Password">
+        <button onclick="checkPassword()">Submit</button>
+
+        <!-- "Non sei ancora partner" section -->
+        <div class="partner-request">
+            <p>Bist du noch kein Partner von Dolomiti NordicSki? <br> Non sei ancora partner di Dolomiti NordicSki?</p>
+            <a href="mailto:info@dolomitinordicski.com?subject=Accomodation Partner&body=Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus luctus urna sed urna ultricies ac tempor dui sagittis. In condimentum facilisis porta." class="button">Anfrage-Richiesta</a>
+			<a href="https://www.dolomitinordicski.com" class="button">Unterlagen - Moduli</a>
+        
+		</div>
+    </div>
+
+    <!-- Main content hidden initially -->
+    <div class="container" id="main-content" style="display:none;">
+        <div class="logo-container">
+            <a href="https://www.dolomitinordicski.com" target="_blank">
+                <img src="https://www.dolomitinordicski.com/media/bd92869d-8dc3-4109-9ade-f89e3e9ac293/dolomiti-nordicski-logo-farbe-2025.png" alt="Dolomiti NordicSki Logo">
+            </a>
+        </div>
+        
+        <h1><strong>TOOLBOX <br> ACCOMODATION PARTNER</strong></h1>
+
+        <p><strong>EINLEITUNG:</strong> In dieser Toolbox finden Sie alle notwendigen Ressourcen und Informationen, die Ihnen als Unterkunftspartner von Dolomiti NordicSki zur Verfügung stehen. Nutzen Sie die verfügbaren Tools, um Ihre Angebote zu optimieren und Ihre Gäste bestmöglich zu informieren.</p>
+
+        <p><strong>INTRODUZIONE:</strong> In questa Toolbox troverai tutte le risorse e le informazioni di cui hai bisogno come partner ricettivo di Dolomiti NordicSki. Utilizza gli strumenti disponibili per ottimizzare la tua offerta e fornire le migliori informazioni ai tuoi ospiti.</p>
+
+        <div class="button-container">
+            <a href="https://drive.google.com/drive/folders/1GwZYaCFJZ0QJUbRLuw4E-rFV5GVZm_M5?usp=drive_link" target="_blank">Corporate Design (Logo)</a>
+            <a href="#" onclick="toggleWidgetConfigurator()" class="accomodation-widget">Accomodation Widget (ONLY DNS PARTNER)</a>
+            <a href="#" onclick="toggleMaterials()">Materials</a> <!-- "Materials" button to toggle content -->
+            <a href="#" onclick="toggleUsefulLinks()">Useful links</a> <!-- "Useful Links" button to toggle content -->
+            <a href="https://forms.gle/3otmxgQz3Q45Ru7r8" target="_blank">GUEST SURVEY</a>
+            <a href="mailto:info@dolomitinordicski.com?subject=Support%20request&body=Lorem%20ipsum" target="_blank">Contact us</a>
+        </div>
+
+        <!-- Hidden content for Materials -->
+        <div class="materials-content" id="materials-content">
+            <a href="https://link-per-materiale1.com" target="_blank">Pocketfolder (Region)</a>
+            <a href="https://link-per-materiale3.com" target="_blank">Plakat - Poster Ticketing</a>
+            <a href="https://link-per-materiale3.com" target="_blank">Skiroom Guide (DE)</a>
+            <a href="https://link-per-materiale3.com" target="_blank">Skiroom Guide (IT)</a>
+            <a href="https://link-per-materiale2.com" target="_blank">Quality Criteria</a>
+            <a href="https://link-per-materiale3.com" target="_blank">Anfrage - Richiesta Partnership</a>
+            <!-- You can add more materials here -->
+        </div>
+
+        <!-- Hidden content for Useful Links -->
+        <div class="useful-links-content" id="useful-links-content">
+            <a href="https://link-per-utili1.com" target="_blank">Useful Link 1</a>
+            <a href="https://link-per-utili2.com" target="_blank">Useful Link 2</a>
+            <a href="https://link-per-utili3.com" target="_blank">Useful Link 3</a>
+            <!-- You can add more useful links here -->
+        </div>
+
+        <!-- Configurator content (hidden by default) -->
+        <div class="widget-configurator" id="widget-configurator">
+            <h2>Widget Configurator</h2>
+            <div class="configurator-container">
+                <iframe src="Widget%20Configurator.html" title="Dolomiti NordicSki Widget Configurator"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function checkPassword() {
+            const password = document.getElementById("password").value;
+            if(password === "") {
+                document.getElementById("main-content").style.display = "block";
+                document.getElementById("password-container").style.display = "none";
+            } else {
+                alert("Incorrect Password");
+            }
+        }
+
+        function toggleMaterials() {
+            const content = document.getElementById("materials-content");
+            const container = document.getElementById("main-content");
+            if (content.style.display === "none" || content.style.display === "") {
+                content.style.display = "block";
+                container.style.height = "auto";  // Adjust container size
+            } else {
+                content.style.display = "none";
+                container.style.height = "auto";  // Adjust container size
+            }
+        }
+
+        function toggleUsefulLinks() {
+            const content = document.getElementById("useful-links-content");
+            const container = document.getElementById("main-content");
+            if (content.style.display === "none" || content.style.display === "") {
+                content.style.display = "block";
+                container.style.height = "auto";  // Adjust container size
+            } else {
+                content.style.display = "none";
+                container.style.height = "auto";  // Adjust container size
+            }
+        }
+
+        function toggleWidgetConfigurator() {
+            const content = document.getElementById("widget-configurator");
+            const container = document.getElementById("main-content");
+            if (content.style.display === "none" || content.style.display === "") {
+                content.style.display = "block";
+                container.style.height = "auto";  // Adjust container size
+            } else {
+                content.style.display = "none";
+                container.style.height = "auto";  // Adjust container size
+            }
+        }
+
+    </script>
+</body>
+Copyright: Dolomiti NordicSki 2025
+</html>
