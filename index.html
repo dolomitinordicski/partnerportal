@@ -58,7 +58,7 @@ main {
   position: relative;
   z-index: 2;
   width: 100%;
-  margin: 0px auto;
+  margin: 0 auto;
   padding: 0;
 }
 
@@ -377,6 +377,7 @@ mark {
     left: 2px;
     z-index: 2000;
     display: flex;
+	color:var(--primary-color);
     align-items: center;
     filter: drop-shadow(2px 2px 6px rgba(0,0,0,.2));
     transition: filter .3s ease;
@@ -431,7 +432,7 @@ mark {
         top: 0;
         left: 0;
         width: 100%;
-        z-index: 5000;
+        z-index: 200000;
         background-color: transparent;   /* ← fix: “none” non è valido */
         display: none;
         justify-content: space-between;
@@ -441,7 +442,7 @@ mark {
         top: 2px;
         width: 100%;
         display: flex;
-        background-color: #fff;
+        background-color: #ffffff;
         box-shadow: 0 2px 6px rgba(0,0,0,.4);
     }
 }
@@ -456,7 +457,7 @@ mark {
   height: 70px;
   opacity: 0.97;
   background-color: white;
-  z-index: 1000;
+  z-index: 400;
   transition: all 0.3s ease;
   filter: drop-shadow(2px 2px 6px rgba(0, 0, 0, 0.2));
   backdrop-filter: blur(4px);
