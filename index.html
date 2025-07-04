@@ -432,6 +432,68 @@ mark {
   }
 }
 
+	 /* === LOGO “DNS Partner Portal” ===================================== */
+
+/* Contenitore generale */
+.partnerhub-logo{
+  position:fixed;        /* resta sempre visibile in alto a sx (desktop)   */
+  top:6px;
+  left:6px;
+  display:flex;
+  align-items:center;
+  gap:8px;               /* distanza fra swoosh e scritta                 */
+  padding:6px 10px;
+  background:rgba(255,255,255,.85); /* leggero fondino trasparente        */
+  border-radius:8px 16px 16px 8px;
+  backdrop-filter:blur(6px);
+  filter:drop-shadow(2px 2px 6px rgba(0,0,0,.25));
+  z-index:5000;
+  transition:background .3s, filter .3s;
+}
+
+/* Swoosh */
+.swoosh-icon{
+  width:auto;
+  height:40px;
+  flex:0 0 auto;
+}
+
+/* SVG: lascialo scalare naturalmente */
+.partnerhub-logo svg{
+  height:56px;           /* larghezza auto (viewBox)                       */
+  width:auto;
+  display:block;
+}
+
+/* Hover (solo su desktop con puntatore) */
+@media (hover:hover){
+  .partnerhub-logo:hover{
+    background:rgba(255,255,255,1);
+    filter:drop-shadow(4px 4px 10px rgba(0,0,0,.35));
+  }
+}
+
+/* --- Mobile: centrato in alto con larghezza piena ------------------ */
+@media screen and (max-width:768px){
+  .partnerhub-logo{
+    position:absolute;
+    top:0;
+    left:50%;
+    transform:translateX(-50%);
+    width:100%;
+    justify-content:center;
+    padding:8px 12px;
+    border-radius:0 0 12px 12px;
+    gap:12px;
+  }
+  .swoosh-icon{height:32px;}
+  .partnerhub-logo svg{height:44px;}
+}
+
+/* === Fine logo ===================================================== */
+
+
+	 
 /* --- STYLE STICKY BAR --- */
 .desktop-sticky-bar {
   display: none;
