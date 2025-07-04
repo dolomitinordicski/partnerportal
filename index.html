@@ -1871,16 +1871,23 @@ width: 100%;
     text-align: left;
 }
 
-@media screen and (max-width: 768px) {
-  #dns-button {
-  display:none;
-	  padding: 35px 35px;
-	  margin:0px auto;
-      font-size: 15px; 
-	      border-radius: 2px;
-  }
+.dns-button {
+  padding: 35px 35px;
+  margin: 0 auto;
+  font-size: 15px;
+  border-radius: 2px;
 }
 
+/* Regole mobile */
+@media screen and (max-width: 768px) {
+  .dns-button.hide-on-mobile {
+    display: none;
+  }
+
+  .dns-button.show-on-mobile {
+    display: block;
+  }
+}
 
 #dns-button:hover {
     background-color: var(--third-color);
@@ -3959,10 +3966,12 @@ document.addEventListener("DOMContentLoaded", function() {
           </div>
 
         </div>
-		<button id="dns-button">3 COLORS 1 VOICE</button>
+		<!-- Questo sarà visibile su mobile -->
+<button class="dns-button show-on-mobile">3 COLORS 1 VOICE</button>
+
+<!-- Questo sarà nascosto su mobile -->
+<button class="dns-button hide-on-mobile">3 COLORS 1 VOICE</button>
 </div>
-
-
 	</div>
 
     <!-- Colonna destra con stile applicato a tutta la sezione -->
