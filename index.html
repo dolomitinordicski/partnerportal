@@ -69,10 +69,10 @@ main {
   }
 }
 
-::before, *::after {
+/* --- STYLE TYPE *, *::before, *::after {
   box-sizing: border-box;
-}
-	   
+}--- * /
+
 	.josefin-sans-<uniquifier> {
   font-family: "Josefin Sans", sans-serif;
   font-optical-sizing: auto;
@@ -1871,20 +1871,17 @@ width: 100%;
     text-align: left;
 }
 
-.dns-button {
-  padding: 35px 35px;
-  margin: 0 auto;
-  font-size: 15px;
-  border-radius: 2px;
-}
-
-/* Nasconde il bottone su mobile */
 @media screen and (max-width: 768px) {
-  .dns-button.desktop-only {
-    display: none;
+  #dns-button {
+  display:none;
+	  padding: 35px 35px;
+	  margin:0px auto;
+      font-size: 15px; 
+	      border-radius: 2px;
   }
 }
-	   
+
+
 #dns-button:hover {
     background-color: var(--third-color);
     color: var(--white-color);
@@ -3594,19 +3591,9 @@ text-align: justify;
             bottom: 0;
             text-align: center;
         }
-		
-		
-		
-		 /* {
- /* outline: 1px solid red; /* debug visivo 
-	   } */
- 
-
-		
-		
-		
-		
+	
     </style>
+
 	
 </head>
 <body>
@@ -3962,11 +3949,10 @@ document.addEventListener("DOMContentLoaded", function() {
           </div>
 
         </div>
-
-<button class="dns-button desktop-only">3 COLORS 1 VOICE</button>
-<!-- Questo sarà nascosto su mobile -->
-<button class="dns-button hide-on-mobile">3 COLORS 1 VOICE</button>
+		<button id="dns-button">3 COLORS 1 VOICE</button>
 </div>
+
+
 	</div>
 
     <!-- Colonna destra con stile applicato a tutta la sezione -->
