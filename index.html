@@ -17,7 +17,7 @@
 <!-- Font alternativi gratuiti che simulano Futura e Univers -->
 <link href="https://fonts.googleapis.com/css2?family=Didact+Gothic&family=Nunito:wght@300;900&family=Work+Sans:wght@300;400&display=swap" rel="stylesheet">
    
- <style>
+   <style>
 
 :root {
   --primary-color:   #0D4D5E;
@@ -30,7 +30,12 @@
   --secondary-color-dark:#7bbabc;
 }
 
-
+/* RESET BASE */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
 /* STRUTTURA BASE */
 html,
@@ -45,13 +50,6 @@ body {
   z-index: 1;
 }
 
-	 /* RESET BASE */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-	 
 /* SEZIONE PRINCIPALE */
 main {
   background-color: var(--white-color);
@@ -371,82 +369,69 @@ mark {
 }
 
 /* --- STYLE LOGO --- */
-.partnerhub-logo{
-    position: fixed;                 /* (eliminato il doppione) */
-    top: 2px;
-    left: 2px;
-    z-index: 2000;
+.partnerhub-logo {
+  position: fixed;
+  top: 2px;
+  left: 2px;
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  filter: drop-shadow(2px 2px 6px rgba(0, 0, 0, 0.2));
+  transition: filter 0.3s ease;
+}
+
+.swoosh-icon {
+  height: 40px;
+  width: auto;
+  display: inline-block;
+  z-index: 10000;
+}
+
+.header-logo-img {
+  max-width: 400px;
+  margin-bottom: 10px;
+  filter: drop-shadow(2px 2px 6px rgba(0, 0, 0, 0.2));
+  transition: filter 0.3s ease;
+}
+
+/* --- RESPONSIVE --- */
+@media screen and (max-width: 768px) {
+  .partnerhub-logo {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%) scale(1);
+    width: 100%;
+    padding: 10px;
     display: flex;
-	color:var(--primary-color);
-    align-items: center;
-    filter: drop-shadow(2px 2px 6px rgba(0,0,0,.2));
-    transition: filter .3s ease;
-}
-
-/* Swoosh icon accanto al logo */
-.swoosh-icon{
-    height: 40px;
-    width: auto;
+    background-color: rgba(200, 200, 200, 0.3);
     z-index: 10000;
-    display: inline-block;
+  }
+
+  .header-logo-img {
+    max-width: 300px;
+  }
+
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 5000;
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+    background-color: none;
+  }
+
+  header.show {
+    display: flex;
+    top: 2px;
+    background-color: white;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+  }
 }
 
-	 
-@media screen and (max-width:768px){
-    .partnerhub-logo{
-        position: absolute;
-        background-color: rgba(200,200,200,.3);   /* grigio trasparente */
-        top: 0;
-        left: 50%;
-        transform: translateX(-50%) scale(1);
-        padding: 10px;
-        z-index: 10000;          /* sopra al menu (4000) */
-        width: 100%;
-    }
-}
-
-/* Swoosh: altezza invariata anche dopo il media query */
-.swoosh-icon{ height: 40px; }
-
-/* Logo immagine grande */
-.header-logo-img{
-    max-width: 400px;
-    margin-bottom: 10px;
-    filter: drop-shadow(2px 2px 6px rgba(0,0,0,.2));
-    transition: filter .3s ease;
-}
-
-/* ───────────── MOBILE (< 768 px) ───────────── */
-@media screen and (max-width:768px){
-    .partnerhub-logo{
-        display: flex;
-        position: relative;
-    }
-    .header-logo-img{ max-width: 300px; }
-}
-
-/* Header mobile “sticky” */
-@media screen and (max-width:768px){
-    header{
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        z-index: 200000;
-        background-color: transparent;   /* ← fix: “none” non è valido */
-        display: none;
-        justify-content: space-between;
-        align-items: center;
-    }
-    header.show{
-        top: 2px;
-        width: 100%;
-        display: flex;
-        background-color: #ffffff;
-        box-shadow: 0 2px 6px rgba(0,0,0,.4);
-    }
-}
-	 
 /* --- STYLE STICKY BAR --- */
 .desktop-sticky-bar {
   display: none;
@@ -457,7 +442,7 @@ mark {
   height: 70px;
   opacity: 0.97;
   background-color: white;
-  z-index: 400;
+  z-index: 1000;
   transition: all 0.3s ease;
   filter: drop-shadow(2px 2px 6px rgba(0, 0, 0, 0.2));
   backdrop-filter: blur(4px);
@@ -855,6 +840,7 @@ nav a::after {
 
 @media screen and (max-width: 768px) {
   .menu-toggle {
+    position: absolute;
     display: block;
   }
 }
@@ -3331,9 +3317,10 @@ footer small{
   footer{padding:40px 12px;}
   footer::before{top:-40px;height:40px;}
 }
+
+</style>
 	
 </head>
-	 
 <body>
 <header>
 <!-- LOGO SVG CON SWOOSH + DNS PartnerHub -->
@@ -3381,10 +3368,6 @@ document.addEventListener("DOMContentLoaded", () => {
   if (hero) observer.observe(hero);
 });
 </script>
-
-
-
-
 <div class="desktop-sticky-bar" id="stickyBar">
 </div>
     <!-- HERO SECTION -->
@@ -4746,55 +4729,50 @@ document.addEventListener("DOMContentLoaded", function () {
     <div class="tooltip" id="tooltip"></div>
 </section>
 <script>
-document.addEventListener("DOMContentLoaded", function () {
-    const valueBoxes = document.querySelectorAll(".value-box");
+document.addEventListener("DOMContentLoaded", () => {
+  const boxes   = document.querySelectorAll(".value-box");
+  let   pinned  = null;                       // box attualmente “fissato”
 
-    valueBoxes.forEach(box => {
-        // Creazione dinamica della descrizione
-        const description = document.createElement("div");
-        description.classList.add("value-description");
-        description.innerHTML = box.getAttribute("data-desc"); // Legge il valore dall'attributo
-        box.appendChild(description);
+  boxes.forEach(box => {
+    /* Tooltip costruita al volo */
+    const tip = document.createElement("div");
+    tip.className = "value-description";
+    tip.innerHTML = box.dataset.desc || "";
+    tip.style.backgroundColor = getComputedStyle(box).backgroundColor;
+    box.appendChild(tip);
 
-        let isOpen = false; // 🔹 Stato aperto/chiuso
-
-        // 🔹 Ottiene il colore del box e lo applica al tooltip
-        const boxColor = window.getComputedStyle(box).backgroundColor;
-        description.style.backgroundColor = boxColor;
-
-        box.addEventListener("mouseenter", function () {
-            if (!isOpen) {
-                description.classList.add("show");
-            }
-        });
-
-        box.addEventListener("mouseleave", function () {
-            if (!isOpen) {
-                description.classList.remove("show");
-            }
-        });
-
-        box.addEventListener("click", function (e) {
-            e.stopPropagation(); // 🔹 Impedisce la chiusura immediata su click fuori
-            isOpen = !isOpen; // 🔹 Alterna lo stato
-            if (isOpen) {
-                description.classList.add("show");
-            } else {
-                description.classList.remove("show");
-            }
-        });
-
-        // 🔹 Chiude la descrizione cliccando fuori dal box
-        document.addEventListener("click", function (event) {
-            if (!box.contains(event.target)) {
-                isOpen = false;
-                description.classList.remove("show");
-            }
-        });
+    /* Hover – mostra solo se non è “pinnato” */
+    box.addEventListener("mouseenter", () => {
+      if (pinned !== box) tip.classList.add("show");
     });
-});
+    box.addEventListener("mouseleave", () => {
+      if (pinned !== box) tip.classList.remove("show");
+    });
 
+    /* Click – pin / unpin */
+    box.addEventListener("click", e => {
+      e.stopPropagation();                    // evita bubbling
+      if (pinned === box) {                   // ➜ era già aperto ⇒ chiudi
+        tip.classList.remove("show");
+        pinned = null;
+      } else {                                // ➜ apri questo e chiudi l’eventuale altro
+        if (pinned) pinned.querySelector(".value-description").classList.remove("show");
+        tip.classList.add("show");
+        pinned = box;
+      }
+    });
+  });
+
+  /* Click altrove → chiude il tooltip “pinnato” */
+  document.addEventListener("click", () => {
+    if (pinned){
+      pinned.querySelector(".value-description").classList.remove("show");
+      pinned = null;
+    }
+  });
+});
 </script>
+
 
 <section id="dns-statement">
     <h2 class="statement-title">MORE THAN JUST SKIING</h2>
