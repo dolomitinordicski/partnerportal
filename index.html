@@ -1719,14 +1719,9 @@ scroll-snap-type: x mandatory;
   transform: rotate(90deg);
 }
 @media screen and (max-width: 768px) {
-.toggle-btn  {
-display:none;
-  flex-direction: column;
-  align-items: center;
-  font-size: 15px;
-    margin-top: 80px;
-
-}
+  .desktop-only {
+    display: none !important;
+  }
 }
 
 
@@ -3938,10 +3933,10 @@ document.addEventListener("DOMContentLoaded", function() {
   "Colors have meanings. We mixed 2, made 3, and created 1 identity"
 ]'></div>
 
-        <button id="toggle-color-wheel" class="toggle-btn">
-          <span class="arrow">▶</span> Color symbology
-        </button>
-
+<button id="toggle-color-wheel" class="toggle-btn desktop-only">
+  <span class="arrow">▶</span> Color symbology
+</button>
+			
         <div class="color-wheel-toggle-wrapper">
           <div id="color-wheel-toggle" class="collapsible">
             <div class="color-wheel-container">
