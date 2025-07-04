@@ -1719,9 +1719,22 @@ scroll-snap-type: x mandatory;
   transform: rotate(90deg);
 }
 	   
+/* Mobile: nasconde solo quelli con la classe desktop-only */
 @media screen and (max-width: 768px) {
   .toggle-btn.desktop-only {
     display: none !important;
+  }
+
+  .toggle-btn {
+    font-size: 16px;
+    padding: 0.6rem 1rem;
+    margin-top: 20px;
+    margin-bottom: 8px;
+    text-align: center;
+  }
+
+  .toggle-btn .arrow {
+    font-size: 18px;
   }
 }
 
