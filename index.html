@@ -1351,7 +1351,7 @@ nav a::after {
 
 .font-column {
   flex: 1;
-  min-width: 220px;
+  min-width: 180px;
   padding: 20px;
   box-sizing: border-box;
   background: #f2ffff;
@@ -1363,6 +1363,15 @@ nav a::after {
   transition: transform 0.4s ease, opacity 0.6s ease, box-shadow 0.4s ease;
   color: var(--primary-color);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+
+  /* BORDO SPESSO A SINISTRA */
+  border-left: 20px solid; /* spessore bordo */
+  border-image: linear-gradient(
+    to bottom,
+    #0D4D5E 0%,      /* Frosted Ice Blue */
+    #417483 50%,     /* Nordic Sky Blue */
+    #AAD0D1 100%     /* Deep Glacier Blue */
+  ) 1;
 }
 
 .font-section.visible .font-column {
