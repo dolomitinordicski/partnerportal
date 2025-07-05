@@ -870,7 +870,7 @@ nav a::after {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 1020%;
     z-index: 5000;
     background-color: white;
     padding: 10px 20px;
@@ -881,6 +881,25 @@ nav a::after {
     padding-top: 60px; /* evita che il contenuto venga coperto dalla sticky bar */
   }
 }
+
+@media screen and (max-width: 768px) {
+  .dns-border-line {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 4px;
+    background: linear-gradient(to right, #0D4D5E 50%, var(--primary-color) 50%);
+    width: 0%;
+    transition: width 0.3s ease-in-out;
+    z-index: 9999;
+  }
+
+  header.show .dns-border-line {
+    width: 100%;
+  }
+}
+
+
 /* ------------------- SINGLE SECTIONS --------------------------------------- */
 /* --- INTRO SECTION --- */
 
