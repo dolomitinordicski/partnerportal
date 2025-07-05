@@ -410,12 +410,12 @@ mark {
   }
 
   .header-logo-img {
-    max-width: 180px;
+   max-width: 180px;
 	  height:auto;
   }
 
 	.swoosh-icon {
-  height: 30px;
+  height: 40px;
 }
 	
   header {
@@ -845,9 +845,10 @@ nav a::after {
 }
 
 @media screen and (max-width: 768px) {
-  .menu-toggle {
     position: absolute;
-    display: block;
+    display: inline-block;
+    vertical-align: middle; /* se vuoi allinearlo meglio con altri elementi */
+    z-index: 10001; /* opzionale, utile per evitare che il logo lo copra */
   }
 }
 
