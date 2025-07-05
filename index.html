@@ -55,6 +55,10 @@
 </nav>
 <div class="dns-border-line"></div>	
 </header>  
+
+
+
+
 <script>
 document.addEventListener("DOMContentLoaded", () => {
   const header = document.querySelector("header");
@@ -72,36 +76,24 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (hero) observer.observe(hero);
 });
+</script>
+
+	
+<div class="desktop-sticky-bar" id="stickyBar">
+</div>
 <script>
 document.addEventListener("DOMContentLoaded", () => {
-  // HEADER TOGGLE
   const header = document.querySelector("header");
-  const hero = document.querySelector(".hero");
   const border = document.querySelector(".dns-border-line");
 
-  if (hero) {
-    const observer = new IntersectionObserver(([entry]) => {
-      if (!entry.isIntersecting) {
-        header.classList.add("show");
-      } else {
-        header.classList.remove("show");
-      }
-    }, {
-      threshold: 0.1
-    });
-
-    observer.observe(hero);
-  }
-
-  // BORDO SCORRIMENTO MOBILE
   window.addEventListener("scroll", () => {
     const scrollTop = window.scrollY;
     const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
     const scrollPercent = (scrollTop / scrollHeight) * 100;
 
-    if (window.innerWidth <= 768 && border) {
-      border.style.width = `${scrollPercent}%`;
-    } else if (border) {
+    if (window.innerWidth <= 768) {
+      border.style.width = ${scrollPercent}%;
+    } else {
       border.style.width = "0%";
     }
   });
@@ -111,12 +103,23 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
+
+
+
+
+
+	
+
+
+
+
+
     <!-- HERO SECTION ----------------------------------------------------------------------->
 <section class="hero" id="hero">
   <div class="hero-content">
     <div class="header-logo-blur">
       <img class="header-logo-img" src="https://www.dolomitinordicski.com/media/bd92869d-8dc3-4109-9ade-f89e3e9ac293/dolomiti-nordicski-logo-farbe-2025.png" alt="Nuovo Logo Dolomiti NordicSki">
-      <h1>WELCCOME</h1>
+      <h1>WELCOME</h1>
       <h2>DEIN EINSTIEG IN DIE WELT VON DNS!</br>
         Spüre den Zauber des Langlaufs, die Kraft der Natur und das gemeinsame Ziel.
         Hier findest du alles: unser visuelles Erscheinungsbild, unsere Werte – und über die Buttons am Rand den direkten Zugang zu allen Tools, die dich als Partner weiterbringen.</h2>
