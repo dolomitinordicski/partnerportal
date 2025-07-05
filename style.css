@@ -1,4 +1,3 @@
-
 :root {
   --primary-color:   #0D4D5E;
   --secondary-color: #AAD0D1;
@@ -18,7 +17,7 @@
 }
 
 /* STRUTTURA BASE */
-html, 
+html,
 body {
   overflow-x: hidden;
   font-family: 'Be Vietnam Pro', sans-serif;
@@ -248,13 +247,13 @@ h2.fade-in {
 /* Responsive */
 @media screen and (max-width: 768px) {
   h1 {
-    font-size: 40px;
-	  text-align:center !important;
+    font-size: 50px;
+	text-align:center;
   }
 
   h2 {
     font-size: 26px;
-	  text-align:center !important;
+	text-align:center;
   }
 
   h3 {
@@ -374,30 +373,31 @@ mark {
   transition: filter 0.3s ease;
 }
 
+
+
+
+
+
+
 /* --- RESPONSIVE --- */
 @media screen and (max-width: 768px) {
   .partnerhub-logo {
     position: absolute;
-	    align-items: left;
     top: 0;
-    left:0;
-    transform: none;
-    width: auto;
+    left: 0; /* ✅ cambia da 50% a 0 per allinearlo a sinistra */
+    transform: none; /* ✅ rimuovi il translateX */
+    width: 100%;
     padding: 10px;
-    display:flex;
-    background-color: #ffffff;rgba(200, 200, 200, 0.3)
+    display: flex;
+    background-color: rgba(255, 255, 255, 0.95); /* ✅ sistemato qui */
     z-index: 10000;
   }
 
   .header-logo-img {
-   max-width: 180px;
-	  height:auto;
+    max-width: 180px; /* ✅ ridotto per mobile */
+    height: auto;
   }
 
-	.swoosh-icon {
-  height: 40px;
-}
-	
   header {
     position: fixed;
     top: 0;
@@ -424,7 +424,7 @@ mark {
   position: fixed;
   top: 0;
   left: 0;
-  width: 30%;
+  width: 50%;
   height: 70px;
   opacity: 0.97;
   background-color: white;
@@ -437,7 +437,6 @@ mark {
 
 @media screen and (min-width: 769px) {
   .desktop-sticky-bar.show {
-	   width: 40%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -477,7 +476,7 @@ mark {
 .hero-content {
   z-index: 2;
   max-width: 800px;
-  padding: 50px;
+  padding: 30px;
   opacity: 0;
   transform: translateY(20px);
   animation: fadeZoom 1.4s ease-out forwards;
@@ -515,20 +514,20 @@ mark {
   .hero {
     position: absolute;
     padding: 10px;
-    text-align: left !important;
-    margin-top: 15px;
+    text-align: left;
+    margin-top: 25px;
   }
 
   .hero h1 {
-    font-size: 28px;
+    font-size: 25px;
   }
 
   .hero h2 {
-    font-size: 14px;
+    font-size: 17px;
   }
 
   .hero h3 {
-    font-size: 10px;
+    font-size: 20px;
   }
 
   .hero-btn {
@@ -826,18 +825,15 @@ nav a::after {
 }
 
 @media screen and (max-width: 768px) {
+  .menu-toggle {
     position: absolute;
-    display: inline-block;
-	left: 15px;  
-    vertical-align: middle; /* se vuoi allinearlo meglio con altri elementi */
-    z-index: 10001; /* opzionale, utile per evitare che il logo lo copra */
+    display: block;
   }
 }
 
 /* --- STYLE GO TO TOP --- */
 
 #goToTop {
-  all: unset; /* RESETTA TUTTE LE PROPRIETÀ EREDITATE */
   position: fixed;
   bottom: 100px;
   right: 20px;
@@ -846,6 +842,7 @@ nav a::after {
   z-index: 10000;
   background-color: var(--primary-color);
   color: white;
+  border: none;
   border-radius: 50%;
   font-size: 24px;
   cursor: pointer;
@@ -853,11 +850,7 @@ nav a::after {
   transform: rotate(180deg);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
-  text-align: center;
-  line-height: 50px; /* Per centrare verticalmente */
-  border: none;
 }
-
 
 #goToTop:hover {
   background-color: var(--secondary-color);
@@ -885,25 +878,6 @@ nav a::after {
     padding-top: 60px; /* evita che il contenuto venga coperto dalla sticky bar */
   }
 }
-
-@media screen and (max-width: 768px) {
-  .dns-border-line {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    height: 4px;
-    background: linear-gradient(to right, #0D4D5E 50%, var(--primary-color) 50%);
-    width: 0%;
-    transition: width 0.3s ease-in-out;
-    z-index: 9999;
-  }
-
-  header.show .dns-border-line {
-    width: 100%;
-  }
-}
-
-
 /* ------------------- SINGLE SECTIONS --------------------------------------- */
 /* --- INTRO SECTION --- */
 
@@ -913,7 +887,7 @@ nav a::after {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  padding: 30px 80px;
+  padding: 70px;
   background-color: var(--secondary-color);
   opacity: 0;
   overflow: visible;
@@ -992,7 +966,7 @@ nav a::after {
 
   .intro-img-wrapper {
     position: static;
-    width: 40%;
+    width: 60%;
     margin: 0 auto 30px;
   }
 
@@ -1837,7 +1811,7 @@ nav a::after {
   clip-path: polygon(0 0, 100% 0, 55% 100%, 0% 100%);
 }
 
-@media screen and (max-width: 880px) {
+@media screen and (max-width: 768px) {
   .parallax-section {
     height: 20vh;
   }
@@ -2839,8 +2813,7 @@ nav a::after {
 
 /* ─── Mobile tweaks (<768 px) ───────────────────────────────────── */
 @media(max-width:768px){
-  .digital-grid{grid-template-columns:1fr;gap:2rem;font-size:.65rem; text-align:center}
-  .h1 {text-align: center;}
+  .digital-grid{grid-template-columns:1fr;gap:2rem;font-size:.65rem;}
   .ecosystem-image{order:1;text-align:center;}
   .ecosystem-image img{transform:none;margin-top:0;}
   .feature-item{clip-path:polygon(0 0,100% 0,85% 100%,0% 100%);}
@@ -2891,36 +2864,15 @@ nav a::after {
 .stat strong{font-size:4.5rem;display:block;}
 .stat:hover{transform:scale(1.1);}
 
-
-@media screen and (max-width: 768px) {
-  .usp-stats {
-    flex-direction: column;
-    align-items: center;
-    gap: 1.5rem;
-  }
-
-  .stat {
-    font-size: 1.2rem;
-  }
-
-  .stat strong {
-    font-size: 3rem;
-  }
-}
-
-
-
-
-
-
-
 /* contenitore word-cloud */
 #wordcloud-container{
   width:100%;max-width:800px;height:500px;
   margin:40px auto;padding:1.5rem;position:relative;overflow:hidden;
   animation:floatIn 2s ease-in-out;
+  box-shadow:0 12px 24px rgba(0,0,0,.3);
+  background:radial-gradient(circle,var(--primary-color),var(--secondary-color));
+  border-radius:30px;
 }
-
 
 /* Mobile riduzioni se servono (aggiungi break-point) */
 @media(max-width:768px){
