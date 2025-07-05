@@ -837,7 +837,8 @@ nav a::after {
 /* --- STYLE GO TO TOP --- */
 
 #goToTop {
-  position: fixed !important;
+  all: unset; /* RESETTA TUTTE LE PROPRIETÀ EREDITATE */
+  position: fixed;
   bottom: 100px;
   right: 20px;
   width: 50px;
@@ -845,7 +846,6 @@ nav a::after {
   z-index: 10000;
   background-color: var(--primary-color);
   color: white;
-  border: none;
   border-radius: 50%;
   font-size: 24px;
   cursor: pointer;
@@ -853,7 +853,11 @@ nav a::after {
   transform: rotate(180deg);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  text-align: center;
+  line-height: 50px; /* Per centrare verticalmente */
+  border: none;
 }
+
 
 #goToTop:hover {
   background-color: var(--secondary-color);
