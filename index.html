@@ -1,34 +1,8 @@
-<!DOCTYPE html>
-<html lang="it">
-<head>
-    <meta charset="UTF-8">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/wordcloud2.js/1.0.5/wordcloud2.min.js"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Dolomiti NordicSki - Corporate Design e values">
-    <meta name="theme-color" content="#0F4C5C">
-    <title>Dolomiti NordicSki - Corporate Design</title>
-
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Lora:ital,wght@0,400..700;1,400..700&family=Merriweather+Sans:ital@0;1&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-<!-- Font alternativi gratuiti che simulano Futura e Univers -->
-<link href="https://fonts.googleapis.com/css2?family=Didact+Gothic&family=Nunito:wght@300;900&family=Work+Sans:wght@300;400&display=swap" rel="stylesheet">
-   <link rel="stylesheet" href="style.css">	
 </head>
-
-
-
-	
 <body>
-
-
-
-	
 <header>
 <!-- LOGO SVG CON SWOOSH + DNS PartnerHub -->
+
 <div class="partnerhub-logo">
     <img src="https://www.dolomitinordicski.com/media/f0a51847-50a9-4eeb-908f-1dee1b292b3c/dolomiti-nordicski-kurve.png" alt="Nordic Swoosh" class="swoosh-icon">
 
@@ -40,6 +14,7 @@
         <text x="0" y="40" class="dns">DNS</text>
         <text x="80" y="40" class="partnerhub">Partner Portal</text>
     </svg>
+
 <button class="menu-toggle" type="button" aria-label="Menu"></button>
 
 	    <nav>
@@ -52,9 +27,8 @@
     <a href="#core-values">CREDO</a>
     <a href="#corporate-identity">IDENTITY</a>
   </div>
+    </div>
 </nav>
-
-<div class="dns-border-line"></div>	
 </header>  
 <script>
 document.addEventListener("DOMContentLoaded", () => {
@@ -74,38 +48,14 @@ document.addEventListener("DOMContentLoaded", () => {
   if (hero) observer.observe(hero);
 });
 </script>
-
-	
 <div class="desktop-sticky-bar" id="stickyBar">
 </div>
-
-	<script>
-document.addEventListener("DOMContentLoaded", function () {
-  const border = document.querySelector(".dns-border-line");
-
-  window.addEventListener("scroll", () => {
-    if (!border) return;
-
-    const scrollTop = window.scrollY;
-    const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
-    const scrollPercent = (scrollTop / scrollHeight) * 100;
-
-    if (window.innerWidth <= 768) {
-      border.style.width = `${scrollPercent}%`;
-    } else {
-      border.style.width = "0%";
-    }
-  });
-});
-</script>
-
-
-    <!-- HERO SECTION ----------------------------------------------------------------------->
+    <!-- HERO SECTION -->
 <section class="hero" id="hero">
   <div class="hero-content">
     <div class="header-logo-blur">
       <img class="header-logo-img" src="https://www.dolomitinordicski.com/media/bd92869d-8dc3-4109-9ade-f89e3e9ac293/dolomiti-nordicski-logo-farbe-2025.png" alt="Nuovo Logo Dolomiti NordicSki">
-      <h1>WEL COME</h1>
+      <h1>WELllllCOME</h1>
       <h2>DEIN EINSTIEG IN DIE WELT VON DNS!</br>
         Spüre den Zauber des Langlaufs, die Kraft der Natur und das gemeinsame Ziel.
         Hier findest du alles: unser visuelles Erscheinungsbild, unsere Werte – und über die Buttons am Rand den direkten Zugang zu allen Tools, die dich als Partner weiterbringen.</h2>
@@ -113,7 +63,6 @@ document.addEventListener("DOMContentLoaded", function () {
         Vivi l’emozione dello sci di fondo, il legame con la natura e la forza della collaborazione.
         Qui scopri la nostra identità visiva, i nostri valori – e puoi accedere facilmente a tutti gli strumenti riservati grazie ai pulsanti laterali.</h2>
     </div>
- </section>
 <script>
 window.addEventListener("scroll", () => {
   const scrolled = window.scrollY;
@@ -123,13 +72,9 @@ window.addEventListener("scroll", () => {
   }
 });
 </script>
-
-
-
-
-	
+</section>
 <main id="inizio">
-<!-- Contenitore per i bottoni sticky --------------------------------------------------->
+<!-- Contenitore per i bottoni sticky -->
 <div class="sticky-buttons-container">
     <div class="sticky-button1" id="accomodation-toolbox">
         <span class="vertical-text">AT</span>
@@ -184,7 +129,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 </script>
 
-<!-- INTRO SECTION ---------------------------------------------------------------------------------------------->
+<!-- INTRO SECTION -->
 <section class="intro-section" id="Intro">
   <div class="intro-img-wrapper">
   <img src="img/dolomitinordicskiimage.png" alt="Langläufer" class="intro-img" loading="lazy">
@@ -230,7 +175,147 @@ document.addEventListener("DOMContentLoaded", function () {
   "Jede Geschichte trägt Spuren. Jede Etappe hat unsere Identität geprägt","Ogni storia lascia un segno. Ogni tappa ha forgiato la nostra identità","Every story leaves a mark. Every milestone has shaped strong our identity"
 ]'></h2>
 
-<!-- CORPORATE DESIGN --------------------------------------------------------------------------------------->
+<!--
+<section>
+<button class="expanded-toggle">
+    <span class="expanded-text">DNS STORY</span>
+  <span class="dns-arrow"></span>
+</button>
+<div class="expanded-content">
+<!-- ✅ HTML: Timeline evolutiva 
+<section class="timeline-section">
+  <div class="timeline-container">
+<svg class="timeline-arrow" viewBox="0 0 24 24" width="24" height="24">
+  <defs>
+    <linearGradient id="arrowGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0D4D5E" />
+      <stop offset="100%" stop-color="#AAD0D1" />
+    </linearGradient>
+  </defs>
+  <path d="M4 4l12 8-12 8" fill="none" stroke="url(#arrowGradient)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+    <div class="timeline timeline-horizontal">
+
+      <div class="timeline-line"></div>
+
+      <!-- Ogni blocco rappresenta un anno  
+      <div class="timeline-block" data-year="2000">
+        <div class="timeline-circle"></div>
+        <div class="timeline-content">
+          <h2>2000</h2>
+          <p><strong>Foundation of the CO.</strong></p>
+		  <p>Central secretary in the Tourismusverband Hochpustertal</p>
+        </div>
+      </div>
+      <div class="timeline-block" data-year="2001">
+        <div class="timeline-circle"></div>
+        <div class="timeline-content">
+          <h2>2001</h2>
+          <p><strong>Interreg III (2001-2005)</strong></p>
+		  		  <p><strong></strong></p>
+          <p>Creation of the logo</p>
+<img src="https://www.dolomitinordicski.com/media/74ccaeaa-44e4-4270-aa58-b3fa8aef4457/logo-dns-transparent.png" alt="Logo 2000">
+		  <p>Maps & publications</p>
+        </div>
+      </div>
+      <div class="timeline-block" data-year="2007">
+        <div class="timeline-circle"></div>
+        <div class="timeline-content">
+          <h2>2007</h2>
+		  <p><strong>Interreg IV (2007-2013)</strong></p>
+          <p>Website</p>
+		  <p>Common signs</p>
+        </div>
+      </div>
+      <div class="timeline-block" data-year="2018">
+        <div class="timeline-circle"></div>
+        <div class="timeline-content">
+          <h2>2018</h2>
+		  <p><strong>Site transfer</strong></p>
+          <p>The secretary transfers in the Tourist Association of Toblach-Dobbiaco</p>
+        </div>
+      </div>
+      <div class="timeline-block" data-year="2023">
+        <div class="timeline-circle"></div>
+        <div class="timeline-content">
+          <h2>2023</h2>
+		  <p><strong>Office open</strong></p>
+          <p>Opening of a strategic office in Welsberg-Monguelfo</p>
+        </div>
+      </div>
+      <div class="timeline-block" data-year="2025">
+        <div class="timeline-circle"></div>
+
+        <div class="timeline-content">
+          <h2>2025</h2>
+		  <p><strong>Interreg VI</strong></p>
+		  <p><strong>Dolomiti Live (2025-2027)</strong></p>
+          <p>redesign logo</p>
+          <img src="https://www.dolomitinordicski.com/media/bd92869d-8dc3-4109-9ade-f89e3e9ac293/dolomiti-nordicski-logo-farbe-2025.png" alt="Logo 2015">
+		  <p>new website</p>
+		  <p>digitalized cartography (Contwise Map)</p>
+		  <p>new strategy</p>
+        </div>
+				 <div class="timeline-circle highlight"></div>
+      </div>
+    </div>
+</section>
+</div>
+</div>
+</section>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const toggles = document.querySelectorAll('.expanded-toggle');
+
+  toggles.forEach(toggle => {
+    toggle.addEventListener('click', function() {
+      this.classList.toggle('open'); // ruota la freccia
+      const content = this.nextElementSibling;
+      content.classList.toggle('open'); // mostra/nasconde il contenuto
+    });
+  });
+});
+</script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const blocks = document.querySelectorAll(".timeline-block");
+
+    if (!blocks.length) return;
+
+    const observer = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+          } else {
+            entry.target.classList.remove("visible");
+          }
+        });
+      },
+      {
+        threshold: 0.4,
+        rootMargin: "0px 0px -10% 0px"
+      }
+    );
+
+    blocks.forEach(block => {
+      observer.observe(block);
+
+      // 🔁 Forza visibilità iniziale se già nel viewport
+      const rect = block.getBoundingClientRect();
+      if (
+        rect.top < window.innerHeight &&
+        rect.bottom > 0
+      ) {
+        block.classList.add("visible");
+      }
+    });
+  });
+</script>
+-->
+
+<!-- CORPORATE DESIGN -->
 <section id="corporate">
   <div class="corporate-layout">
   
@@ -274,7 +359,7 @@ document.addEventListener("DOMContentLoaded", function () {
     <!-- Colonna destra con stile applicato a tutta la sezione -->
     <div class="corporate-right corporate-type">
 
-      <!-- TYPOGRAPHY ----------------------------------------------------->
+      <!-- TYPOGRAPHY -->
       <h2>TYPEFACE</h2>
       <div class="font-section">
         <div class="font-column">
@@ -294,7 +379,7 @@ document.addEventListener("DOMContentLoaded", function () {
         </div>
       </div>
 
-      <!-- COLORS -------------------------------------------------------------------------->
+      <!-- COLORS -->
       <h2>PALETTE</h2>
       <div class="corporate-colors"> 
         <div class="color-palette">
@@ -323,8 +408,7 @@ document.addEventListener("DOMContentLoaded", function () {
           </div>
         </div>
       </div>
-	    
-      <!-- DNS COLOR IDENTITY --------------------------------------------------->
+      <!-- DNS COLOR IDENTITY -->
       <div class="corporate-dns-identity" id="dns-description">
         <div class="dns-color-box">
           <span class="color-dot" style="background:#0D4D5E;"></span>
@@ -345,6 +429,8 @@ document.addEventListener("DOMContentLoaded", function () {
     </div> <!-- fine .corporate-right -->
   </div> <!-- fine .corporate-layout -->
 </section>
+
+
 <script>
 // Entrata/uscita animata della sezione font
 const fontSection = document.querySelector('.font-section');
@@ -597,7 +683,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-<!--LOGO SECTION---------------------------------------------------------------------------------------->
+
 <section id="logo">
 <section class="parallax-section">
   <div class="parallax-bg"></div>
@@ -614,12 +700,7 @@ document.addEventListener("DOMContentLoaded", () => {
 </script>
       <div class="logo-layout"> 
     <div class="logo" id="LogoTimeline" aria-label="Timeline evoluzione logo">
-
-
-
-
-	    
-	    <!-- 1. TIMELINE DESKTOP ------------------------------------------------------------->	 
+    <!-- 1. TIMELINE -->	 
 	<div class="timeline-wrapper">
 			<p class="separator-text"></p>
         <div class="timeline-track">
@@ -649,9 +730,9 @@ document.addEventListener("DOMContentLoaded", () => {
             alt="Logo Dolomiti NordicSki storico di confronto"
           />
         </div>
-	</div>
+		</div>
       </div>
-</div>
+	  	</div>
 </section>
 <script>
   document.getElementById('restart-logo-animation').addEventListener('click', function () {
@@ -767,11 +848,6 @@ document.addEventListener("DOMContentLoaded", () => {
   if (logoSection) observer.observe(logoSection);
 });
 </script>
-
-
-
-	
-<!--TIMELINE MOBILE-------------------------------------------------------------------->
 <div class="mobile-timeline">
   <div class="mobile-entry">
     <div class="mobile-year">2000</div>
@@ -870,11 +946,6 @@ document.addEventListener("DOMContentLoaded", () => {
 </script>
 
 
-
-
-
-	
-<!--LOGO DECODING----------------------------------------------------------------------------------------------------->
 <section class="logo-decoding">
 <!-- Switch lingua -->
   <div class="logo-elements">
@@ -969,10 +1040,6 @@ document.addEventListener("DOMContentLoaded", () => {
 	</div>
   </div>
     </div>
-
-
-	
-<!--LOGO MANUAL SECTION-------------------------------------------------------------------->
 	<section class="logo-manual-section">
   <div class="manual-grid">
     <!-- Colonna sinistra: titolo + toggle -->
@@ -1131,10 +1198,6 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 </script>
-
-
-
-<!--TDIGITAL SECTION-------------------------------------------------------------------->
 <section id="digital" class="digital-section">
 
   <div class="container">
@@ -1222,26 +1285,15 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 </script>
 
-
-
-
-<!--USP SECTIONE-------------------------------------------------------------------->
 <section id="usps" class="wordcloud-section">
   <section class="section-separator">
     <h1 class="section-title wordcloud-title">USP</h1>
     <h2>WHAT MAKES US UNIQUE</h2>
 
-
-
-
-	  
-    <!--WORDCLOUD-------------------------------------------------------------------->
+    <!-- WordCloud -->
     <div id="wordcloud-container"></div>
 
-
-
-	  
-    <!-- VISUAL STATS------------------------------------------------------------- -->
+    <!-- Statistiche visive -->
     <div class="usp-stats">
 	<div class="stat"><strong>25</strong><br>years experience</div>
       <div class="stat"><strong>700</strong><br>km of ski trails</div>
@@ -1327,9 +1379,7 @@ document.addEventListener("DOMContentLoaded", function () {
     window.addEventListener('resize', renderWordCloud);
 });
 </script>
-
-	
-    <!-- CORE VALUES ---------------------------------------------------------------------------------->
+    <!-- CORE VALUES -->
 <section id="core-values">
 
 	<h1 class="section-title">CREDO</h1>
@@ -1430,12 +1480,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 </script>
 </section>
-
-
-
-
-	
-<!-- CORPORATE IDENTITY SECTION -------------------------------------------------------------------------------->
+<!-- CORPORATE IDENTITY SECTION -->
 <section id="corporate-identity">
     <h1 class="section-title">CORPORATE IDENTITY</h1>
     <div class="image-slider">
@@ -1456,7 +1501,7 @@ document.addEventListener("DOMContentLoaded", () => {
     </div>
 </section>
 	
-    <!-- LIGHTBOX ----------------------------------------------------------------------------------->
+    <!-- LIGHTBOX -->
     <div id="lightbox" class="lightbox">
         <span class="close">&times;</span>
         <img class="lightbox-img" id="lightbox-img">
@@ -1523,14 +1568,8 @@ document.addEventListener("DOMContentLoaded", function () {
   elements.forEach(el => observer.observe(el));
 });
 </script>
-	
 </main>
 
-
-
-<!--SCRIPT GENERALI; MENU; ANIMAZIONI, COMPORTAMENTI MOBILE DESKTOP-------------------------------------------------------------------->
-
-	
 <script>
 document.addEventListener("DOMContentLoaded", function () {
   const titles = document.querySelectorAll("h1.section-title");
@@ -1634,7 +1673,6 @@ const menuToggle = document.querySelector(".menu-toggle");
             behavior: "smooth"
         });
     });
-	
     /** EFFETTO ESPANSIONE SEZIONE LOGO **/
 const logoImages = document.querySelectorAll(".logo-element img");
 const descriptionContainers = document.querySelectorAll(".logo-description-container");
@@ -1704,9 +1742,18 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
 
-<script>
+        // 🔹 Chiude la descrizione cliccando fuori dal box
+        document.addEventListener("click", function (event) {
+            if (!box.contains(event.target)) {
+                isOpen = false;
+                description.classList.remove("show");
+            }
+        });
+    });
+});
 
-	
+</script>
+<script>
 // SCRIPT PER IL MENU - compatibile con hero full-screen
 document.querySelectorAll('nav a').forEach(anchor => {
    
@@ -1714,7 +1761,7 @@ document.querySelectorAll('nav a').forEach(anchor => {
 
 </script>
 
-
+<button id="goToTop">&#8679;</button>
 <script>
 document.addEventListener("DOMContentLoaded", function () {
   const stickyBar = document.getElementById("stickyBar");
@@ -1733,14 +1780,12 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 </script>
-<button id="goToTop">&#8679;</button>
 
 
- <!-- FOOTER ----------------------------------------------------------------------------------------->   
+
+     <!-- FOOTER -->   
 	 <footer>
 	   &copy; 2025 Dolomiti NordicSki. All rights reserved.
-	 </br>
-		 OK Dolomiti NordicSki, Dolomitenstrasse 29, 39034 Toblach-Dobbiaco (BZ) - ITALY
     </footer>
 </body>
 </html>
