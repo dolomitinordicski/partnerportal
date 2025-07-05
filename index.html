@@ -53,26 +53,9 @@
     <a href="#corporate-identity">IDENTITY</a>
   </div>
 </nav>
+
 <div class="dns-border-line"></div>	
 </header>  
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-  const header = document.querySelector("header");
-  const border = document.querySelector(".dns-border-line");
-
-  window.addEventListener("scroll", () => {
-    const scrollTop = window.scrollY;
-    const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
-    const scrollPercent = (scrollTop / scrollHeight) * 100;
-
-    if (window.innerWidth <= 768) {
-      border.style.width = ${scrollPercent}%;
-    } else {
-      border.style.width = "0%";
-    }
-  });
-});
-</script>
 <script>
 document.addEventListener("DOMContentLoaded", () => {
   const header = document.querySelector("header");
@@ -96,13 +79,33 @@ document.addEventListener("DOMContentLoaded", () => {
 <div class="desktop-sticky-bar" id="stickyBar">
 </div>
 
+	<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const border = document.querySelector(".dns-border-line");
+
+  window.addEventListener("scroll", () => {
+    if (!border) return;
+
+    const scrollTop = window.scrollY;
+    const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const scrollPercent = (scrollTop / scrollHeight) * 100;
+
+    if (window.innerWidth <= 768) {
+      border.style.width = `${scrollPercent}%`;
+    } else {
+      border.style.width = "0%";
+    }
+  });
+});
+</script>
+
 
     <!-- HERO SECTION ----------------------------------------------------------------------->
 <section class="hero" id="hero">
   <div class="hero-content">
     <div class="header-logo-blur">
       <img class="header-logo-img" src="https://www.dolomitinordicski.com/media/bd92869d-8dc3-4109-9ade-f89e3e9ac293/dolomiti-nordicski-logo-farbe-2025.png" alt="Nuovo Logo Dolomiti NordicSki">
-      <h1>WELlCOME</h1>
+      <h1>WELLCOME</h1>
       <h2>DEIN EINSTIEG IN DIE WELT VON DNS!</br>
         Spüre den Zauber des Langlaufs, die Kraft der Natur und das gemeinsame Ziel.
         Hier findest du alles: unser visuelles Erscheinungsbild, unsere Werte – und über die Buttons am Rand den direkten Zugang zu allen Tools, die dich als Partner weiterbringen.</h2>
