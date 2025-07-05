@@ -837,7 +837,7 @@ nav a::after {
 /* --- STYLE GO TO TOP --- */
 
 #goToTop {
-  position: fixed;
+  position: relative;
   bottom: 100px;
   right: 20px;
   width: 50px;
@@ -882,7 +882,22 @@ nav a::after {
   }
 }
 
+@media screen and (max-width: 768px) {
+  .dns-border-line {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 4px;
+    background: linear-gradient(to right, #0D4D5E 50%, var(--primary-color) 50%);
+    width: 0%;
+    transition: width 0.3s ease-in-out;
+    z-index: 9999;
+  }
 
+  header.show .dns-border-line {
+    width: 100%;
+  }
+}
 
 
 /* ------------------- SINGLE SECTIONS --------------------------------------- */
