@@ -1,4 +1,3 @@
-   <style>
 
 :root {
   --primary-color:   #0D4D5E;
@@ -19,7 +18,7 @@
 }
 
 /* STRUTTURA BASE */
-html,
+html, 
 body {
   overflow-x: hidden;
   font-family: 'Be Vietnam Pro', sans-serif;
@@ -249,13 +248,13 @@ h2.fade-in {
 /* Responsive */
 @media screen and (max-width: 768px) {
   h1 {
-    font-size: 50px;
-	  text-align:center;
+    font-size: 40px;
+	  text-align:center !important;
   }
 
   h2 {
     font-size: 26px;
-	  text-align:center;
+	  text-align:center !important;
   }
 
   h3 {
@@ -882,6 +881,25 @@ nav a::after {
     padding-top: 60px; /* evita che il contenuto venga coperto dalla sticky bar */
   }
 }
+
+@media screen and (max-width: 768px) {
+  .dns-border-line {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 4px;
+    background: linear-gradient(to right, #0D4D5E 50%, var(--primary-color) 50%);
+    width: 0%;
+    transition: width 0.3s ease-in-out;
+    z-index: 9999;
+  }
+
+  header.show .dns-border-line {
+    width: 100%;
+  }
+}
+
+
 /* ------------------- SINGLE SECTIONS --------------------------------------- */
 /* --- INTRO SECTION --- */
 
@@ -2817,7 +2835,8 @@ nav a::after {
 
 /* ─── Mobile tweaks (<768 px) ───────────────────────────────────── */
 @media(max-width:768px){
-  .digital-grid{grid-template-columns:1fr;gap:2rem;font-size:.65rem;}
+  .digital-grid{grid-template-columns:1fr;gap:2rem;font-size:.65rem; text-align:center}
+  .h1 {text-align: center;}
   .ecosystem-image{order:1;text-align:center;}
   .ecosystem-image img{transform:none;margin-top:0;}
   .feature-item{clip-path:polygon(0 0,100% 0,85% 100%,0% 100%);}
@@ -2868,15 +2887,36 @@ nav a::after {
 .stat strong{font-size:4.5rem;display:block;}
 .stat:hover{transform:scale(1.1);}
 
+
+@media screen and (max-width: 768px) {
+  .usp-stats {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .stat {
+    font-size: 1.2rem;
+  }
+
+  .stat strong {
+    font-size: 3rem;
+  }
+}
+
+
+
+
+
+
+
 /* contenitore word-cloud */
 #wordcloud-container{
   width:100%;max-width:800px;height:500px;
   margin:40px auto;padding:1.5rem;position:relative;overflow:hidden;
   animation:floatIn 2s ease-in-out;
-  box-shadow:0 12px 24px rgba(0,0,0,.3);
-  background:radial-gradient(circle,var(--primary-color),var(--secondary-color));
-  border-radius:30px;
 }
+
 
 /* Mobile riduzioni se servono (aggiungi break-point) */
 @media(max-width:768px){
@@ -3316,5 +3356,3 @@ footer small{
   footer{padding:40px 12px;}
   footer::before{top:-40px;height:40px;}
 }
-
-</style>
