@@ -2816,7 +2816,7 @@ nav a::after {
 
 /* ─── Mobile tweaks (<768 px) ───────────────────────────────────── */
 @media(max-width:768px){
-  .digital-grid{grid-template-columns:1fr;gap:2rem;font-size:.65rem;}
+  .digital-grid{grid-template-columns:1fr;gap:2rem;font-size:.65rem; text-align:center}
   .ecosystem-image{order:1;text-align:center;}
   .ecosystem-image img{transform:none;margin-top:0;}
   .feature-item{clip-path:polygon(0 0,100% 0,85% 100%,0% 100%);}
