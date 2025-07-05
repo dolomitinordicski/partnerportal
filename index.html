@@ -1778,6 +1778,7 @@ const menuToggle = document.querySelector(".menu-toggle");
             behavior: "smooth"
         });
     });
+	
     /** EFFETTO ESPANSIONE SEZIONE LOGO **/
 const logoImages = document.querySelectorAll(".logo-element img");
 const descriptionContainers = document.querySelectorAll(".logo-description-container");
@@ -1847,17 +1848,6 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
 
-        // 🔹 Chiude la descrizione cliccando fuori dal box
-        document.addEventListener("click", function (event) {
-            if (!box.contains(event.target)) {
-                isOpen = false;
-                description.classList.remove("show");
-            }
-        });
-    });
-});
-
-</script>
 <script>
 
 	
