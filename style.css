@@ -837,7 +837,7 @@ nav a::after {
 /* --- STYLE GO TO TOP --- */
 
 #goToTop {
-  position: fixed;
+  position: fixed !important;
   bottom: 100px;
   right: 20px;
   width: 50px;
