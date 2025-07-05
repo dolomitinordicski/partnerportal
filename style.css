@@ -2872,11 +2872,8 @@ nav a::after {
   width:100%;max-width:800px;height:500px;
   margin:40px auto;padding:1.5rem;position:relative;overflow:hidden;
   animation:floatIn 2s ease-in-out;
-  box-shadow:0 12px 24px rgba(0,0,0,.3);
- 
-  border-radius:30px;
 }
-/* background:radial-gradient(circle,var(--primary-color),var(--secondary-color)) */
+
 
 /* Mobile riduzioni se servono (aggiungi break-point) */
 @media(max-width:768px){
