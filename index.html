@@ -96,6 +96,24 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 </script>
 
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const header = document.querySelector("header");
+  const border = document.querySelector(".dns-border-line");
+
+  window.addEventListener("scroll", () => {
+    const scrollTop = window.scrollY;
+    const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const scrollPercent = (scrollTop / scrollHeight) * 100;
+
+    if (window.innerWidth <= 768) {
+      border.style.width = `${scrollPercent}%`;
+    } else {
+      border.style.width = "0%";
+    }
+  });
+});
+</script>
 
 	
     <!-- HERO SECTION ----------------------------------------------------------------------->
@@ -1665,9 +1683,9 @@ document.addEventListener("DOMContentLoaded", function () {
   elements.forEach(el => observer.observe(el));
 });
 </script>
-	<button id="goToTop">&#8679;</button>
+	
 </main>
-
+<button id="goToTop">&#8679;</button>
 
 
 <!--SCRIPT GENERALI; MENU; ANIMAZIONI, COMPORTAMENTI MOBILE DESKTOP-------------------------------------------------------------------->
