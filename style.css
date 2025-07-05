@@ -2868,6 +2868,29 @@ nav a::after {
 .stat strong{font-size:4.5rem;display:block;}
 .stat:hover{transform:scale(1.1);}
 
+
+@media screen and (max-width: 768px) {
+  .usp-stats {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .stat {
+    font-size: 1.2rem;
+  }
+
+  .stat strong {
+    font-size: 3rem;
+  }
+}
+
+
+
+
+
+
+
 /* contenitore word-cloud */
 #wordcloud-container{
   width:100%;max-width:800px;height:500px;
