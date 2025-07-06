@@ -2926,6 +2926,12 @@ nav a::after {
 }
 
 /* ─── Value palette – fix z-index & accessibility ───────────────────── */
+
+@media(max-width:768px){
+	h1: text-align:center;
+}
+}
+
 .value-palette{
   display:flex;
   justify-content:center;
