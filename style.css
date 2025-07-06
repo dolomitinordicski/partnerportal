@@ -2762,6 +2762,7 @@ nav a::after {
   text-decoration:none;
   margin-top:1rem;
   font-weight:700;
+	
 }
 
 /* immagine ecosistema */
@@ -2813,7 +2814,9 @@ nav a::after {
 
 /* ─── Mobile tweaks (<768 px) ───────────────────────────────────── */
 @media(max-width:768px){
+  .btn-dns{display: block;margin:0 auto;text-align:center;}
   .digital-grid{grid-template-columns:1fr;gap:2rem;font-size:.65rem;}
+  h1{text-align: center};
   .ecosystem-image{order:1;text-align:center;}
   .ecosystem-image img{transform:none;margin-top:0;}
   .feature-item{clip-path:polygon(0 0,100% 0,85% 100%,0% 100%);}
@@ -2869,9 +2872,6 @@ nav a::after {
   width:100%;max-width:800px;height:500px;
   margin:40px auto;padding:1.5rem;position:relative;overflow:hidden;
   animation:floatIn 2s ease-in-out;
-  box-shadow:0 12px 24px rgba(0,0,0,.3);
-  background:radial-gradient(circle,var(--primary-color),var(--secondary-color));
-  border-radius:30px;
 }
 
 /* Mobile riduzioni se servono (aggiungi break-point) */
