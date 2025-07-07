@@ -515,7 +515,7 @@ display:none;
 }
 
 .hero h1 {
-  font-size: 50px;
+  font-size: 60px;
   font-weight: 900;
   font-style: normal;
   text-align:left;
@@ -552,17 +552,17 @@ display:none;
   }
 
   .hero h2 {
-    font-size: 17px;
+    font-size: 15px;
 	text-align: left;
   }
   
   .hero p {
-    font-size: 17px;
+    font-size: 15px;
 	text-align: left;
   }
 
   .hero h3 {
-    font-size: 20px;
+    font-size: 15px;
   }
 
   .hero-btn {
