@@ -1267,6 +1267,10 @@ nav a::after {
   display: flex;
   flex-direction: column;
   gap: 1.875rem;
+	  /* Wireframe background + overlay */
+  background: 
+    url('https://www.dolomitinordicski.com/media/51c93f2d-b59b-4330-a7c9-085ba422b0e0/pattern-final.png') center/cover repeat,
+    rgba(170, 208, 209, 0.7);
 }
 
 .corporate-left,
