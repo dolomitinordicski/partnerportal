@@ -3131,9 +3131,9 @@ margin-top: 100px;
 /*  ─── DNS STATEMENT ──────────────────────────────────────────────── */
 :root {
   --dns-font-base: 28px;
-  --dns-font-mobile: 10px;
+  --dns-font-mobile: 6px;
   --dns-pad-base: 20px;
-  --dns-pad-mobile: 10px;
+  --dns-pad-mobile: 6px;
 }
 
 /* Titolo */
@@ -3232,7 +3232,7 @@ margin-top: 100px;
   display: block;
   opacity: 1;
   transform: translateY(0);
-  animation: dnsPulse 1.2s ease-out;
+  animation: dnsPulse 1.5s ease-out;
 }
 
 /* Pulse (opzionale, definita se usata) */
@@ -3280,9 +3280,10 @@ margin-top: 100px;
 /* ——— Mobile ——— */
 @media (max-width: 768px) {
   .dns-statement {
+font-size: var(--dns-font-mobile);
     max-width: 00%;
     padding: var(--dns-pad-mobile);
-	  height: 300px; /* o un valore adatto alla tua frase più lunga */
+ height: 300px; /* o un valore adatto alla tua frase più lunga */
   overflow: hidden;
   }
 }
