@@ -3131,9 +3131,9 @@ margin-top: 100px;
 /*  ─── DNS STATEMENT ──────────────────────────────────────────────── */
 :root {
   --dns-font-base: 28px;
-  --dns-font-mobile: 13px;
+  --dns-font-mobile: 10px;
   --dns-pad-base: 20px;
-  --dns-pad-mobile: 15px;
+  --dns-pad-mobile: 10px;
 }
 
 /* Titolo */
