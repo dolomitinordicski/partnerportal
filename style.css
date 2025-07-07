@@ -16,9 +16,12 @@
   box-sizing: border-box;
 }
 
+
+
 /* STRUTTURA BASE */
 html,
 body {
+scroll-behavior: smooth;
   overflow-x: hidden;
   font-family: 'Be Vietnam Pro', sans-serif;
   font-weight: 700;
@@ -379,14 +382,14 @@ mark {
   z-index: 10000;
 }
 
+
+
 .header-logo-img {
-  max-width: 350px;
-  margin-bottom: 10px;
+  max-width: 250px;
+  margin-bottom: 2px;
   filter: drop-shadow(2px 2px 6px rgba(0, 0, 0, 0.2));
   transition: filter 0.3s ease;
 }
-
-
 
 
 
@@ -408,6 +411,7 @@ mark {
   }
 
   .header-logo-img {
+display:none;
     max-width: 180px; /* ✅ ridotto per mobile */
     height: auto;
   }
@@ -514,14 +518,24 @@ mark {
   font-size: 50px;
   font-weight: 900;
   font-style: normal;
+  text-align:left;
 }
 
 .hero h2 {
   font-size: 20px;
+  color: var(--primary-color);
+  margin-bottom: 30px;
+  font-weight: 500;
+  text-align:left;
+}
+.hero p {
+  font-size: 20px;
   color: var(--dark-color);
   margin-bottom: 30px;
   font-weight: 500;
+  text-align:left;
 }
+
 
 /* --- RESPONSIVE HERO --- */
 @media screen and (max-width: 768px) {
@@ -534,10 +548,17 @@ mark {
 
   .hero h1 {
     font-size: 25px;
+	text-align: left;
   }
 
   .hero h2 {
     font-size: 17px;
+	text-align: left;
+  }
+  
+  .hero p {
+    font-size: 17px;
+	text-align: left;
   }
 
   .hero h3 {
@@ -2255,7 +2276,7 @@ nav a::after {
 
 /* --- LOGO DECODING SECTION --- */
 .logo-decoding {
-  margin-top: 100px;
+margin-top: 100px;
   position: relative;
   background-position: center;
   background-repeat: no-repeat;
@@ -2377,9 +2398,6 @@ nav a::after {
 
 /* --- RESPONSIVE --- */
 @media screen and (max-width: 768px) {
-.logo-decoding {
-margin-top: 1px;
-	  }
   .logo-layouts {
     padding: 5px;
   }
@@ -2604,6 +2622,7 @@ margin-top: 1px;
 .animated-heading-grid {
   display: flex;
   height: 4rem;
+  max-width:600px;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
@@ -2618,6 +2637,7 @@ margin-top: 1px;
   margin-bottom: 1rem;
   text-transform: none;
   padding: 1rem 1rem;
+  z-index:1000;
 }
 
 .animated-heading-grid span {
@@ -2651,6 +2671,7 @@ margin-top: 1px;
     padding: 1rem 1rem;
     height: auto;
     text-align: center;
+	z-index:1000;
   }
 	
   .animated-heading-grid .word {
@@ -3468,6 +3489,257 @@ margin-top: 1px;
   opacity:1!important;
   transform:translateY(0)!important;
 }
+
+
+
+
+/* --- SECTION WIDGET -------------------------------------------------------- */
+.widget-section {
+  padding: 80px 5vw;
+  background: #f7f7f7;
+  border-top: 4px solid var(--primary-color);
+}
+
+.widget-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+.widget-text .special-heading {
+  font-size: 2.2rem;
+  text-align:center;
+    letter-spacing: 0.15em;
+    padding: 1rem 1rem;
+    height: auto;
+    text-align: center;
+  
+  
+  font-weight: bold;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.widget-text .special-heading span {
+  color: var(--secondary-color);
+  margin-top:30px;
+}
+
+.widget-subtext {
+  margin-top: 20px;
+  font-size: 1rem;
+  color: #444;
+  max-width: 450px;
+}
+
+.widget-tool {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.05);
+}
+
+/* --- RESPONSIVE --- */
+@media screen and (max-width: 768px) {
+  .widget-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .widget-text, .widget-tool {
+    text-align: center;
+  }
+
+  .widget-text .special-heading {
+    font-size: 1.2rem;
+	margin-top:20px;
+  }
+
+  .widget-subtext {
+    margin: 15px auto;
+  }
+}
+
+/* ─── CONTACT SECTION ─────────────────────────────────────────── */
+.contact-section {
+  position: relative;
+  display: grid;
+  grid-template-columns: 60px 1fr;
+  gap: 2rem;
+  padding: 5rem 2rem;
+  min-height: 100vh;
+  width: 100vw;
+  align-items: center;
+  box-sizing: border-box;
+  margin: 0 auto;
+  overflow: hidden;
+
+  /* Wireframe background + overlay */
+  background: 
+    url('https://www.dolomitinordicski.com/media/51c93f2d-b59b-4330-a7c9-085ba422b0e0/pattern-final.png') center/cover repeat,
+    rgba(170, 208, 209, 0.7);
+}
+
+.contact-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(170, 208, 209, 0.7);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.contact-section h1 {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  font-size: 3rem;
+  font-weight: bold;
+  color: var(--primary-color, #0D4D5E);
+  letter-spacing: 10px;
+  position: relative;
+  z-index: 1;
+  padding: 1rem 0;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ─── Right Column ─────────────────────────────────────────────── */
+.contact-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+.contact-content h2 {
+  font-size: 1.5rem;
+  color: var(--primary-color, #0D4D5E);
+  font-weight: bold;
+  text-align: left;
+  letter-spacing: 2px;
+}
+
+.contact-content p {
+  max-width: 600px;
+  text-align: left;
+  color: var(--primary-color);
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* ─── Form ─────────────────────────────────────────────────────── */
+.support-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  width: 100%;
+  max-width: 600px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.form-group label {
+  margin-bottom: 0.4rem;
+  font-weight: bold;
+  color: var(--primary-color, #0D4D5E);
+  font-family: "Be Vietnam Pro", sans-serif;
+}
+
+.support-form input,
+.support-form textarea {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border: 2px solid var(--third-color, #AAD0D1);
+  border-radius: 8px;
+  font-family: "Be Vietnam Pro", sans-serif;
+  font-size: 1rem;
+  background: white;
+  resize: vertical;
+  transition: border-color 0.3s ease;
+}
+
+.support-form input:focus,
+.support-form textarea:focus {
+  outline: none;
+  border-color: var(--primary-color, #0D4D5E);
+}
+
+/* ─── DNS Button ──────────────────────────────────────────────── */
+.dns-button {
+  background-color: var(--primary-color, #0D4D5E);
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 50px;
+  padding: 0.8rem 2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  font-family: "Be Vietnam Pro", sans-serif;
+  letter-spacing: 0.5px;
+  align-self: center;
+}
+
+.dns-button:hover {
+  background-color: var(--third-color, #AAD0D1);
+  color: var(--primary-color, #0D4D5E);
+  transform: translateY(-2px);
+}
+
+/* ─── Responsive ─────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .contact-section {
+    grid-template-columns: 1fr;
+    padding: 2rem 1rem;
+    text-align: center;
+  }
+
+  .left-column {
+    justify-content: center;
+    align-items: center;
+    height: auto;
+  }
+
+  .contact-section h1 {
+    writing-mode: horizontal-tb;
+    transform: rotate(0deg);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    letter-spacing: 5px;
+  }
+
+  .contact-content {
+    padding: 0;
+    gap: 1.5rem;
+  }
+
+  .contact-content h2 {
+    font-size: 1.3rem;
+  }
+
+  .contact-content p {
+    font-size: 1rem;
+    padding: 0 1rem;
+  }
+
+  .support-form {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+
+
+
+
 /* ---------- FOOTER 2.0 ------------------------------------------- */
 footer{
   position:relative;
@@ -3483,23 +3755,6 @@ footer{
               var(--primary-color) 100%);
 }
 
-/* ▸ wave che separa il footer dal resto della pagina */
-footer::before{
-  content:"";
-  position:absolute;
-  top:-60px;               /* altezza dell’onda */
-  left:0;
-  width:100%;
-  height:60px;
-  background:
-    url('data:image/svg+xml;utf8,\
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 90">\
-        <path fill="white" d="M0,60 C320,120 640,0 960,60 1280,120 1600,0 1920,60 V90 H0 Z"/>\
-      </svg>') repeat-x;
-  background-size:1600px 100%;
-  transform:translateY(1px);   /* elimina eventuale “gap” */
-  pointer-events:none;
-}
 
 /* ▸ sezione link / social (facoltativo) */
 .footer-links,
@@ -3565,4 +3820,38 @@ footer small{
   header.scrolled .dns-border-line {
     width: 100%;
   }
+}
+
+.scroll-down-arrow {
+  display: inline-block;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: bounce 2s infinite;
+  text-decoration: none;
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  z-index: 20;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.scroll-down-arrow:hover {
+  opacity: 1;
+    color: var(--primary-color);
+}
+
+.scroll-down-arrow svg {
+  width: 36px;
+  height: 36px;
+  stroke: white;
+    color: var(--primary-color);
+}
+
+/* Animazione a rimbalzo */
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% { transform: translate(-50%, 0); }
+  40% { transform: translate(-50%, 10px); }
+  60% { transform: translate(-50%, 5px); }
 }
