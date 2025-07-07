@@ -2980,7 +2980,7 @@ margin-top: 100px;
 }
 
 .section-subtitle {
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 .core-values-grid {
@@ -3094,7 +3094,9 @@ margin-top: 100px;
   .core-values-section {
     padding: 3rem 1rem;
   }
-
+	.h2{
+		font-size:18px;
+  }
   .core-values-grid {
     display: flex;
     overflow-x: auto;
