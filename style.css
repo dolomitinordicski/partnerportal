@@ -3283,7 +3283,7 @@ margin-top: 100px;
 font-size: var(--dns-font-mobile);
     max-width: 00%;
     padding: var(--dns-pad-mobile);
- height: 300px; /* o un valore adatto alla tua frase più lunga */
+ height: 600px; /* o un valore adatto alla tua frase più lunga */
   overflow: hidden;
   }
 }
