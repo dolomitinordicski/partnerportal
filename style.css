@@ -1261,6 +1261,18 @@ nav a::after {
 /* === STILE GENERALE PER LA SEZIONE CORPORATE === */
 #corporate {
   padding: 1.875rem 1.25rem; /* Mobile default */
+	  background: 
+    url('https://www.dolomitinordicski.com/media/51c93f2d-b59b-4330-a7c9-085ba422b0e0/pattern-final.png') center/cover repeat,
+    rgba(170, 208, 209, 0.7);
+}
+
+#corporate:before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(255, 255, 255, 0.7);
+  pointer-events: none;
+  z-index: 0;
 }
 
 .corporate-layout {
@@ -1268,9 +1280,6 @@ nav a::after {
   flex-direction: column;
   gap: 1.875rem;
 	  /* Wireframe background + overlay */
-  background: 
-    url('https://www.dolomitinordicski.com/media/51c93f2d-b59b-4330-a7c9-085ba422b0e0/pattern-final.png') center/cover repeat,
-    rgba(170, 208, 209, 0.7);
 }
 
 .corporate-left,
