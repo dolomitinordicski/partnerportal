@@ -3147,7 +3147,7 @@ margin-top: 100px;
 /*  ─── DNS STATEMENT ──────────────────────────────────────────────── */
 :root {
   --dns-font-base: 28px;
-  --dns-font-mobile: 6px;
+  --dns-font-mobile: 10px;
   --dns-pad-base: 20px;
   --dns-pad-mobile: 6px;
 }
@@ -3297,7 +3297,7 @@ margin-top: 100px;
 @media (max-width: 768px) {
   .dns-statement {
 font-size: var(--dns-font-mobile);
-    max-width: 00%;
+    max-width: 80%;
     padding: var(--dns-pad-mobile);
  height: 600px; /* o un valore adatto alla tua frase più lunga */
   overflow: hidden;
