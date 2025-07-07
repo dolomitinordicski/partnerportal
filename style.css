@@ -3214,6 +3214,8 @@ margin-top: 100px;
   text-align: center;
   max-width: 800px;
   margin: 50px auto;
+		  height: 250px; /* o un valore adatto alla tua frase più lunga */
+  overflow: hidden;
   padding: var(--dns-pad-base);
   border-inline: 5px solid var(--third-color);
   border-radius: 10px;
@@ -3280,6 +3282,8 @@ margin-top: 100px;
   .dns-statement {
     max-width: 00%;
     padding: var(--dns-pad-mobile);
+	  height: 300px; /* o un valore adatto alla tua frase più lunga */
+  overflow: hidden;
   }
 }
 
