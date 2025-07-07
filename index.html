@@ -25,8 +25,6 @@
 <body>
 
 
-
-	
 <header>
 <!-- LOGO SVG CON SWOOSH + DNS PartnerHub -->
 
@@ -43,7 +41,7 @@
     </svg>
 
 <button class="menu-toggle" type="button" aria-label="Menu"></button>
-
+  <div class="dns-border-line"></div>
 	    <nav>
   <h1 class="menu-title">NAVIGATION</h1>
   <div class="menu-items">
@@ -56,6 +54,7 @@
   </div>
     </div>
 </nav>
+
 </header>  
 <script>
 document.addEventListener("DOMContentLoaded", () => {
@@ -75,6 +74,28 @@ document.addEventListener("DOMContentLoaded", () => {
   if (hero) observer.observe(hero);
 });
 </script>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const header = document.querySelector("header");
+  const border = document.querySelector(".dns-border-line");
+
+  window.addEventListener("scroll", () => {
+    const scrollTop = window.scrollY;
+    const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const scrollPercent = (scrollTop / scrollHeight) * 100;
+
+    if (window.innerWidth <= 768) {
+      border.style.width = `${scrollPercent}%`;
+    } else {
+      border.style.width = "0%";
+    }
+  });
+});
+</script>
+
+
+
 <div class="desktop-sticky-bar" id="stickyBar">
 </div>
     <!-- HERO SECTION -->
@@ -82,7 +103,7 @@ document.addEventListener("DOMContentLoaded", () => {
   <div class="hero-content">
     <div class="header-logo-blur">
       <img class="header-logo-img" src="https://www.dolomitinordicski.com/media/bd92869d-8dc3-4109-9ade-f89e3e9ac293/dolomiti-nordicski-logo-farbe-2025.png" alt="Nuovo Logo Dolomiti NordicSki">
-      <h1>WELC  OME</h1>
+      <h1>WELCOME</h1>
       <h2>DEIN EINSTIEG IN DIE WELT VON DNS!</br>
         Spüre den Zauber des Langlaufs, die Kraft der Natur und das gemeinsame Ziel.
         Hier findest du alles: unser visuelles Erscheinungsbild, unsere Werte – und über die Buttons am Rand den direkten Zugang zu allen Tools, die dich als Partner weiterbringen.</h2>
@@ -1406,90 +1427,112 @@ document.addEventListener("DOMContentLoaded", function () {
     window.addEventListener('resize', renderWordCloud);
 });
 </script>
-    <!-- CORE VALUES -->
-<section id="core-values">
+  <!-- CORE VALUES -->
+<section class="core-values-section">
+  <h1 class="section-title">CREDO</h1>
+  <h2 class="section-subtitle">CORE VALUES THAT GUIDE US</h2>
 
-	<h1 class="section-title">CREDO</h1>
-    <h2>CORE VALUES THAT GUIDE US️</h2>
-	</br>
-    <div class="value-palette">
-        <div class="value-box" style="background-color: rgb(13, 77, 94);" data-desc="Our deep commitment and love for Nordic skiing.">
-            <strong>Passion & Dedication</strong>
-        </div>
-        <div class="value-box" style="background-color: rgb(32, 96, 112);" data-desc="Staying true to our roots and embracing our traditions.">
-            <strong>Authenticity</strong>
-        </div>
-        <div class="value-box" style="background-color: rgb(65, 116, 131);" data-desc="The spirit of adventure, accessibility, and connection with nature.">
-            <strong>Freedom & Connected Openness</strong>
-        </div>
-        <div class="value-box" style="background-color: rgb(110, 160, 170);" data-desc="Promoting an active lifestyle, health, and well-being.">
-            <strong>Health & Well-being</strong>
-        </div>
-        <div class="value-box" style="background-color: rgb(150, 190, 200);" data-desc="Protecting nature and ensuring a sustainable future.">
-            <strong>Sustainability</strong>
-        </div>
-        <div class="value-box" style="background-color: rgb(170, 208, 209);" data-desc="Constantly improving to offer the best Nordic skiing experience.">
-            <strong>Innovation & Progress</strong>
-        </div>
+  <div class="core-values-grid">
+    <div class="value-card" style="--accent: #0D4D5E;">
+      <div class="icon-container"><i data-lucide="flame"></i></div>
+      <h3>PASSION & DEDICATION</h3>
+      <p>Our deep commitment and love for Nordic skiing.</p>
     </div>
-	    <!-- Tooltip a fumetto -->
-    <div class="tooltip" id="tooltip"></div>
+
+    <div class="value-card" style="--accent: #206070;">
+      <div class="icon-container"><i data-lucide="check-circle"></i></div>
+      <h3>AUTHENTICITY</h3>
+      <p>Staying true to our roots and embracing our traditions.</p>
+    </div>
+
+    <div class="value-card" style="--accent: #417483;">
+      <div class="icon-container"><i data-lucide="compass"></i></div>
+      <h3>FREEDOM & CONNECTED OPENNESS</h3>
+      <p>The spirit of adventure, accessibility, and connection with nature.</p>
+    </div>
+
+    <div class="value-card" style="--accent: #6EA0AA;">
+      <div class="icon-container"><i data-lucide="heart-pulse"></i></div>
+      <h3>HEALTH & WELLBEING</h3>
+      <p>Promoting an active lifestyle, health, and well-being.</p>
+    </div>
+
+    <div class="value-card" style="--accent: #96BEC8;">
+      <div class="icon-container"><i data-lucide="leaf"></i></div>
+      <h3>SUSTAINABILITY & RESPECT</h3>
+      <p>Protecting nature and ensuring a sustainable future.</p>
+    </div>
+
+    <div class="value-card" style="--accent: #AAD0D1;">
+      <div class="icon-container"><i data-lucide="lightbulb"></i></div>
+      <h3>INNOVATION & RESILIENCE</h3>
+      <p>Constantly improving to offer the best Nordic skiing experience.</p>
+    </div>
+  </div>
 </section>
+
+<!-- Lucide Icons (wireframe-style) -->
+<script src="https://unpkg.com/lucide@latest"></script>
 <script>
-document.addEventListener("DOMContentLoaded", () => {
-  const boxes   = document.querySelectorAll(".value-box");
-  let   pinned  = null;                       // box attualmente “fissato”
-
-  boxes.forEach(box => {
-    /* Tooltip costruita al volo */
-    const tip = document.createElement("div");
-    tip.className = "value-description";
-    tip.innerHTML = box.dataset.desc || "";
-    tip.style.backgroundColor = getComputedStyle(box).backgroundColor;
-    box.appendChild(tip);
-
-    /* Hover – mostra solo se non è “pinnato” */
-    box.addEventListener("mouseenter", () => {
-      if (pinned !== box) tip.classList.add("show");
-    });
-    box.addEventListener("mouseleave", () => {
-      if (pinned !== box) tip.classList.remove("show");
-    });
-
-    /* Click – pin / unpin */
-    box.addEventListener("click", e => {
-      e.stopPropagation();                    // evita bubbling
-      if (pinned === box) {                   // ➜ era già aperto ⇒ chiudi
-        tip.classList.remove("show");
-        pinned = null;
-      } else {                                // ➜ apri questo e chiudi l’eventuale altro
-        if (pinned) pinned.querySelector(".value-description").classList.remove("show");
-        tip.classList.add("show");
-        pinned = box;
-      }
-    });
-  });
-
-  /* Click altrove → chiude il tooltip “pinnato” */
-  document.addEventListener("click", () => {
-    if (pinned){
-      pinned.querySelector(".value-description").classList.remove("show");
-      pinned = null;
-    }
-  });
-});
+  lucide.createIcons();
 </script>
 
 
-<section id="dns-statement">
-    <h2 class="statement-title">MORE THAN JUST SKIING</h2>
-    <h2 class="statement-subtitle">"0% FOOTPRINT, 100% IIMPACT"</h2>
-    <p class="dns-statement">
-        "Dolomiti NordicSki is more than just a skiing destination. <br>
-        It’s a way of life, a connection to nature, and a passion for excellence."
-    </p>
 
+<section class="dns-claim-rotator">
+  <h2 class="statement-title">BEYOND SKIING</h2>
+  <h2 class="statement-subtitle">0% FOOTPRINT, 100% IMPACT</h2>
+  <div class="swoosh-icon-statement swoosh-top-left"></div>
+
+  <div class="dns-statement-group">
+    <p class="dns-statement" data-lang="de">
+Dolomiti NordicSki ist mehr als nur ein Langlaufkarussell.</br>
+Es ist ein gemeinsames Ökosystem, ein grenzüberschreitendes Netzwerk und eine Gemeinschaft von Menschen,
+die durch gemeinsame Werte und eine Vision für eine sanfte Winterkultur verbunden sind.
+    </p>
+    <p class="dns-statement" data-lang="it">
+Dolomiti NordicSki non è solo un carosello per lo sci di fondo.</br>
+È un ecosistema condiviso, un network transfrontaliero e una comunità di persone unite da valori comuni e da una visione per una cultura invernale leggera.
+    </p>
+	    <p class="dns-statement fade-in" data-lang="en">
+      Dolomiti NordicSki is more than just a skiing destination.</br>
+It’s a shared ecosystem, a cross-border network, and a community of people united by common values and a vision for a gentle winter culture.
+    </p>
+  </div>
 </section>
+
+<script>
+  const statements = document.querySelectorAll(".dns-statement");
+  let current = 0;
+
+  function showStatement(index) {
+    statements.forEach((el, i) => {
+      el.classList.remove("fade-in");
+      el.style.display = "none";
+      if (i === index) {
+        el.style.display = "block";
+        setTimeout(() => el.classList.add("fade-in"), 20);
+      }
+    });
+  }
+
+  showStatement(current);
+
+  setInterval(() => {
+    current = (current + 1) % statements.length;
+    showStatement(current);
+  }, 6000); // cambia lingua ogni 7 secondi
+</script>
+
+
+
+
+  
+  <div class="swoosh-icon swoosh-bottom-right"></div>
+</section>
+
+
+
   <div class="separator-line"></div>
 <script>
 	document.addEventListener("DOMContentLoaded", function () {
