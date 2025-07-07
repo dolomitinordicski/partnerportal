@@ -3179,7 +3179,7 @@ margin-top: 100px;
 /* Responsive */
 @media (max-width: 768px) {
   .statement-title {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     letter-spacing: 0.06em;
   }
 
@@ -3275,7 +3275,7 @@ margin-top: 100px;
 /* ——— Mobile ——— */
 @media (max-width: 768px) {
   .dns-statement {
-    font-size: var(--dns-font-mobile);
+    font-size: 16px;
     max-width: 90%;
     padding: var(--dns-pad-mobile);
   }
