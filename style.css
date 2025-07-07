@@ -1260,19 +1260,21 @@ nav a::after {
 
 /* === STILE GENERALE PER LA SEZIONE CORPORATE === */
 #corporate {
+  position: relative; /* NECESSARIO per il ::before */
   padding: 1.875rem 1.25rem; /* Mobile default */
-	  background: 
-    url('https://www.dolomitinordicski.com/media/51c93f2d-b59b-4330-a7c9-085ba422b0e0/pattern-final.png') center/cover repeat,
-    rgba(170, 208, 209, 0.7);
+  background:
+    url('https://www.dolomitinordicski.com/media/51c93f2d-b59b-4330-a7c9-085ba422b0e0/pattern-final.png') center/cover repeat;
+  z-index: 1; /* Posiziona sopra al ::before */
+  overflow: hidden; /* Evita che il ::before "strabordi" */
 }
 
-#corporate:before {
+#corporate::before {
   content: "";
   position: absolute;
   inset: 0;
-  background-color: rgba(255, 255, 255, 0.7);
-  pointer-events: none;
+  background-color: rgba(255, 255, 255, 0.7); /* overlay bianco trasparente */
   z-index: 0;
+  pointer-events: none;
 }
 
 .corporate-layout {
