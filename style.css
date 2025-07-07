@@ -2377,6 +2377,9 @@ nav a::after {
 
 /* --- RESPONSIVE --- */
 @media screen and (max-width: 768px) {
+.logo-decoding {
+margin-top: 1px;
+	  }
   .logo-layouts {
     padding: 5px;
   }
