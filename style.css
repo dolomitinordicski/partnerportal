@@ -3094,8 +3094,9 @@ margin-top: 100px;
   .core-values-section {
     padding: 3rem 1rem;
   }
-	.h2{
-		font-size:18px;
+	.section-subtitle {
+  font-size:18px;
+		
   }
   .core-values-grid {
     display: flex;
