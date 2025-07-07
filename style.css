@@ -2592,6 +2592,7 @@ margin-top: 100px;
   margin-bottom: 1rem;
   text-transform: none;
   padding: 4rem 4rem;
+	z-index:200;
 }
 
 .animated-heading span {
