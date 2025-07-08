@@ -3755,27 +3755,34 @@ font-size: var(--dns-font-mobile);
   }
 }
 
+
+/* AGENCY CREDITS */
 .agency-credit {
-  background-color: #f8f9fa;
-  padding: 2rem 1.5rem;
-  text-align: center;
-  border-top: 1px solid rgba(0,0,0,0.05);
+  background-color: #f8f9fa; /* colore chiaro neutro */
+  padding: 1.5rem 2rem;
   font-family: "Be Vietnam Pro", sans-serif;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .agency-credit-inner {
-  max-width: 900px;
+  max-width: 1000px;
   margin: 0 auto;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  gap: 1rem;
+  gap: 1.5rem;
 }
 
 .agency-logo {
-  max-height: 60px;
+  max-height: 50px;
   width: auto;
-  opacity: 0.9;
+  flex-shrink: 0;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+.agency-texts {
+  text-align: left;
+  flex: 1;
 }
 
 .agency-texts p {
@@ -3788,14 +3795,19 @@ font-size: var(--dns-font-mobile);
   color: var(--primary-color, #0D4D5E);
 }
 
-/* Responsive */
+/* Responsive layout */
 @media (max-width: 600px) {
+  .agency-credit-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
   .agency-logo {
     max-height: 40px;
   }
 
   .agency-texts p {
-    font-size: 0.85rem;
+    font-size: 0.9rem;
   }
 }
 
