@@ -3755,6 +3755,49 @@ font-size: var(--dns-font-mobile);
   }
 }
 
+.agency-credit {
+  background-color: #f8f9fa;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  border-top: 1px solid rgba(0,0,0,0.05);
+  font-family: "Be Vietnam Pro", sans-serif;
+}
+
+.agency-credit-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.agency-logo {
+  max-height: 60px;
+  width: auto;
+  opacity: 0.9;
+}
+
+.agency-texts p {
+  margin: 0.2rem 0;
+  font-size: 0.95rem;
+  color: #444;
+}
+
+.agency-texts strong {
+  color: var(--primary-color, #0D4D5E);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .agency-logo {
+    max-height: 40px;
+  }
+
+  .agency-texts p {
+    font-size: 0.85rem;
+  }
+}
 
 
 
