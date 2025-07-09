@@ -778,7 +778,7 @@ nav a {
   color: var(--primary-color);
   text-decoration: none;
   font-weight: bold;
-  text-align: center;
+  text-align: left;
   padding: 10px 15px;
   position: relative;
   transition: all 0.3s ease;
@@ -839,6 +839,7 @@ nav a::after {
   display: flex;
   align-items: center;
   justify-content: center;
+	color: var(--primary-color);
 }
 
 .menu-toggle::before {
@@ -847,6 +848,7 @@ nav a::after {
   display: block;
   transition: all 0.3s ease-in-out;
   transform-origin: center;
+color: var(--primary-color);
 }
 
 .menu-toggle.active::before {
