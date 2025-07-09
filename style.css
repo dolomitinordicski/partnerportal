@@ -9,12 +9,7 @@
   --secondary-color-dark:#7bbabc;
 }
 
-/* RESET BASE */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
+
 
 
 
@@ -38,6 +33,13 @@ main {
   width: 100%;
   margin: 0 auto;
   padding: 0;
+}
+
+/* RESET BASE */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
 /* CONTENITORE */
@@ -363,10 +365,48 @@ mark {
   padding: 2px 4px;
 }
 
-/* --- STYLE LOGO --- */
+
+header {
+  top: 0;
+  left: 4px;
+  width: 100%;
+  z-index: 2000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+  header.show {
+    display: flex;
+    top: 20px;
+    background-color: white;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+  }
+
+.header-logo-img {
+  max-width: 250px;
+  margin-bottom: 2px;
+  filter: drop-shadow(2px 2px 6px rgba(0, 0, 0, 0.2));
+  transition: filter 0.3s ease;
+}
+
+  .header-logo-img {
+display:none;
+    max-width: 180px; /* ✅ ridotto per mobile */
+    height: auto;
+  }
+
+@media screen and (max-width: 768px) {
+  body {
+    padding-top: 60px; /* evita che il contenuto venga coperto dalla sticky bar */
+  }
+}
+
+
+/* --- STYLE Partner PORTAL LOGO --- */
 .partnerhub-logo {
   position: fixed;
-  top: 2px;
+  top: 0px;
   left: 2px;
   z-index: 2000;
   display: flex;
@@ -379,88 +419,43 @@ mark {
   height: 40px;
   width: auto;
   display: inline-block;
-  z-index: 10000;
+  z-index: 1000;
 }
 
 
 
-.header-logo-img {
-  max-width: 250px;
-  margin-bottom: 2px;
-  filter: drop-shadow(2px 2px 6px rgba(0, 0, 0, 0.2));
-  transition: filter 0.3s ease;
-}
-
-
-
-
-
-/* --- RESPONSIVE --- */
-@media screen and (max-width: 768px) {
-  .partnerhub-logo {
-    position: absolute;
-    top: 0;
-    left: 0; /* ✅ cambia da 50% a 0 per allinearlo a sinistra */
-    transform: none; /* ✅ rimuovi il translateX */
-    width: 100%;
-	align-items:left;
-    padding: 10px;
-    display: flex;
-    background-color: rgba(255, 255, 255, 0.95); /* ✅ sistemato qui */
-    z-index: 10000;
-  }
-
-  .header-logo-img {
-display:none;
-    max-width: 180px; /* ✅ ridotto per mobile */
-    height: auto;
-  }
-
-  header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 5000;
-    display: none;
-    justify-content: space-between;
-    align-items: left;
-    background-color: #ffff;
-  }
-
-  header.show {
-    display: flex;
-    top: 2px;
-    background-color: white;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
-  }
+/* Nasconde il testo DNS e Partner Portal con animazione */
+#dns-label.hide-logo-text,
+#partnerhub-label.hide-logo-text {
+  transform: translateX(-150%);
+  opacity: 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
 /* --- STYLE STICKY BAR --- */
-.desktop-sticky-bar {
-  display: none;
+.sticky-bar {
   position: fixed;
   top: 0;
   left: 0;
-  width: 50%;
-  height: 70px;
+  width: 100%;
+  height: 60px;
   opacity: 0.97;
   background-color: white;
   z-index: 1000;
   transition: all 0.3s ease;
   filter: drop-shadow(2px 2px 6px rgba(0, 0, 0, 0.2));
   backdrop-filter: blur(4px);
-  clip-path: polygon(0 0, 100% 0, 90% 100%, 0% 100%);
 }
 
-@media screen and (min-width: 769px) {
-  .desktop-sticky-bar.show {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 2px;
-  }
+.sticky-bar.hide-on-scroll {
+  transform: translateY(-100%);
+  opacity: 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
 }
+
+
+
+
 
 /* --- STYLE HERO --- */
 .hero {
@@ -597,19 +592,26 @@ display:none;
 
 /* --- STILE BASE NAV --- */
 nav {
-  display: none;
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: var(--secondary-color); /* #AAD0D1 */
+  background-color: rgba(170, 208, 209, 0.9); /* con trasparenza */
   z-index: 4000;
   overflow: hidden;
+  display: flex;
+  transform: translateX(-100%);
+  opacity: 0;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  pointer-events: none;
 }
 
+
 nav.active {
-  display: flex;
+  transform: translateX(0%);
+  opacity: 1;
+  pointer-events: all;
 }
 
 /* --- SFONDO DECORATIVO NAV --- */
@@ -670,7 +672,7 @@ nav::before {
   nav {
     flex-direction: column;
     justify-content: flex-start !important;
-    align-items: center;
+    align-items: left;
     gap: 20px;
     padding: 20px;
   }
@@ -683,13 +685,13 @@ nav::before {
     color: var(--primary-color);
     background-color: transparent;
     border-radius: 6px;
-    text-align: center;
+    text-align: left;
     position: relative;
     transition: transform 0.3s ease, color 0.3s ease;
   }
 
   nav a:hover {
-    transform: scale(1.05);
+    transform: scale(1);
     color: var(--third-color);
   }
 
@@ -756,7 +758,9 @@ nav::before {
   .menu-title {
     font-size: 32px;
     color: var(--primary-color);
-    margin-bottom: 30px;
+	margin-top:60px;
+	text-align:left !important;;
+    margin-bottom: 40px;
   }
 
   .menu-items {
@@ -772,6 +776,7 @@ nav::before {
     text-decoration: none;
   }
 }
+
 
 /* --- STILE BASE LINK NAV --- */
 nav a {
@@ -828,15 +833,14 @@ nav a::after {
 /* --- STYLE MENU HAMBURGER --- */
 
 .menu-toggle {
-  position: relative;
-  right: 20px;
+  position: absolute;
+  right: 2px;
   z-index: 12000;
   width: 40px;
   height: 40px;
   background: none;
   border: none;
   cursor: pointer;
-  display: flex;
   align-items: center;
   justify-content: center;
 	color: var(--primary-color);
@@ -861,12 +865,12 @@ color: var(--primary-color);
   color: var(--primary-color);
 }
 
-@media screen and (max-width: 768px) {
-  .menu-toggle {
-    position: absolute;
-    display: block;
-  }
+.menu-toggle.hide-on-scroll {
+  transform: translateY(-100%);
+  opacity: 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
 }
+
 
 /* --- STYLE GO TO TOP --- */
 
@@ -897,24 +901,7 @@ color: var(--primary-color);
   transition: filter 0.3s ease;
 }
 
-/* --- STYLE MOBILE STICKY BAR --- */
 
-@media screen and (max-width: 768px) {
-  .desktop-sticky-bar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 5000;
-    background-color: white;
-    padding: 0px 0px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  }
-
-  body {
-    padding-top: 60px; /* evita che il contenuto venga coperto dalla sticky bar */
-  }
-}
 /* ------------------- SINGLE SECTIONS --------------------------------------- */
 /* --- INTRO SECTION --- */
 
@@ -3875,13 +3862,11 @@ footer small{
 /* ---------- RESPONSIVE ---------- */
 @media(max-width:768px){
   footer{padding:40px 12px;}
-  footer::before{top:-40px;height:40px;}
+  footer::before{top:-40px;height:40px;
+  }
 }
 
 
-
-
-@media screen and (max-width: 768px) {
   .dns-border-line {
     position: absolute;
     bottom: 0;
@@ -3893,9 +3878,14 @@ footer small{
     z-index: 9999;
   }
 
-  header.scrolled .dns-border-line {
+  body.scrolled .dns-border-line {
     width: 100%;
   }
+  
+  .dns-border-line.hide-on-scroll {
+  transform: translateY(-100%);
+  opacity: 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
 .scroll-down-arrow {
