@@ -11,8 +11,6 @@
 
 
 
-
-
 /* STRUTTURA BASE */
 html,
 body {
@@ -882,7 +880,7 @@ color: var(--primary-color);
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  padding: 2px;
+  padding: 10px;
   background-color: var(--secondary-color);
   opacity: 0;
   overflow: visible;
