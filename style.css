@@ -907,7 +907,7 @@ color: var(--primary-color);
     width: 100%;
     z-index: 5000;
     background-color: white;
-    padding: 10px 20px;
+    padding: 0px 0px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   }
 
