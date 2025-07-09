@@ -21,9 +21,6 @@
 	
 <body>
 
-
-
-	
 <header>
 <!-- LOGO SVG CON SWOOSH + DNS PartnerHub -->
 
@@ -32,15 +29,15 @@
 
     <svg width="280" height="60" xmlns="http://www.w3.org/2000/svg">
         <style>
-            .dns { font: bold 28px 'Be Vietnam Pro', sans-serif; fill: #0D4D5E; }
+            .dns { font: bold 24px 'Be Vietnam Pro', sans-serif; fill: #0D4D5E; }
             .partnerhub { font: 24px 'Be Vietnam Pro', sans-serif; fill: var(--primary-color); }
         </style>
-        <text x="0" y="40" class="dns">DNS</text>
-        <text x="80" y="40" class="partnerhub">Partner Portal</text>
+<text x="0" y="40" id="dns-label" class="dns">DNS</text>
+<text x="53" y="40" id="partnerhub-label" class="partnerhub">Partner Portal</text>
     </svg>
 
 <button class="menu-toggle" type="button" aria-label="Menu"></button>
-  <div class="dns-border-line"></div>
+
 	    <nav>
   <h1 class="menu-title">NAVIGATION</h1>
   <div class="menu-items">
@@ -53,8 +50,12 @@
   </div>
     </div>
 </nav>
+<div class="sticky-bar" id="stickyBar">
+  <div class="dns-border-line"></div>
+</header>
 
-</header>  
+
+
 <script>
 document.addEventListener("DOMContentLoaded", () => {
   const header = document.querySelector("header");
@@ -74,29 +75,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 </script>
 
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-  const header = document.querySelector("header");
-  const border = document.querySelector(".dns-border-line");
 
-  window.addEventListener("scroll", () => {
-    const scrollTop = window.scrollY;
-    const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
-    const scrollPercent = (scrollTop / scrollHeight) * 100;
-
-    if (window.innerWidth <= 768) {
-      border.style.width = `${scrollPercent}%`;
-    } else {
-      border.style.width = "0%";
-    }
-  });
-});
-</script>
-
-
-
-<div class="desktop-sticky-bar" id="stickyBar">
-</div>
     <!-- HERO SECTION -->
 <section class="hero" id="hero">
   <div class="hero-content">
@@ -1770,24 +1749,7 @@ document.querySelectorAll('nav a').forEach(anchor => {
 </script>
 
 <button id="goToTop">&#8679;</button>
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-  const stickyBar = document.getElementById("stickyBar");
-  const trigger = document.querySelector("main");
 
-  window.addEventListener("scroll", function () {
-    const triggerTop = trigger.getBoundingClientRect().top;
-
-    // Modifica qui: attiva la stickyBar 2em (≈32px) prima
-    if (triggerTop <= 32) {
-      stickyBar.classList.add("show");
-    } else {
-      stickyBar.classList.remove("show");
-    }
-  });
-});
-
-</script>
 
 	<section class="agency-credit">
   <div class="agency-credit-inner">
@@ -1805,5 +1767,57 @@ document.addEventListener("DOMContentLoaded", function () {
 	 <footer>
 	   &copy; 2025 Dolomiti NordicSki. All rights reserved.
     </footer>
+	
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  let lastScrollTop = 0;
+  const dns = document.getElementById("dns-label");
+  const partnerhub = document.getElementById("partnerhub-label");
+  const menuToggle = document.querySelector(".menu-toggle");
+  const stickyBar = document.getElementById("stickyBar");
+  const dnsBorder = document.querySelector(".dns-border-line");
+
+  window.addEventListener("scroll", () => {
+    const scrollTop = window.scrollY;
+    const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const scrollPercent = (scrollTop / scrollHeight) * 100;
+
+    // Aggiorna larghezza barra DNS Border
+    if (dnsBorder) {
+      dnsBorder.style.width = `${scrollPercent}%`;
+    }
+
+    // Aggiungi/rimuovi classe "scrolled" al <body>
+    if (scrollTop > 20) {
+      document.body.classList.add("scrolled");
+    } else {
+      document.body.classList.remove("scrolled");
+    }
+
+    // Direzione dello scroll: giù -> nascondi, su -> mostra
+    if (scrollTop > lastScrollTop) {
+      dns?.classList.add("hide-logo-text");
+      partnerhub?.classList.add("hide-logo-text");
+      menuToggle?.classList.add("hide-on-scroll");
+      stickyBar?.classList.add("hide-on-scroll");
+      dnsBorder?.classList.add("hide-on-scroll");
+    } else {
+      dns?.classList.remove("hide-logo-text");
+      partnerhub?.classList.remove("hide-logo-text");
+      menuToggle?.classList.remove("hide-on-scroll");
+      stickyBar?.classList.remove("hide-on-scroll");
+      dnsBorder?.classList.remove("hide-on-scroll");
+    }
+
+    lastScrollTop = Math.max(scrollTop, 0);
+  });
+});
+</script>
+
+
+	
 </body>
 </html>
+
+	
+
