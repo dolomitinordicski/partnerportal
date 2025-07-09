@@ -882,7 +882,7 @@ color: var(--primary-color);
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  padding: 70px;
+  padding: 20px;
   background-color: var(--secondary-color);
   opacity: 0;
   overflow: visible;
