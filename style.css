@@ -444,7 +444,7 @@ display:none;
   content: "";
   position: fixed;
   top: 0; left: 0; right: 0; bottom: 0;
-  background: url('https://www.dolomitinordicski.com/media/ca8effb6-0abe-43c1-9792-dc0da61fed6c/013-dns-plaetzwiese-kottersteger-dji-0189.jpg') no-repeat center;
+  background: url('img/dns-3-zinnen-dolomiten-langlaufen-sci-di-fondo-cross-country-1920.jpg') no-repeat center;
   background-size: cover;
   z-index: -1;
   animation: zoomSlow 20s ease-in-out alternate infinite;
@@ -592,7 +592,7 @@ nav::before {
   transform: translateX(-50%);
   width: 120%;
   height: 120%;
-  background: url('https://www.dolomitinordicski.com/media/f0a51847-50a9-4eeb-908f-1dee1b292b3c/dolomitinordicski-kurve.png') no-repeat center;
+  background: url('img/dolomiti nordicski kurve.png') no-repeat center;
   background-size: contain;
   opacity: 0.6;
   z-index: 1;
@@ -1224,7 +1224,7 @@ color: var(--primary-color);
   position: relative; /* NECESSARIO per il ::before */
   padding: 1.875rem 1.25rem; /* Mobile default */
   background:
-    url('https://www.dolomitinordicski.com/media/51c93f2d-b59b-4330-a7c9-085ba422b0e0/pattern-final.png') center/cover repeat;
+    url('img/pattern.png') center/cover repeat;
   z-index: 1; /* Posiziona sopra al ::before */
   overflow: hidden; /* Evita che il ::before "strabordi" */
 }
@@ -1809,7 +1809,7 @@ color: var(--primary-color);
 }
 
 .parallax-bg {
-  background-image: url("https://www.dolomitinordicski.com/media/b2befeed-3abd-4706-8a49-e16220472991/chatgpt-image-24-apr-2025-16-42-17.png");
+  background-image: url("pattern.png");
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
@@ -2272,7 +2272,7 @@ margin-top: 100px;
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url("https://www.dolomitinordicski.com/media/0fba5714-7f8e-4551-9ddc-aca93ba1453d/011-dns-kasern-kottersteger-kot-4988.jpg");
+  background-image: url("img/dns-seiser-alm-langlaufen-sci-di-fondo-cross-country-1920 (1).jpg");
   background-size: cover;
   background-position: center;
   filter: grayscale(90%);
@@ -2859,7 +2859,7 @@ margin-top: 100px;
 .wordcloud-section::before{
   content:"";
   position:absolute;inset:0;
-  background:url("https://www.dolomitinordicski.com/media/c63f89ef-5fa4-4a1e-a660-042f2a863e8f/036-dns-seiseralm-kottersteger-kot-4059.jpg") center/cover;
+  background:url("img/dns-ahrntal-langlaufen-sci-di-fondo-cross-country-1920.jpg") center/cover;
   filter:grayscale(40%);
   opacity:.5;
   pointer-events:none;
@@ -3227,7 +3227,7 @@ margin-top: 100px;
 }
 
 .swoosh-icon-statement {
-  background-image: url('https://www.dolomitinordicski.com/media/f0a51847-50a9-4eeb-908f-1dee1b292b3c/dolomiti-nordicski-kurve.png'); 
+  background-image: url('img/dolomiti nordicski kurve.png'); 
   background-size: contain;
   background-repeat: no-repeat;
   width: 40px;
@@ -3556,7 +3556,7 @@ font-size: var(--dns-font-mobile);
 
   /* Wireframe background + overlay */
   background: 
-    url('https://www.dolomitinordicski.com/media/51c93f2d-b59b-4330-a7c9-085ba422b0e0/pattern-final.png') center/cover repeat,
+    url('img/pattern.png') center/cover repeat,
     rgba(170, 208, 209, 0.7);
 }
 
