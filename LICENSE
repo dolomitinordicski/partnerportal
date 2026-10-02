@@ -1,21 +1,48 @@
-MIT License
+DOLOMITI NORDICSKI PROPRIETARY SOFTWARE LICENSE
 
-Copyright (c) 2025 Dolomiti NordicSki
+Copyright (c) 2026 Dolomiti NordicSki. All rights reserved.
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+This repository, including its source code, documentation, assets, data models,
+design systems, configuration, and related materials (collectively, the
+"Software"), is proprietary to Dolomiti NordicSki unless a file or component
+expressly states otherwise.
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+No license or other rights are granted to use, copy, modify, adapt, merge,
+publish, distribute, sublicense, sell, commercially exploit, or create
+derivative works from the Software, in whole or in part, without prior written
+permission from Dolomiti NordicSki.
+
+Access to or availability of the source code, including through a public source
+code hosting platform, does not by itself grant permission to reuse the
+Software beyond rights that cannot be excluded under applicable law or rights
+required by the hosting platform for the operation of its service.
+
+Use by Dolomiti NordicSki personnel, contractors, partners, or service
+providers is permitted only to the extent separately authorized by Dolomiti
+NordicSki.
+
+THIRD-PARTY COMPONENTS
+
+Third-party libraries, frameworks, fonts, assets, or other components included
+in or used by the Software remain subject to their respective licenses and
+copyright notices. Nothing in this license restricts rights granted directly
+by those third-party licensors.
+
+TRANSITION FROM EARLIER LICENSES
+
+This proprietary license applies to versions of the Software first released
+with this license and to subsequent versions unless otherwise stated. Earlier
+versions that were validly released under another license remain available to
+their recipients under the terms of the license that applied to those versions.
+
+NO WARRANTY
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+IMPLIED, INCLUDING BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY, FITNESS
+FOR A PARTICULAR PURPOSE, TITLE, AND NON-INFRINGEMENT. TO THE MAXIMUM EXTENT
+PERMITTED BY APPLICABLE LAW, DOLOMITI NORDICSKI SHALL NOT BE LIABLE FOR ANY
+CLAIM, DAMAGES, OR OTHER LIABILITY ARISING FROM OR IN CONNECTION WITH THE
+SOFTWARE OR ITS USE.
+
+For licensing or permission requests, contact Dolomiti NordicSki through its
+official contact channels.
